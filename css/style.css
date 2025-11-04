@@ -229,6 +229,7 @@ body {
   display:grid; gap:18px;
   grid-template-columns: repeat(3,1fr);
 }
+
 @media (max-width: 900px){ .cards{ grid-template-columns:1fr; } }
 
 .card{
@@ -239,6 +240,23 @@ body {
   transition: transform .2s;
 }
 .card:hover{ transform: translateY(-8px); }
+
+/* Quita el estilo de enlace dentro de las cards */
+.card a {
+  display: block;            /* hace que toda la card sea clicable */
+  text-decoration: none;     /* sin subrayado */
+  color: inherit;            /* hereda el color del texto */
+}
+
+/* Evita el morado del enlace visitado */
+.card a:visited {
+  color: inherit;
+}
+
+/* Opcional: efectos al pasar el ratón */
+.card a:hover {
+  text-decoration: none;
+}
 
 .thumb {
   height: 160px;
