@@ -2,15 +2,16 @@
  *  PORTFOLIO (A) — CREATIVO-VISUAL (versión optimizada)
  *  Estructura:
  *  0) Reset/Base
- *  1) Tokens (variables)
- *  2) Utilidades/Layouts
- *  3) Header + botones/chips
- *  4) HERO + Skills
+ *  1) Tokens
+ *  2) Utilidades / Layout
+ *  3) Header
+ *  4) Hero + Skills
  *  5) Secciones genéricas
  *  6) Proyectos (cards)
  *  7) Sobre mí
  *  8) Footer
- *  9) (Opcional) Mock/legacy
+ *  9) Mock (opcional)
+ * 10) Responsive
  **************************************************************/
 
 /* =========================
@@ -27,13 +28,12 @@ body{
 }
 
 /* =========================
-   1) TOKENS (variables)
+   1) TOKENS
    ========================= */
 :root{
-  /* Gradiente de página */
-  --bg1: #042b35;   /* azul oscuro */
-  --bg2: #4f46ce;   /* índigo (sin uso directo ahora) */
-  --bg3: #0891b2;   /* cyan */
+  /* Gradiente */
+  --bg1: #042b35;
+  --bg3: #0891b2;
 
   /* Superficies */
   --card:   rgba(255,255,255,.10);
@@ -45,8 +45,8 @@ body{
   --muted:  rgba(255,255,255,.85);
 
   /* Acentos */
-  --accent1: #fbbf24; /* amber */
-  --accent2: #fb7185; /* pink */
+  --accent1: #fbbf24;
+  --accent2: #fb7185;
 
   /* Dimensiones */
   --radius: 18px;
@@ -54,7 +54,7 @@ body{
 }
 
 /* =========================
-   2) UTILIDADES / LAYOUTS
+   2) UTILIDADES / LAYOUT
    ========================= */
 .container{
   max-width: 1100px;
@@ -67,22 +67,19 @@ body{
   gap: 28px;
   grid-template-columns: 1.1fr .9fr;
 }
-@media (max-width: 900px){
-  .grid2 { grid-template-columns: 1fr; }
-}
 
 .center { text-align: center; }
 
-/* Tipos rápidos para títulos del logo */
+/* Tipos rápidos */
 .logo_tittle{ font-size: 2rem; font-family: 'Inter', sans-serif; }
 .logo_subtitle{ opacity:.85; font-size: 1.1rem; }
 .proyectos_title{ font-size: 2rem; font-family: 'Manrope', sans-serif; }
 
 /* =========================
-   3) HEADER + BOTONES/CHIPS
+   3) HEADER
    ========================= */
 .header{
-  position: relative;           /* si la quieres sticky: position: sticky */
+  position: relative;   /* si la quieres sticky: position: sticky */
   top: 0;
   backdrop-filter: blur(10px);
   background: rgba(0,0,0,.38);
@@ -104,17 +101,24 @@ body{
   transform: scale(5) translateX(-30px);
   transform-origin: left center;
 }
+
+/* Bloque marca (logo + pequeño gap para el centrado) */
 .brand{
   display: flex; align-items: center; gap: 8px;
   margin-left: 110px; flex: 1;
 }
-/* título centrado en header */
+
+/* Título centrado en header */
 .logo_tittle{
-  position: absolute; left: 50%; transform: translateX(-50%);
-  text-align: center; width: max-content;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: max-content;
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
 }
 
-/* Botones */
+/* Botón */
 .btn{
   display: inline-flex; gap:8px; align-items: center;
   padding:12px 16px;
@@ -160,8 +164,10 @@ body{
     url("../img/proyectofigma.webp") center 75%/cover no-repeat;
 }
 
+/* Badge (posición fluida; en móvil se ajusta a la derecha) */
 .showcase-badge{
-  position: absolute; left: 750px; top: 16px;
+  position: absolute;
+  left: 750px; top: 16px;
   background: rgba(0,0,0,.25);
   border: 1px solid #fff;
   backdrop-filter: blur(4px);
@@ -185,8 +191,6 @@ body{
   display: grid; gap: var(--gap);
   grid-template-columns: repeat(3, 1fr);
 }
-@media (max-width: 860px){ .skills-grid{ grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 520px){ .skills-grid{ grid-template-columns: 1fr; } }
 
 .skill-card{
   display:flex; align-items:center; gap:12px;
@@ -216,15 +220,18 @@ body{
 .section{ padding: 20px 0 64px; }
 .section h2{ margin: 0 0 14px; }
 
+/* Más aire antes de “Proyectos destacados” */
+#proyectos{
+  margin-top: 28px;
+  padding-top: 6px;
+}
+
 /* =========================
    6) PROYECTOS (cards)
    ========================= */
 .cards{
   display:grid; gap:18px;
   grid-template-columns: repeat(3,1fr);
-}
-@media (max-width: 900px){
-  .cards{ grid-template-columns: 1fr; }
 }
 
 .card{
@@ -236,7 +243,7 @@ body{
 }
 .card:hover{ transform: translateY(-8px); }
 
-/* que toda la card sea clicable sin morado visitado */
+/* Enlaces de card */
 .card a{
   display:block;
   text-decoration:none;
@@ -245,7 +252,7 @@ body{
 .card a:visited{ color: inherit; }
 .card a:hover{ text-decoration: none; }
 
-/* thumbs */
+/* Thumbs */
 .thumb{
   height:160px;
   border-radius:14px;
@@ -265,7 +272,7 @@ body{
 .thumb_frame{    background-image: url("../img/mockauppc.png"); }
 .thumb_paleta{   background-image: url("../img/palettebg.png"); }
 .thumb_gradients{background-image: url("../img/gradientbg.png"); }
-.thumb_botones{background-image: url("../img/buttonsbg.png"); }
+.thumb_botones{  background-image: url("../img/buttonsbg.png"); }
 
 .card h3{
   margin:12px 0 6px;
@@ -280,7 +287,7 @@ body{
   font-family:'Plus Jakarta Sans', sans-serif;
 }
 
-/* chips tech */
+/* Chips tech */
 .chips{
   display:flex; gap:8px; flex-wrap:wrap;
   margin-top:10px; font-size:1rem;
@@ -303,9 +310,6 @@ body{
   border-radius:20px;
   padding:22px;
 }
-@media (max-width: 900px){
-  .about{ flex-direction:column; align-items:flex-start; }
-}
 .avatar{
   width:80px; height:80px; border-radius:20px;
   background-image: url(../img/me.png);
@@ -324,7 +328,7 @@ body{
 }
 
 /* =========================
-   9) MOCK / LEGACY (opcional)
+   9) MOCK (opcional)
    ========================= */
 .mock{
   border:1px solid var(--border);
@@ -347,99 +351,69 @@ body{
 }
 
 /* =========================
-   Ajustes responsive (móvil)
+   10) RESPONSIVE
    ========================= */
+
+/* Break 900px */
+@media (max-width: 900px){
+  .grid2 { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  .about { flex-direction: column; align-items: flex-start; }
+}
+
+/* Skills 2 cols */
+@media (max-width: 860px){
+  .skills-grid{ grid-template-columns: repeat(2,1fr); }
+}
+
+/* Skills 1 col */
+@media (max-width: 520px){
+  .skills-grid{ grid-template-columns: 1fr; }
+}
+
+/* Móvil compacto (≤640px): mantener layout del header y escalar */
 @media (max-width: 640px){
 
+  /* Header idéntico, más pequeño */
   .header-in{
-    gap: 10px;
-    flex-wrap: wrap;                 /* permite saltos de línea */
-    justify-content: center;
+    transform: scale(0.85);
+    transform-origin: top center;
+    padding: 10px 0;
   }
 
   .logo{
-    width: 40px; height: 40px;
-    transform: none;                 /* quita el scale(5) */
+    width: 2.2rem;
+    height: 2.2rem;
+    transform: none;                /* elimina el scale(5) en móvil */
+    background-size: contain;
   }
 
-  .brand{
-    margin-left: 0;                  /* quita desplazamiento forzado */
-    gap: 6px;
-  }
+  .brand{ margin-left: 80px; }      /* conserva alineación visual */
 
-  .logo_tittle{
-    position: static;                /* deja de ser absolute */
-    transform: none;
-    width: auto;
-    font-size: 1.25rem;
-    text-align: center;
-  }
-
-  .btn{
-    padding: 10px 12px;              /* botón más compacto */
-  }
-
-  .showcase{ padding: 14px; }
-
-  /* badge del hero: en esquina derecha siempre */
-  .showcase-badge{
-    left: auto;
-    right: 12px;
-    top: 12px;
-    font-size: .9rem;
-    padding: 6px 10px;
-  }
-
-  /* Cards y skills ya tienen media queries; afinamos un poco los radios/gaps */
-  .skill-card{ padding: 14px; }
-  .card h3{ font-size: 1.4rem; }
-  .card p{ font-size: 1rem; }
-
-  /* Contenedor con más “aire” lateral pequeño */
-  .container{ padding: 0 14px; }
-}
-
-/* ——— Más aire antes de “Proyectos destacados” ——— */
-#proyectos{
-  margin-top: 28px;      /* súbelo a 40px si lo quieres más separado */
-  padding-top: 6px;
-}
-
-/* ——— Título “Francisco Sánchez” centrado y un poco más pequeño ——— */
-/* Desktop/tablet: centrado absoluto en la barra */
-@media (min-width: 641px){
   .logo_tittle{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: clamp(1.1rem, 2.2vw, 1.6rem); /* más pequeño */
-    text-align: center;
+    font-size: 1rem;
   }
+
+  .btn{
+    font-size: .9rem;
+    padding: 8px 12px;
+  }
+
+  /* Hero */
+  .showcase{ padding: 14px; }
+  .showcase-badge{
+    left: auto; right: 12px; top: 12px;
+    font-size: .9rem; padding: 6px 10px;
+  }
+
+  /* Tipos cards */
+  .skill-card{ padding: 14px; }
+  .card h3{ font-size: 1.4rem; }
+  .card p{ font-size: 1rem; }
+
+  /* Contenedor con más margen interior */
+  .container{ padding: 0 14px; }
 }
-
-/* Móvil: que ocupe toda la fila, centrado y compacto */
-@media (max-width: 640px){
-  .header-in{
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    row-gap: 6px;
-  }
-  .logo_tittle{
-    position: static;
-    transform: none;
-    font-size: 1.15rem;  /* un poco más pequeño */
-    text-align: center;
-  }
-}
-
-
-/* — Sugerencias rápidas:
-   - Cambia --accent1/--accent2 para variar el gradiente.
-   - Para usar imágenes reales en .thumb:
-       background: url("ruta.jpg") center/cover no-repeat;
-   - Más contraste en header:
-       .header { background: rgba(0,0,0,.28); }
-   - Más “flotación” en las cards:
-       .card { box-shadow: 0 12px 32px rgba(0,0,0,.25); }
-*/
