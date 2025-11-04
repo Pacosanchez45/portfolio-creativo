@@ -220,10 +220,11 @@ body{
 .section{ padding: 20px 0 64px; }
 .section h2{ margin: 0 0 14px; }
 
-/* Más aire antes de “Proyectos destacados” */
+/* Más aire antes/después de “Proyectos destacados” */
 #proyectos{
   margin-top: 28px;
   padding-top: 6px;
+  margin-bottom: 40px;   /* nuevo: separación con Sobre mí */
 }
 
 /* =========================
@@ -309,6 +310,7 @@ body{
   background:var(--card);
   border-radius:20px;
   padding:22px;
+  margin-top: 36px;    /* nuevo: separación extra */
 }
 .avatar{
   width:80px; height:80px; border-radius:20px;
@@ -371,49 +373,67 @@ body{
   .skills-grid{ grid-template-columns: 1fr; }
 }
 
-/* Móvil compacto (≤640px): mantener layout del header y escalar */
+/* ===== HEADER — MÓVIL (≤640px): mismo layout, más compacto ===== */
 @media (max-width: 640px){
 
-  /* Header idéntico, más pequeño */
+  /* Header en 3 columnas: [logo][títulos centrados][CTA] */
   .header-in{
-    transform: scale(0.85);
-    transform-origin: top center;
-    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    transform: none;                 /* sin scale */
   }
 
+  /* Logo pequeño, sin transformaciones */
   .logo{
-    width: 2.2rem;
-    height: 2.2rem;
-    transform: none;                /* elimina el scale(5) en móvil */
+    width: 32px;
+    height: 32px;
+    transform: none;                 /* anula scale(5) del base */
     background-size: contain;
   }
 
-  .brand{ margin-left: 80px; }      /* conserva alineación visual */
+  /* Sin empuje lateral en móvil */
+  .brand{ margin-left: 0; }
 
+  /* Título/subtítulo centrados en la columna central */
+  .logo_tittle,
+  .logo_subtitle{
+    grid-column: 2;
+    justify-self: center;
+    position: static;
+    transform: none;
+    text-align: center;
+    width: auto;
+  }
   .logo_tittle{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1rem;
+    font-size: clamp(1rem, 3.6vw, 1.15rem);
+    line-height: 1.1;
+  }
+  .logo_subtitle{
+    font-size: .95rem;
+    opacity: .9;
+    margin-top: 2px;
   }
 
-  .btn{
+  /* Botón a la derecha (columna 3) sin saltos de línea */
+  .header-in .btn{
+    grid-column: 3;
+    justify-self: end;
     font-size: .9rem;
     padding: 8px 12px;
+    white-space: nowrap;
   }
 
-  /* Hero */
+  /* Ajustes compactos del hero/contenedor */
   .showcase{ padding: 14px; }
   .showcase-badge{
     left: auto; right: 12px; top: 12px;
     font-size: .9rem; padding: 6px 10px;
   }
-
-  /* Tipos cards */
   .skill-card{ padding: 14px; }
   .card h3{ font-size: 1.4rem; }
   .card p{ font-size: 1rem; }
-
-  /* Contenedor con más margen interior */
   .container{ padding: 0 14px; }
 }
