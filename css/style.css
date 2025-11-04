@@ -253,7 +253,8 @@ body{
 }
 .thumb_frame,
 .thumb_paleta,
-.thumb_gradients{
+.thumb_gradients,
+.thumb_botones{
   height:160px;
   border-radius:14px;
   border: 1px solid var(--border);
