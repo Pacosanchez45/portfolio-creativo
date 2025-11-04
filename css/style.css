@@ -346,6 +346,59 @@ body{
   background: rgba(255,255,255,.15);
 }
 
+/* =========================
+   Ajustes responsive (móvil)
+   ========================= */
+@media (max-width: 640px){
+
+  .header-in{
+    gap: 10px;
+    flex-wrap: wrap;                 /* permite saltos de línea */
+    justify-content: center;
+  }
+
+  .logo{
+    width: 40px; height: 40px;
+    transform: none;                 /* quita el scale(5) */
+  }
+
+  .brand{
+    margin-left: 0;                  /* quita desplazamiento forzado */
+    gap: 6px;
+  }
+
+  .logo_tittle{
+    position: static;                /* deja de ser absolute */
+    transform: none;
+    width: auto;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .btn{
+    padding: 10px 12px;              /* botón más compacto */
+  }
+
+  .showcase{ padding: 14px; }
+
+  /* badge del hero: en esquina derecha siempre */
+  .showcase-badge{
+    left: auto;
+    right: 12px;
+    top: 12px;
+    font-size: .9rem;
+    padding: 6px 10px;
+  }
+
+  /* Cards y skills ya tienen media queries; afinamos un poco los radios/gaps */
+  .skill-card{ padding: 14px; }
+  .card h3{ font-size: 1.4rem; }
+  .card p{ font-size: 1rem; }
+
+  /* Contenedor con más “aire” lateral pequeño */
+  .container{ padding: 0 14px; }
+}
+
 /* — Sugerencias rápidas:
    - Cambia --accent1/--accent2 para variar el gradiente.
    - Para usar imágenes reales en .thumb:
