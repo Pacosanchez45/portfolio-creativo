@@ -1,41 +1,39 @@
 /**************************************************************
- *  PORTFOLIO (A) — CREATIVO-VISUAL
- *  Ordenado según el flujo de la web:
+ *  PORTFOLIO (A) — CREATIVO-VISUAL (versión optimizada)
+ *  Estructura:
  *  0) Reset/Base
  *  1) Tokens (variables)
  *  2) Utilidades/Layouts
- *  3) Header
- *  4) HERO + SKILLS (showcase)
+ *  3) Header + botones/chips
+ *  4) HERO + Skills
  *  5) Secciones genéricas
  *  6) Proyectos (cards)
  *  7) Sobre mí
- *  8) Contacto
- *  9) Footer
- *  10) (Opcional) Estilos legacy del mock
- *  11) Sugerencias de personalización
+ *  8) Footer
+ *  9) (Opcional) Mock/legacy
  **************************************************************/
 
 /* =========================
-   0) RESET BÁSICO / BASE
+   0) RESET / BASE
    ========================= */
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 
-body {
+body{
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
-  background: linear-gradient(120deg, var(--bg1), var(--bg3), var(--bg1)) fixed; /* fondo global */
+  background: linear-gradient(120deg, var(--bg1), var(--bg3), var(--bg1)) fixed;
   min-height: 100dvh;
 }
 
 /* =========================
-   1) DESIGN TOKENS (variables)
+   1) TOKENS (variables)
    ========================= */
 :root{
   /* Gradiente de página */
-  --bg1: #042b35;  /* azul oscuro */
-  --bg2: #4f46ce;  /* índigo */
-  --bg3: #0891b2;  /* cyan */
+  --bg1: #042b35;   /* azul oscuro */
+  --bg2: #4f46ce;   /* índigo (sin uso directo ahora) */
+  --bg3: #0891b2;   /* cyan */
 
   /* Superficies */
   --card:   rgba(255,255,255,.10);
@@ -58,504 +56,130 @@ body {
 /* =========================
    2) UTILIDADES / LAYOUTS
    ========================= */
-.container { max-width: 1100px; margin: auto; padding: 0 20px; }
+.container{
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
 
-/* Grid de dos columnas para layouts antiguos (si lo usas) */
-.grid2 {
+.grid2{
   display: grid;
   gap: 28px;
   grid-template-columns: 1.1fr .9fr;
 }
-@media (max-width: 900px){ .grid2 { grid-template-columns: 1fr; } }
+@media (max-width: 900px){
+  .grid2 { grid-template-columns: 1fr; }
+}
 
 .center { text-align: center; }
 
-/* Tipos rápidos del logotipo/títulos auxiliares */
+/* Tipos rápidos para títulos del logo */
 .logo_tittle{ font-size: 2rem; font-family: 'Inter', sans-serif; }
 .logo_subtitle{ opacity:.85; font-size: 1.1rem; }
-
 .proyectos_title{ font-size: 2rem; font-family: 'Manrope', sans-serif; }
 
-
 /* =========================
-   3) CABECERA (header + nav)
+   3) HEADER + BOTONES/CHIPS
    ========================= */
-.header {
-  position: relative; /* si quieres sticky: sticky */
+.header{
+  position: relative;           /* si la quieres sticky: position: sticky */
   top: 0;
   backdrop-filter: blur(10px);
   background: rgba(0,0,0,.38);
   border-bottom: 1px solid var(--border);
 }
-.header-in {
+.header-in{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0px;
+  padding: 14px 0;
   position: relative;
 }
 
-.logo {
-  width: 3rem;
-  height: 3rem;
+/* Marca / logo */
+.logo{
+  width: 3rem; height: 3rem; flex-shrink: 0;
   border-radius: 12px;
   background: url("../img/logoheader.png") center/contain no-repeat;
   transform: scale(5) translateX(-30px);
   transform-origin: left center;
-  flex-shrink: 0;
 }
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-left: 110px;
-  flex: 1; /* permite que el bloque central se centre bien */
+.brand{
+  display: flex; align-items: center; gap: 8px;
+  margin-left: 110px; flex: 1;
 }
-
-.logo_tittle {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  width: max-content;
+/* título centrado en header */
+.logo_tittle{
+  position: absolute; left: 50%; transform: translateX(-50%);
+  text-align: center; width: max-content;
 }
 
-/* Botones CTA genéricos (también se usan en el hero) */
+/* Botones */
 .btn{
-  display:inline-flex; gap:8px; align-items:center;
-  padding:12px 16px; border-radius:14px;
-  border:1px solid var(--border); text-decoration:none;
-  color:var(--text); font-weight:600;
-}
-.btn.primary{ 
-  background:#fff; 
-  color:#111; 
-  border-color:#fff; 
-}
-
-.btn.ghost{ 
-  background:rgba(255,255,255,.10); 
-}
-
-/* Chips genéricos (estado/disponibilidad) */
-.badge{
-  display:inline-flex; 
-  padding:6px 10px; 
-  border-radius:999px;
-  background:var(--chip); 
-  font-size:.75rem; 
-  margin-right:8px;
-}
-
-/* =========================
-   4) HERO + SKILLS (showcase)
-   ========================= */
-.showcase{
-  background: rgba(255,255,255,.08);
-  border: 1px solid var(--border);
-  border-radius: 22px;
-  padding: 18px;
-  margin-top: 2rem;            /* espacio con el header */
-  backdrop-filter: blur(6px);
-  box-shadow: 0 18px 60px rgba(12,22,58,.35);
-}
-
-/* Hero con imagen de fondo + overlay */
-.showcase-hero{
-  height: clamp(220px, 36vw, 480px);
-  border-radius: 18px;
-  background:linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0)), url("../img/proyectofigma.webp") center 75%/cover no-repeat; /* cambia la ruta si quieres */
-  border: 1px solid var(--border);
-  position: relative;
-}
-
-/* Badge del hero (glass limpio) */
-.showcase-badge{
-  position: absolute; left: 750px; top: 16px;
-  background: rgba(0,0,0,.25);
-  border: 1px solid rgb(255, 255, 255);
-  backdrop-filter: blur(4px);
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-size: 1rem;
-  color: var(--text);
-}
-
-/* Título dentro del hero */
-.showcase-title{
-  position: absolute; left: 22px; right: 22px; bottom: 20px;
-  font-size: clamp(22px, 4vw, 34px);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  line-height: 1.1; font-weight: 900; letter-spacing: -0.02em;
-  color: var(--text); text-shadow: 0 8px 24px rgba(0,0,0,.25);
-}
-
-/* Grid de habilidades */
-.skills-grid{
-  margin-top: var(--gap);
-  display: grid; gap: var(--gap);
-  grid-template-columns: repeat(3, 1fr);
-}
-@media (max-width: 860px){ .skills-grid{ grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 520px){ .skills-grid{ grid-template-columns: 1fr; } }
-
-.skill-card{
-  display:flex; align-items:center; gap:12px;
-  padding:16px; border-radius:14px;
-  background: rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.22);
-  transition: transform .18s ease, background .18s ease, border-color .18s ease;
-  font-family: 'Outfit', sans-serif;
-}
-.skill-card:hover{ transform: translateY(-2px); background:rgba(255,255,255,.16); border-color:rgba(255,255,255,.35); }
-
-.skill-ico{
-  flex:0 0 40px; height:40px; width:40px; border-radius:10px;
-  background: linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
-  display:grid; place-items:center; font-weight:800; color:var(--text);
-}
-.skill-name{ font-weight:600; letter-spacing:.2px; color:var(--muted); }
-
-/* =========================
-   5) SECCIONES GENÉRICAS
-   ========================= */
-.section{ padding: 20px 0 64px; }
-.section h2{ margin: 0 0 14px; }
-
-/* =========================
-   6) PROYECTOS (cards)
-   ========================= */
-.cards{
-  display:grid; gap:18px;
-  grid-template-columns: repeat(3,1fr);
-}
-
-@media (max-width: 900px){ .cards{ grid-template-columns:1fr; } }
-
-.card{
+  display: inline-flex; gap:8px; align-items: center;
+  padding:12px 16px;
+  border-radius: 14px;
   border:1px solid var(--border);
-  background:var(--card);
-  border-radius:20px;
-  padding:16px;
-  transition: transform .2s;
-}
-.card:hover{ transform: translateY(-8px); }
-
-/* Quita el estilo de enlace dentro de las cards */
-.card a {
-  display: block;            /* hace que toda la card sea clicable */
-  text-decoration: none;     /* sin subrayado */
-  color: inherit;            /* hereda el color del texto */
-}
-
-/* Evita el morado del enlace visitado */
-.card a:visited {
-  color: inherit;
-}
-
-/* Opcional: efectos al pasar el ratón */
-.card a:hover {
+  color: var(--text);
+  font-weight: 600;
   text-decoration: none;
 }
+.btn.primary{ background:#fff; color:#111; border-color:#fff; }
+.btn.ghost{ background: rgba(255,255,255,.10); }
 
-.thumb {
-  height: 160px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--accent1), var(--accent2));
-}
-
-.thumb_frame{
-  height: 160px;
-  border-radius: 14px;
-  background: url("../img/mockauppc.png") center/cover no-repeat;
-  border: 1px solid var(--border);
-}
-
-.thumb_paleta{
-  height: 160px;
-  border-radius: 14px;
-  background: url("../img/palettebg.png") center/cover no-repeat;
-  border: 1px solid var(--border);
-}
-
-.thumb_gradients{
-  height: 160px;
-  border-radius: 14px;
-  background: url("../img/gradientbg.png") center/cover no-repeat;
-  border: 1px solid var(--border);
-}
-
-.card h3{
-  margin:12px 0 6px;
-  font-size:1.8rem;
-  font-family:'Manrope',sans-serif;
-  letter-spacing: .05rem;
-}
-.card p{
-  margin-top:15px; 
-  color:var(--muted);
-  font-size:1.1rem;
-  font-family:'Plus Jakarta Sans', sans-serif;
-}
-
-/* Chips de tecnología */
-.chips{
-  display:flex; gap:8px; flex-wrap:wrap;
-  margin-top:10px; font-size:1rem;
-  font-family:'Plus Jakarta Sans', sans-serif;
-}
-.chips span{
-  background:var(--chip); padding:6px 10px; border-radius:999px;
-  font-size:.85rem;
-}
-
-/* =========================
-   7) SOBRE MÍ
-   ========================= */
-.about{
-  display:flex; gap:22px; align-items:center;
-  border:1px solid var(--border); background:var(--card);
-  border-radius:20px; padding:22px;
-}
-@media (max-width: 900px){ .about{ flex-direction:column; align-items:flex-start; } }
-
-.avatar{
-  width:80px; height:80px; border-radius:20px;
-  background-image: url(../img/me.png);
-}
-
-/* =========================
-   8) CONTACTO
-   ========================= */
-/* usa .center para centrar contenido y .btn.primary para el CTA */
-
-/* =========================
-   9) FOOTER
-   ========================= */
-.footer{
-  opacity:.8; border-top:1px solid var(--border);
-  padding:40px 0 40px; 
-  background: rgba(0,0,0,.78);
-  text-align: center;
-}
-
-/* ============================================================
-   10) (OPCIONAL) ESTILOS LEGACY DEL MOCK (si lo reutilizas)
-   ============================================================ */
-.mock{
-  border:1px solid var(--border); border-radius:20px;
-  background: rgba(255,255,255,.10); padding:10px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.25);
-}
-.mock-hero{ height:260px; border-radius:16px; background: linear-gradient(135deg, var(--accent1), var(--accent2)); }
-.mock-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:10px; }
-.mock-grid>div{ height:70px; border-radius:12px; background: rgba(255,255,255,.15); }
-
-/**************************************************************
- *  11) SUGERENCIAS DE PERSONALIZACIÓN
- **************************************************************/
-/* - Cambia --accent1/--accent2 para otro gradiente.
-   - Para imágenes reales en .thumb:
-       background: url("ruta/a/tu-imagen.jpg") center/cover no-repeat;
-   - Más contraste en header:
-       .header { background: rgba(0,0,0,.28); }
-   - Más “flotación” en las cards:
-       .card { box-shadow: 0 12px 32px rgba(0,0,0,.25); }
-*/
-
-/**************************************************************
- *  PORTFOLIO (A) — CREATIVO-VISUAL
- *  Ordenado según el flujo de la web:
- *  0) Reset/Base
- *  1) Tokens (variables)
- *  2) Utilidades/Layouts
- *  3) Header
- *  4) HERO + SKILLS (showcase)
- *  5) Secciones genéricas
- *  6) Proyectos (cards)
- *  7) Sobre mí
- *  8) Contacto
- *  9) Footer
- *  10) (Opcional) Estilos legacy del mock
- *  11) Sugerencias de personalización
- **************************************************************/
-
-/* =========================
-   0) RESET BÁSICO / BASE
-   ========================= */
-* { box-sizing: border-box; }
-html, body { margin: 0; }
-
-body {
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--text);
-  background: linear-gradient(120deg, var(--bg1), var(--bg3), var(--bg1)) fixed; /* fondo global */
-  min-height: 100dvh;
-}
-
-/* =========================
-   1) DESIGN TOKENS (variables)
-   ========================= */
-:root{
-  /* Gradiente de página */
-  --bg1: #042b35;  /* azul oscuro */
-  --bg2: #4f46ce;  /* índigo */
-  --bg3: #0891b2;  /* cyan */
-
-  /* Superficies */
-  --card:   rgba(255,255,255,.10);
-  --border: rgba(255,255,255,.25);
-  --chip:   rgba(255,255,255,.15);
-
-  /* Tipografía */
-  --text:   #fff;
-  --muted:  rgba(255,255,255,.85);
-
-  /* Acentos */
-  --accent1: #fbbf24; /* amber */
-  --accent2: #fb7185; /* pink */
-
-  /* Dimensiones */
-  --radius: 18px;
-  --gap: 18px;
-}
-
-/* =========================
-   2) UTILIDADES / LAYOUTS
-   ========================= */
-.container { max-width: 1100px; margin: auto; padding: 0 20px; }
-
-/* Grid de dos columnas para layouts antiguos (si lo usas) */
-.grid2 {
-  display: grid;
-  gap: 28px;
-  grid-template-columns: 1.1fr .9fr;
-}
-@media (max-width: 900px){ .grid2 { grid-template-columns: 1fr; } }
-
-.center { text-align: center; }
-
-/* Tipos rápidos del logotipo/títulos auxiliares */
-.logo_tittle{ font-size: 2rem; font-family: 'Inter', sans-serif; }
-.logo_subtitle{ opacity:.85; font-size: 1.1rem; }
-
-.proyectos_title{ font-size: 2rem; font-family: 'Manrope', sans-serif; }
-
-
-/* =========================
-   3) CABECERA (header + nav)
-   ========================= */
-.header {
-  position: relative; /* si quieres sticky: sticky */
-  top: 0;
-  backdrop-filter: blur(10px);
-  background: rgba(0,0,0,.38);
-  border-bottom: 1px solid var(--border);
-}
-.header-in {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 0px;
-  position: relative;
-}
-
-.logo {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 12px;
-  background: url("../img/logoheader.png") center/contain no-repeat;
-  transform: scale(5) translateX(-30px);
-  transform-origin: left center;
-  flex-shrink: 0;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-left: 110px;
-  flex: 1; /* permite que el bloque central se centre bien */
-}
-
-.logo_tittle {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  width: max-content;
-}
-
-/* Botones CTA genéricos (también se usan en el hero) */
-.btn{
-  display:inline-flex; gap:8px; align-items:center;
-  padding:12px 16px; border-radius:14px;
-  border:1px solid var(--border); text-decoration:none;
-  color:var(--text); font-weight:600;
-}
-.btn.primary{ 
-  background:#fff; 
-  color:#111; 
-  border-color:#fff; 
-}
-
-.btn.ghost{ 
-  background:rgba(255,255,255,.10); 
-}
-
-/* Chips genéricos (estado/disponibilidad) */
+/* Chips / badges */
 .badge{
-  display:inline-flex; 
-  padding:6px 10px; 
-  border-radius:999px;
-  background:var(--chip); 
-  font-size:.75rem; 
-  margin-right:8px;
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--chip);
+  font-size: .75rem;
+  margin-right: 8px;
 }
 
 /* =========================
-   4) HERO + SKILLS (showcase)
+   4) HERO + SKILLS
    ========================= */
 .showcase{
   background: rgba(255,255,255,.08);
   border: 1px solid var(--border);
-  border-radius: 22px;
+  border-radius: calc(var(--radius) + 4px);
   padding: 18px;
-  margin-top: 2rem;            /* espacio con el header */
+  margin-top: 2rem;
   backdrop-filter: blur(6px);
   box-shadow: 0 18px 60px rgba(12,22,58,.35);
 }
 
-/* Hero con imagen de fondo + overlay */
 .showcase-hero{
   height: clamp(220px, 36vw, 480px);
-  border-radius: 18px;
-  background:linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0)), url("../img/proyectofigma.webp") center 75%/cover no-repeat; /* cambia la ruta si quieres */
-  border: 1px solid var(--border);
+  border-radius: var(--radius);
   position: relative;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0)),
+    url("../img/proyectofigma.webp") center 75%/cover no-repeat;
 }
 
-/* Badge del hero (glass limpio) */
 .showcase-badge{
   position: absolute; left: 750px; top: 16px;
   background: rgba(0,0,0,.25);
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid #fff;
   backdrop-filter: blur(4px);
   padding: 8px 12px;
   border-radius: 999px;
-  font-size: 1rem;
-  color: var(--text);
+  font-size: 1rem; color: var(--text);
 }
 
-/* Título dentro del hero */
 .showcase-title{
   position: absolute; left: 22px; right: 22px; bottom: 20px;
   font-size: clamp(22px, 4vw, 34px);
   font-family: 'Plus Jakarta Sans', sans-serif;
   line-height: 1.1; font-weight: 900; letter-spacing: -0.02em;
-  color: var(--text); text-shadow: 0 8px 24px rgba(0,0,0,.25);
+  color: var(--text);
+  text-shadow: 0 8px 24px rgba(0,0,0,.25);
 }
 
-/* Grid de habilidades */
+/* Skills */
 .skills-grid{
   margin-top: var(--gap);
   display: grid; gap: var(--gap);
@@ -572,17 +196,22 @@ body {
   transition: transform .18s ease, background .18s ease, border-color .18s ease;
   font-family: 'Outfit', sans-serif;
 }
-.skill-card:hover{ transform: translateY(-2px); background:rgba(255,255,255,.16); border-color:rgba(255,255,255,.35); }
-
+.skill-card:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.35);
+}
 .skill-ico{
-  flex:0 0 40px; height:40px; width:40px; border-radius:10px;
+  flex:0 0 40px; height:40px; width:40px;
+  border-radius:10px;
+  display:grid; place-items:center;
+  font-weight:800; color:var(--text);
   background: linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
-  display:grid; place-items:center; font-weight:800; color:var(--text);
 }
 .skill-name{ font-weight:600; letter-spacing:.2px; color:var(--muted); }
 
 /* =========================
-   5) SECCIONES GENÉRICAS
+   5) SECCIONES
    ========================= */
 .section{ padding: 20px 0 64px; }
 .section h2{ margin: 0 0 14px; }
@@ -594,65 +223,71 @@ body {
   display:grid; gap:18px;
   grid-template-columns: repeat(3,1fr);
 }
-@media (max-width: 900px){ .cards{ grid-template-columns:1fr; } }
+@media (max-width: 900px){
+  .cards{ grid-template-columns: 1fr; }
+}
 
 .card{
   border:1px solid var(--border);
-  background:var(--card);
-  border-radius:20px;
+  background: var(--card);
+  border-radius: 20px;
   padding:16px;
   transition: transform .2s;
 }
 .card:hover{ transform: translateY(-8px); }
 
-.thumb {
-  height: 160px;
-  border-radius: 14px;
+/* que toda la card sea clicable sin morado visitado */
+.card a{
+  display:block;
+  text-decoration:none;
+  color: inherit;
+}
+.card a:visited{ color: inherit; }
+.card a:hover{ text-decoration: none; }
+
+/* thumbs */
+.thumb{
+  height:160px;
+  border-radius:14px;
   background: linear-gradient(135deg, var(--accent1), var(--accent2));
 }
-
-.thumb_frame{
-  height: 160px;
-  border-radius: 14px;
-  background: url("../img/mockauppc.png") center/cover no-repeat;
-  border: 1px solid var(--border);
-}
-
-.thumb_paleta{
-  height: 160px;
-  border-radius: 14px;
-  background: url("../img/palettebg.png") center/cover no-repeat;
-  border: 1px solid var(--border);
-}
-
+.thumb_frame,
+.thumb_paleta,
 .thumb_gradients{
-  height: 160px;
-  border-radius: 14px;
-  background: url("../img/gradientbg.png") center/cover no-repeat;
+  height:160px;
+  border-radius:14px;
   border: 1px solid var(--border);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+.thumb_frame{    background-image: url("../img/mockauppc.png"); }
+.thumb_paleta{   background-image: url("../img/palettebg.png"); }
+.thumb_gradients{background-image: url("../img/gradientbg.png"); }
 
 .card h3{
   margin:12px 0 6px;
   font-size:1.8rem;
   font-family:'Manrope',sans-serif;
-  letter-spacing: .05rem;
+  letter-spacing:.05rem;
 }
 .card p{
-  margin-top:15px; 
+  margin-top:15px;
   color:var(--muted);
   font-size:1.1rem;
   font-family:'Plus Jakarta Sans', sans-serif;
 }
 
-/* Chips de tecnología */
+/* chips tech */
 .chips{
   display:flex; gap:8px; flex-wrap:wrap;
   margin-top:10px; font-size:1rem;
   font-family:'Plus Jakarta Sans', sans-serif;
 }
 .chips span{
-  background:var(--chip); padding:6px 10px; border-radius:999px;
+  background:var(--chip);
+  padding:6px 10px;
+  border-radius:999px;
   font-size:.85rem;
 }
 
@@ -661,49 +296,58 @@ body {
    ========================= */
 .about{
   display:flex; gap:22px; align-items:center;
-  border:1px solid var(--border); background:var(--card);
-  border-radius:20px; padding:22px;
+  border:1px solid var(--border);
+  background:var(--card);
+  border-radius:20px;
+  padding:22px;
 }
-@media (max-width: 900px){ .about{ flex-direction:column; align-items:flex-start; } }
-
+@media (max-width: 900px){
+  .about{ flex-direction:column; align-items:flex-start; }
+}
 .avatar{
   width:80px; height:80px; border-radius:20px;
   background-image: url(../img/me.png);
+  background-size: cover; background-position:center;
 }
 
 /* =========================
-   8) CONTACTO
-   ========================= */
-/* usa .center para centrar contenido y .btn.primary para el CTA */
-
-/* =========================
-   9) FOOTER
+   8) FOOTER
    ========================= */
 .footer{
-  opacity:.8; border-top:1px solid var(--border);
-  padding:40px 0 40px; 
+  opacity:.8;
+  border-top:1px solid var(--border);
+  padding:40px 0;
   background: rgba(0,0,0,.78);
   text-align: center;
 }
 
-/* ============================================================
-   10) (OPCIONAL) ESTILOS LEGACY DEL MOCK (si lo reutilizas)
-   ============================================================ */
+/* =========================
+   9) MOCK / LEGACY (opcional)
+   ========================= */
 .mock{
-  border:1px solid var(--border); border-radius:20px;
-  background: rgba(255,255,255,.10); padding:10px;
+  border:1px solid var(--border);
+  border-radius:20px;
+  background: rgba(255,255,255,.10);
+  padding:10px;
   box-shadow: 0 20px 60px rgba(0,0,0,.25);
 }
-.mock-hero{ height:260px; border-radius:16px; background: linear-gradient(135deg, var(--accent1), var(--accent2)); }
-.mock-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:10px; }
-.mock-grid>div{ height:70px; border-radius:12px; background: rgba(255,255,255,.15); }
+.mock-hero{
+  height:260px; border-radius:16px;
+  background: linear-gradient(135deg, var(--accent1), var(--accent2));
+}
+.mock-grid{
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:10px; margin-top:10px;
+}
+.mock-grid>div{
+  height:70px; border-radius:12px;
+  background: rgba(255,255,255,.15);
+}
 
-/**************************************************************
- *  11) SUGERENCIAS DE PERSONALIZACIÓN
- **************************************************************/
-/* - Cambia --accent1/--accent2 para otro gradiente.
-   - Para imágenes reales en .thumb:
-       background: url("ruta/a/tu-imagen.jpg") center/cover no-repeat;
+/* — Sugerencias rápidas:
+   - Cambia --accent1/--accent2 para variar el gradiente.
+   - Para usar imágenes reales en .thumb:
+       background: url("ruta.jpg") center/cover no-repeat;
    - Más contraste en header:
        .header { background: rgba(0,0,0,.28); }
    - Más “flotación” en las cards:
