@@ -399,6 +399,41 @@ body{
   .container{ padding: 0 14px; }
 }
 
+/* ——— Más aire antes de “Proyectos destacados” ——— */
+#proyectos{
+  margin-top: 28px;      /* súbelo a 40px si lo quieres más separado */
+  padding-top: 6px;
+}
+
+/* ——— Título “Francisco Sánchez” centrado y un poco más pequeño ——— */
+/* Desktop/tablet: centrado absoluto en la barra */
+@media (min-width: 641px){
+  .logo_tittle{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem); /* más pequeño */
+    text-align: center;
+  }
+}
+
+/* Móvil: que ocupe toda la fila, centrado y compacto */
+@media (max-width: 640px){
+  .header-in{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 6px;
+  }
+  .logo_tittle{
+    position: static;
+    transform: none;
+    font-size: 1.15rem;  /* un poco más pequeño */
+    text-align: center;
+  }
+}
+
+
 /* — Sugerencias rápidas:
    - Cambia --accent1/--accent2 para variar el gradiente.
    - Para usar imágenes reales en .thumb:
