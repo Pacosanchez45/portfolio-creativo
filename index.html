@@ -99,6 +99,161 @@
         </div>
       </article>
       <article class="card">
+        <a href="http://gradientes.uiverse.es">
+          <div class="thumb_gradients"></div>
+          <h3>Generador de Botones — UIverse</h3>
+          <p>Herramienta visual para diseñar botones personalizados con control total sobre tipografía, colores, sombras, bordes y efectos hover.
+          <br>
+          <br>
+          Permite ajustar cada parámetro en tiempo real, visualizar el resultado instantáneamente y copiar el código CSS y HTML listo para usar.
+          <br>
+          <br>
+          Ideal para interfaces modernas, componentes interactivos, sistemas de diseño y prototipos UI/UX.</p>
+          <div class="chips">
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>UI Design</span>
+            <span>Buttons</span>
+          </div>
+      </a>
+      </article>
+    </div>
+  </section>
+  
+
+  <section class="section container">
+    <div class="about">
+      <div class="avatar"></div>
+      <div>
+        <h2>Sobre mí</h2>
+        <p style="margin:6px 0 0;color:var(--muted)">
+          Soy Francisco Sánchez, enfocado en diseño UI, prototipado en Figma y maquetación moderna (HTML/CSS/JS).
+          Me gusta combinar estética y claridad para que cada pantalla tenga propósito.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section container center">
+    <h2>Contacto</h2>
+    <p style="color:var(--muted);max-width:60ch;margin:8px auto 18px">
+      ¿Tienes una idea o necesitas mejorar tu web? Hablemos y vemos cómo darle forma.
+    </p>
+    <a class="btn primary" href="mailto:tuemail@ejemplo.com">Escríbeme</a>
+    <p style="opacity:.8;margin-top:14px;font-size:.9rem">
+      Francisco Sánchez — Diseñador y Desarrollador Web
+    </p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container center">© <span id="y"></span> Francisco Sánchez. Todos los derechos reservados.</div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Francisco Sánchez — Portfolio</title>
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=DM+Sans:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container header-in">
+    <div class="brand">
+      <div class="logo"></div>
+      <div class="logo_tittle">
+        <strong>Francisco Sánchez</strong>
+        <div class="logo_subtitle">Diseñador y Desarrollador Web</div>
+      </div>
+    </div>
+    <a class="btn ghost" href="#contacto">Contactar</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO + SKILLS (Opción 1) -->
+  <section class="container">
+    <div class="showcase">
+      <!-- Hero con imagen -->
+      <div class="showcase-hero">
+        <div class="showcase-badge">Disponible · Remoto / España</div>
+      </div>
+
+      <!-- Grid de habilidades -->
+      <div class="skills-grid" aria-label="Herramientas y tecnologías">
+        <div class="skill-card">
+          <div class="skill-ico">H</div><div class="skill-name">HTML5</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-ico">C</div><div class="skill-name">CSS3 / Responsive</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-ico">J</div><div class="skill-name">JavaScript</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-ico">F</div><div class="skill-name">Figma / UI Kits</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-ico">R</div><div class="skill-name">React (básico)</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-ico">A</div><div class="skill-name">Accesibilidad (A11y)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" class="section container">
+    <h2 class="proyectos_title">Proyectos destacados</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="thumb_frame"></div>
+        <h3>FRAME Festival — Web de venta de entradas</h3>
+        <p>
+        Proyecto conceptual donde diseñé la web oficial del festival FRAME, centrada en una experiencia visual inmersiva y un proceso de compra fluido.
+        <br>
+        <br>
+        El diseño combina color, tipografía y jerarquía para reflejar la energía del evento.</p>
+        <div class="chips"><span>Figma</span><span>HTML/CSS</span><span>JS</span></div>
+      </article>
+      <article class="card">
+        <div class="thumb_paleta"></div>
+        <h3>Generador de Paletas — UIverse</h3>
+          <p>
+            Aplicación web interactiva que genera combinaciones de colores aleatorias, permite bloquear tonos,
+            copiar códigos HEX, previsualizar la paleta en una interfaz tipo dashboard y guardarlas localmente.
+          </p>
+        <div class="chips">
+          <span>JavaScript</span>
+          <span>UI/UX</span>
+          <span>LocalStorage</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb_gradients"></div>
+        <h3>Generador de Gradientes — UIverse</h3>
+        <p>Herramienta interactiva para diseñar gradientes lineales o radiales con control total sobre ángulo, colores y posiciones.
+        <br>
+        <br>
+        Ideal para interfaces modernas, fondos, componentes y exploración de combinaciones cromáticas.</p>
+        <div class="chips">
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Gradients</span>
+        </div>
+      </article>
+      <article class="card">
         <div class="thumb_gradients"></div>
         <h3>Generador de Botones — UIverse</h3>
         <p>Herramienta visual para diseñar botones personalizados con control total sobre tipografía, colores, sombras, bordes y efectos hover.
