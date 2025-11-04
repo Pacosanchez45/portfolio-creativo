@@ -224,7 +224,7 @@ body{
 #proyectos{
   margin-top: 28px;
   padding-top: 6px;
-  margin-bottom: 40px;   /* nuevo: separación con Sobre mí */
+  margin-bottom: 40px;   /* separación con Sobre mí */
 }
 
 /* =========================
@@ -310,7 +310,7 @@ body{
   background:var(--card);
   border-radius:20px;
   padding:22px;
-  margin-top: 36px;    /* nuevo: separación extra */
+  margin-top: 36px;    /* separación extra */
 }
 .avatar{
   width:80px; height:80px; border-radius:20px;
@@ -373,65 +373,81 @@ body{
   .skills-grid{ grid-template-columns: 1fr; }
 }
 
-/* ===== HEADER — MÓVIL (≤640px): mismo layout, más compacto ===== */
+/* ===== HEADER — MÓVIL (≤640px):
+       logo izq., "Francisco Sánchez" centrado, subtítulo debajo,
+       CTA como icono de correo ===== */
 @media (max-width: 640px){
 
-  /* Header en 3 columnas: [logo][títulos centrados][CTA] */
+  /* Grid 2 filas:
+     F1 -> [logo][title][cta]
+     F2 -> [   ][subtitle][   ] */
   .header-in{
     display: grid;
     grid-template-columns: 40px 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "logo title cta"
+      ".    subtitle .";
     align-items: center;
-    gap: 8px;
+    gap: 6px 8px;
     padding: 10px 12px;
-    transform: none;                 /* sin scale */
   }
 
-  /* Logo pequeño, sin transformaciones */
   .logo{
-    width: 32px;
-    height: 32px;
-    transform: none;                 /* anula scale(5) del base */
+    grid-area: logo;
+    width: 32px; height: 32px;
+    transform: none;
     background-size: contain;
+    justify-self: start;
   }
 
-  /* Sin empuje lateral en móvil */
   .brand{ margin-left: 0; }
 
-  /* Título/subtítulo centrados en la columna central */
-  .logo_tittle,
-  .logo_subtitle{
-    grid-column: 2;
+  .logo_tittle{
+    grid-area: title;
+    position: static;
+    transform: none;
+    width: auto;
+    text-align: center;
     justify-self: center;
+    font-size: clamp(1.05rem, 3.6vw, 1.2rem);
+    line-height: 1.15;
+  }
+
+  .logo_subtitle{
+    grid-area: subtitle;
     position: static;
     transform: none;
     text-align: center;
+    justify-self: center;
     width: auto;
-  }
-  .logo_tittle{
-    font-size: clamp(1rem, 3.6vw, 1.15rem);
-    line-height: 1.1;
-  }
-  .logo_subtitle{
-    font-size: .95rem;
+    margin-top: 0;
+    font-size: clamp(.9rem, 3.2vw, 1rem);
     opacity: .9;
-    margin-top: 2px;
   }
 
-  /* Botón a la derecha (columna 3) sin saltos de línea */
+  /* El <a> del header vira a icono redondo de correo */
   .header-in .btn{
-    grid-column: 3;
+    grid-area: cta;
     justify-self: end;
-    font-size: .9rem;
-    padding: 8px 12px;
+    width: 36px; height: 36px;
+    padding: 0;
+    border-radius: 999px;
+    display: grid; place-items: center;
+    font-size: 0;                 /* oculta texto "Contactar" */
     white-space: nowrap;
   }
-
-  /* Ajustes compactos del hero/contenedor */
-  .showcase{ padding: 14px; }
-  .showcase-badge{
-    left: auto; right: 12px; top: 12px;
-    font-size: .9rem; padding: 6px 10px;
+  .header-in .btn::before{
+    content: "";
+    width: 18px; height: 18px;
+    display: block;
+    background: center/contain no-repeat
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z'/><path d='m22 6-10 7L2 6'/></svg>");
   }
+
+  /* Compactos de la home */
+  .showcase{ padding: 14px; }
+  .showcase-badge{ left: auto; right: 12px; top: 12px; font-size: .9rem; padding: 6px 10px; }
   .skill-card{ padding: 14px; }
   .card h3{ font-size: 1.4rem; }
   .card p{ font-size: 1rem; }
