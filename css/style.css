@@ -510,31 +510,30 @@ body{
   }
 
   /* CTA → icono de correo redondo y accesible */
-  .header-in .btn{
+    .header-in .btn{
     justify-self: end;
-    width: 40px;
-    height: 40px;
+    width: 40px; height: 40px;
     padding: 0;
     border-radius: 999px;
-    display: grid;
-    place-items: center;
-    font-size: 0;
+    display: block;                 /* no necesitamos grid aquí */
+    position: relative;             /* REFERENCIA para ::before */
     background: rgba(255,255,255,.08);
     border: 1px solid var(--border);
     backdrop-filter: blur(4px);
+    font-size: 0;
     white-space: nowrap;
   }
+
   .header-in .btn::before{
     content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 20px;
     height: 20px;
-    display: block;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='14' rx='2' ry='2'/%3E%3Cpolyline points='3,7 12,13 21,7'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center center;
-    margin-top: 100px;
-    background-size: 100%;
-    margin: auto;   
+    transform: translate(-50%, -50%);     /* centro perfecto */
+    background: center/contain no-repeat
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='14' rx='2' ry='2'/%3E%3Cpolyline points='3,7 12,13 21,7'/%3E%3C/svg%3E");
   }
   .header-in .btn:active{ transform: scale(.98); }
 
