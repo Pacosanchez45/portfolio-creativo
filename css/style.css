@@ -1,19 +1,3 @@
-/**************************************************************
- *  PORTFOLIO (A) — CREATIVO-VISUAL (versión optimizada)
- *  Estructura:
- *  0) Reset/Base
- *  1) Tokens
- *  2) Utilidades / Layout
- *  3) Header
- *  4) Hero + Skills
- *  5) Secciones genéricas
- *  6) Proyectos (cards)
- *  7) Sobre mí
- *  8) Footer
- *  9) Mock (opcional)
- * 10) Responsive
- **************************************************************/
-
 /* =========================
    0) RESET / BASE
    ========================= */
@@ -79,18 +63,23 @@ body{
    3) HEADER
    ========================= */
 .header{
-  position: relative;   /* si la quieres sticky: position: sticky */
-  top: 0;
+  min-height: 68px; /* alto fijo del header */
+  display: flex;
+  align-items: center;          /* centra todos verticalmente */
+  justify-content: center;      /* centra el contenido del contenedor interior */
   backdrop-filter: blur(10px);
-  background: rgba(0,0,0,.38);
+  background: rgba(0, 0, 0, .38);
   border-bottom: 1px solid var(--border);
 }
+
 .header-in{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 0;
-  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;          /* <-- alinea logo, texto y botón verticalmente */
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Marca / logo */
@@ -102,20 +91,34 @@ body{
   transform-origin: left center;
 }
 
-/* Bloque marca (logo + pequeño gap para el centrado) */
+/* apilar título y subtítulo */
 .brand{
-  display: flex; align-items: center; gap: 8px;
-  margin-left: 110px; flex: 1;
+  margin-left: 0;                 /* anula el 110px heredado */
+  display: flex;
+  flex-direction: column;         /* <-- columna */
+  align-items: center;            /* centrados */
+  gap: 2px;
+  flex: 1;
+  text-align: center;
 }
 
 /* Título centrado en header */
 .logo_tittle{
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  width: max-content;
+  position: static;
+  transform: none;
+  width: auto;
+  margin: 0;
   font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  line-height: 1.1;
+}
+
+.logo_subtitle{
+  position: static;
+  transform: none;
+  margin: 0;
+  font-size: .95rem;
+  opacity: .9;
+  line-height: 1.1;
 }
 
 /* Botón */
