@@ -455,80 +455,74 @@ body{
 }
 
 
-/* ===== HEADER — MÓVIL (≤640px):
-   logo izq., "Francisco Sánchez" centrado, subtítulo debajo,
-   CTA como icono de correo ===== */
+/* ===== HEADER — MÓVIL (≤640px):*/
 @media (max-width: 640px){
 
-    /* Rejilla: 3 columnas, 2 filas (título y subtítulo apilados) */
+  /* Rejilla: [logo] [bloque títulos] [icono] en una fila */
   .header-in{
     display: grid;
     grid-template-columns: 40px 1fr 40px;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "logo title cta"
-      "logo subtitle cta";
     align-items: center;
-    column-gap: 10px;
-    row-gap: 2px;
+    gap: 10px;
     padding: 12px 14px;
   }
 
-  /* Logo: pequeño, nítido, sin transformaciones */
+  /* Logo a la izquierda, sin escalados */
   .logo{
-    grid-area: logo;
-    width: 32px; height: 32px;
+    width: 32px;
+    height: 32px;
     transform: none !important;
     background-size: contain;
     justify-self: start;
   }
 
-  /* Oculta la marca extra en móvil si te saca de composición */
-  .brand{ display: none !important; }
+  /* Bloque central con títulos apilados y centrados */
+  .brand{
+    margin-left: 0 !important;      /* anula el empuje de desktop */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
 
-  /* Título centrado y equilibrado (anula absolute del estilo base) */
+  /* Título: centrado y sin absolute */
   .logo_tittle{
-    grid-area: title;
     position: static !important;
     left: auto; transform: none !important;
     margin: 0;
-    width: auto;
     text-align: center;
-    justify-self: center;
     font-size: clamp(1.05rem, 3.8vw, 1.25rem);
     line-height: 1.15;
     letter-spacing: -0.015em;
     font-weight: 800;
   }
 
-  /* Subtítulo justo debajo, centrado y más discreto */
+  /* Subtítulo: debajo, más discreto */
   .logo_subtitle{
-    grid-area: subtitle;
     position: static !important;
     transform: none !important;
     margin: 0;
-    width: auto;
     text-align: center;
-    justify-self: center;
-    font-size: clamp(.88rem, 3.3vw, 1.02rem);
+    font-size: clamp(.9rem, 3.2vw, 1rem);
     line-height: 1.15;
     opacity: .9;
     font-weight: 600;
   }
 
-  /* CTA → icono de correo con buena pulsación */
+  /* CTA → icono de correo redondo y accesible */
   .header-in .btn{
-    grid-area: cta;
     justify-self: end;
-    width: 40px; height: 40px;          /* área de toque confortable */
+    width: 40px;
+    height: 40px;
     padding: 0;
     border-radius: 999px;
-    display: grid; place-items: center;
-    font-size: 0;                        /* oculta el texto "Contactar" */
-    white-space: nowrap;
+    display: grid;
+    place-items: center;
+    font-size: 0;                   /* oculta el texto “Contactar” */
     background: rgba(255,255,255,.08);
     border: 1px solid var(--border);
     backdrop-filter: blur(4px);
+    white-space: nowrap;
   }
   .header-in .btn::before{
     content: "";
@@ -539,7 +533,7 @@ body{
   }
   .header-in .btn:active{ transform: scale(.98); }
 
-  /* Un pelín más de contraste en el borde del header en móvil */
+  /* Un pelín más de contraste del header en móvil */
   .header{
     border-bottom-color: rgba(255,255,255,.22);
     background: linear-gradient(135deg, rgba(0,0,0,.45), rgba(0,0,0,.25));
