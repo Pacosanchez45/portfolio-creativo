@@ -460,78 +460,88 @@ body{
    CTA como icono de correo ===== */
 @media (max-width: 640px){
 
-  /* El contenedor del header pasa a grid 2 filas */
+    /* Rejilla: 3 columnas, 2 filas (título y subtítulo apilados) */
   .header-in{
     display: grid;
-    grid-template-columns: 40px 1fr auto;
+    grid-template-columns: 40px 1fr 40px;
     grid-template-rows: auto auto;
     grid-template-areas:
       "logo title cta"
-      ".    subtitle .";
+      "logo subtitle cta";
     align-items: center;
-    gap: 6px 8px;
-    padding: 10px 12px;
+    column-gap: 10px;
+    row-gap: 2px;
+    padding: 12px 14px;
   }
 
-  /* Logo a la izquierda */
-  .header-in .logo{
+  /* Logo: pequeño, nítido, sin transformaciones */
+  .logo{
     grid-area: logo;
     width: 32px; height: 32px;
-    transform: none;
+    transform: none !important;
     background-size: contain;
     justify-self: start;
   }
 
-  /* Quitamos empuje lateral en móvil */
-  .header-in .brand{ margin-left: 0; }
+  /* Oculta la marca extra en móvil si te saca de composición */
+  .brand{ display: none !important; }
 
-  /* Título centrado: anulamos absolute del estilo base */
-  .header-in .logo_tittle{
+  /* Título centrado y equilibrado (anula absolute del estilo base) */
+  .logo_tittle{
     grid-area: title;
     position: static !important;
     left: auto; transform: none !important;
+    margin: 0;
     width: auto;
     text-align: center;
     justify-self: center;
-    font-size: clamp(1.05rem, 3.6vw, 1.2rem);
+    font-size: clamp(1.05rem, 3.8vw, 1.25rem);
     line-height: 1.15;
+    letter-spacing: -0.015em;
+    font-weight: 800;
   }
 
-  /* Subtítulo debajo, centrado y más pequeño */
-  .header-in .logo_subtitle{
+  /* Subtítulo justo debajo, centrado y más discreto */
+  .logo_subtitle{
     grid-area: subtitle;
-    position: static;
-    transform: none;
+    position: static !important;
+    transform: none !important;
+    margin: 0;
+    width: auto;
     text-align: center;
     justify-self: center;
-    width: auto;
-    margin-top: 0;
-    font-size: clamp(.9rem, 3.2vw, 1rem);
+    font-size: clamp(.88rem, 3.3vw, 1.02rem);
+    line-height: 1.15;
     opacity: .9;
+    font-weight: 600;
   }
 
-  /* El <a class="btn ..."> pasa a icono de correo redondo */
+  /* CTA → icono de correo con buena pulsación */
   .header-in .btn{
     grid-area: cta;
     justify-self: end;
-    width: 36px; height: 36px;
+    width: 40px; height: 40px;          /* área de toque confortable */
     padding: 0;
     border-radius: 999px;
     display: grid; place-items: center;
-    font-size: 0;             /* oculta el texto "Contactar" */
+    font-size: 0;                        /* oculta el texto "Contactar" */
     white-space: nowrap;
+    background: rgba(255,255,255,.08);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(4px);
   }
   .header-in .btn::before{
     content: "";
-    width: 18px; height: 18px; display: block;
-    background: center/contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z'/%3E%3Cpath d='m22 6-10 7L2 6'/%3E%3C/svg%3E");
+    width: 20px; height: 20px;
+    display: block;
+    background: center/contain no-repeat
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='14' rx='2' ry='2'/%3E%3Cpolyline points='3,7 12,13 21,7'/%3E%3C/svg%3E");
   }
+  .header-in .btn:active{ transform: scale(.98); }
 
-  /* Ajustes complementarios */
-  .showcase{ padding: 14px; }
-  .showcase-badge{ left: auto; right: 12px; top: 12px; font-size: .9rem; padding: 6px 10px; }
-  .skill-card{ padding: 14px; }
-  .card h3{ font-size: 1.4rem; }
-  .card p{ font-size: 1rem; }
-  .container{ padding: 0 14px; }
+  /* Un pelín más de contraste en el borde del header en móvil */
+  .header{
+    border-bottom-color: rgba(255,255,255,.22);
+    background: linear-gradient(135deg, rgba(0,0,0,.45), rgba(0,0,0,.25));
+  }
 }
