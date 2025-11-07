@@ -1,157 +1,142 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Francisco Sánchez — Portfolio</title>
-<!-- FONTS -->
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=DM+Sans:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Francisco Sánchez — Portfolio</title>
 
-<link rel="stylesheet" href="css/style.css">
+  <!-- hreflang -->
+  <link rel="alternate" href="https://uiverse.es/" hreflang="es">
+  <link rel="alternate" href="https://uiverse.es/en/" hreflang="en">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <header class="header">
-      <div class="container header-in">
+    <div class="container header-in">
+      <!-- Logo -->
+      <a href="/" class="logo-link" aria-label="Inicio">
         <div class="logo"></div>
+      </a>
 
-        <div class="brand">
-          <h1 class="logo_tittle">Francisco Sánchez</h1>
-          <div class="logo_subtitle">Diseñador y Desarrollador Web</div>
-        </div>
-
-        <a href="mailto:pacosnchez45@gmail.com" class="btn primary" aria-label="Contactar por correo">Contactar</a>
+      <!-- Centro -->
+      <div class="brand">
+        <h1 class="logo_tittle">Francisco Sánchez</h1>
+        <div class="logo_subtitle">Diseñador y Desarrollador Web</div>
       </div>
+
+      <!-- Acciones derecha -->
+      <div class="header-actions">
+        <a href="/en/" class="btn ghost" aria-label="View portfolio in English">EN</a>
+        <a href="mailto:pacosnchez45@gmail.com" class="btn primary" aria-label="Contactar por correo">
+          Contactar
+        </a>
+      </div>
+    </div>
   </header>
 
-<main>
-  <!-- HERO + SKILLS (Opción 1) -->
-  <section class="container">
-    <div class="showcase">
-      <!-- Hero con imagen -->
-      <div class="showcase-hero">
-        <div class="showcase-badge">Disponible · Remoto / España</div>
-      </div>
+  <main>
+    <!-- HERO + SKILLS -->
+    <section class="container">
+      <div class="showcase">
+        <div class="showcase-hero">
+          <div class="showcase-badge">Disponible · Remoto / España</div>
+        </div>
 
-      <!-- Grid de habilidades -->
-      <div class="skills-grid" aria-label="Herramientas y tecnologías">
-        <div class="skill-card">
-          <div class="skill-ico">H</div><div class="skill-name">HTML5</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-ico">C</div><div class="skill-name">CSS3 / Responsive</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-ico">J</div><div class="skill-name">JavaScript</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-ico">F</div><div class="skill-name">Figma / UI Kits</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-ico">R</div><div class="skill-name">React (básico)</div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-ico">A</div><div class="skill-name">Accesibilidad (A11y)</div>
+        <div class="skills-grid" aria-label="Herramientas y tecnologías">
+          <div class="skill-card"><div class="skill-ico">H</div><div class="skill-name">HTML5</div></div>
+          <div class="skill-card"><div class="skill-ico">C</div><div class="skill-name">CSS3 / Responsive</div></div>
+          <div class="skill-card"><div class="skill-ico">J</div><div class="skill-name">JavaScript</div></div>
+          <div class="skill-card"><div class="skill-ico">F</div><div class="skill-name">Figma / UI Kits</div></div>
+          <div class="skill-card"><div class="skill-ico">R</div><div class="skill-name">React (básico)</div></div>
+          <div class="skill-card"><div class="skill-ico">A</div><div class="skill-name">Accesibilidad (A11y)</div></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="proyectos" class="section container">
-    <h2 class="proyectos_title">Proyectos destacados</h2>
-    <div class="cards">
-      <article class="card">
-        <a href="https://frame.uiverse.es" target="_blank" rel="noopener">
-          <div class="thumb_frame"></div>
-          <h3>FRAME Festival — Web de venta de entradas</h3>
-          <p>
-          Proyecto conceptual donde diseñé la web oficial del festival FRAME, centrada en una experiencia visual inmersiva y un proceso de compra fluido.
-          <br>
-          <br>
-          El diseño combina color, tipografía y jerarquía para reflejar la energía del evento.</p>
-          <div class="chips"><span>Figma</span><span>HTML/CSS</span><span>JS</span></div>
-        </a>  
-      </article>
-      <article class="card">
-        <a href="https://paletas.uiverse.es" target="_blank" rel="noopener">
-          <div class="thumb_paleta"></div>
-          <h3>Generador de Paletas — UIverse</h3>
-            <p>
-              Aplicación web interactiva que genera combinaciones de colores aleatorias, permite bloquear tonos,
-              copiar códigos HEX, previsualizar la paleta en una interfaz tipo dashboard y guardarlas localmente.
-            </p>
-          <div class="chips">
-            <span>JavaScript</span>
-            <span>UI/UX</span>
-            <span>LocalStorage</span>
-          </div>
-        </a>  
-      </article>
-      <article class="card">
-        <a href="https://gradientes.uiverse.es" target="_blank" rel="noopener">
-          <div class="thumb_gradients"></div>
-          <h3>Generador de Gradientes — UIverse</h3>
-          <p>Herramienta interactiva para diseñar gradientes lineales o radiales con control total sobre ángulo, colores y posiciones.
-          <br>
-          <br>
-          Ideal para interfaces modernas, fondos, componentes y exploración de combinaciones cromáticas.</p>
-          <div class="chips">
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Gradients</span>
-          </div>
-        </a>  
-      </article>
-      <article class="card">
-        <a href="https://buttons.uiverse.es" target="_blank" rel="noopener">
-          <div class="thumb_botones"></div>
-          <h3>Generador de Botones — UIverse</h3>
-          <p>Herramienta visual para diseñar botones personalizados con control total sobre tipografía, colores, sombras, bordes y efectos hover.</p>
-          <p>Permite ajustar cada parámetro en tiempo real, visualizar el resultado instantáneamente y copiar el código CSS y HTML listo para usar.</p>
-          <br>
-          <p>Ideal para interfaces modernas, componentes interactivos, sistemas de diseño y prototipos UI/UX.</p>
-          <div class="chips">
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>UI Design</span>
-            <span>Buttons</span>
-          </div>
-        </a>
-      </article>
-    </div>
-  </section>
-  
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section container">
+      <h2 class="proyectos_title">Proyectos destacados</h2>
+      <div class="cards">
+        <article class="card">
+          <a href="https://frame.uiverse.es" target="_blank" rel="noopener">
+            <div class="thumb_frame"></div>
+            <h3>FRAME Festival — Web de venta de entradas</h3>
+            <p>Proyecto conceptual donde diseñé la web oficial del festival FRAME, centrada en una experiencia visual inmersiva y un proceso de compra fluido. El diseño combina color, tipografía y jerarquía para reflejar la energía del evento.</p>
+            <div class="chips"><span>Figma</span><span>HTML/CSS</span><span>JS</span></div>
+          </a>
+        </article>
 
-  <section class="section container">
-    <div class="about">
-      <div class="avatar"></div>
-      <div>
-        <h2>Sobre mí</h2>
-        <p style="margin:6px 0 0;color:var(--muted)">
-          Soy Francisco Sánchez, enfocado en diseño UI, prototipado en Figma y maquetación moderna (HTML/CSS/JS).
-          Me gusta combinar estética y claridad para que cada pantalla tenga propósito.
-        </p>
+        <article class="card">
+          <a href="https://paletas.uiverse.es" target="_blank" rel="noopener">
+            <div class="thumb_paleta"></div>
+            <h3>Generador de Paletas — UIverse</h3>
+            <p>Aplicación web interactiva que genera combinaciones de colores aleatorias, permite bloquear tonos, copiar códigos HEX, previsualizar la paleta y guardarlas localmente.</p>
+            <div class="chips"><span>JavaScript</span><span>UI/UX</span><span>LocalStorage</span></div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="https://gradientes.uiverse.es" target="_blank" rel="noopener">
+            <div class="thumb_gradients"></div>
+            <h3>Generador de Gradientes — UIverse</h3>
+            <p>Herramienta interactiva para diseñar gradientes con control total sobre ángulo, colores y posiciones. Ideal para interfaces modernas, fondos y componentes.</p>
+            <div class="chips"><span>CSS</span><span>JavaScript</span><span>Gradients</span></div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="https://buttons.uiverse.es" target="_blank" rel="noopener">
+            <div class="thumb_botones"></div>
+            <h3>Generador de Botones — UIverse</h3>
+            <p>Herramienta visual para diseñar botones personalizados con control sobre tipografía, colores, sombras, bordes y efectos hover, y copiar el código listo para usar.</p>
+            <div class="chips"><span>CSS</span><span>JavaScript</span><span>UI Design</span><span>Buttons</span></div>
+          </a>
+        </article>
       </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="section container">
+      <div class="about">
+        <div class="avatar"></div>
+        <div>
+          <h2>Sobre mí</h2>
+          <p style="margin:6px 0 0;color:var(--muted)">
+            Soy Francisco Sánchez, enfocado en diseño UI, prototipado en Figma y maquetación moderna (HTML/CSS/JS).
+            Me gusta combinar estética y claridad para que cada pantalla tenga propósito.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section container center">
+      <h2>Contacto</h2>
+      <p style="color:var(--muted);max-width:60ch;margin:8px auto 18px">
+        ¿Tienes una idea o necesitas mejorar tu web? Hablemos y vemos cómo darle forma.
+      </p>
+      <a class="btn primary" href="https://contacto.uiverse.es/">Escríbeme</a>
+      <p style="opacity:.8;margin-top:14px;font-size:.9rem">
+        Francisco Sánchez — Diseñador y Desarrollador Web
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container center">
+      © <span id="y"></span> Francisco Sánchez. Todos los derechos reservados.
     </div>
-  </section>
+  </footer>
 
-  <section id="contacto" class="section container center">
-    <h2>Contacto</h2>
-    <p style="color:var(--muted);max-width:60ch;margin:8px auto 18px">
-      ¿Tienes una idea o necesitas mejorar tu web? Hablemos y vemos cómo darle forma.
-    </p>
-    <a class="btn primary" href="https://contacto.uiverse.es/">Escríbeme</a>
-    <p style="opacity:.8;margin-top:14px;font-size:.9rem">
-      Francisco Sánchez — Diseñador y Desarrollador Web
-    </p>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="container center">© <span id="y"></span> Francisco Sánchez. Todos los derechos reservados.</div>
-</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
