@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Francisco Sánchez — Portfolio</title>
+
+  <!-- hreflang -->
+  <link rel="alternate" href="https://uiverse.es/" hreflang="es">
+  <link rel="alternate" href="https://uiverse.es/en/" hreflang="en">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-in">
+      <!-- Logo -->
+      <a href="/en/" class="logo-link" aria-label="Back to English homepage">
+        <div class="logo"></div>
+      </a>
+
+      <!-- Center -->
+      <div class="brand">
+        <h1 class="logo_tittle">Francisco Sánchez</h1>
+        <div class="logo_subtitle">Designer & Web Developer</div>
+      </div>
+
+      <!-- Right actions -->
+      <div class="header-actions">
+        <a href="/" class="btn ghost" aria-label="Ver portfolio en español">ES</a>
+        <a href="mailto:pacosnchez45@gmail.com" class="btn primary" aria-label="Contact by email">
+          Contact
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO + SKILLS -->
+    <section class="container">
+      <div class="showcase">
+        <div class="showcase-hero">
+          <div class="showcase-badge">Available · Remote / Spain</div>
+        </div>
+
+        <div class="skills-grid" aria-label="Tools and technologies">
+          <div class="skill-card"><div class="skill-ico">H</div><div class="skill-name">HTML5</div></div>
+          <div class="skill-card"><div class="skill-ico">C</div><div class="skill-name">CSS3 / Responsive</div></div>
+          <div class="skill-card"><div class="skill-ico">J</div><div class="skill-name">JavaScript</div></div>
+          <div class="skill-card"><div class="skill-ico">F</div><div class="skill-name">Figma / UI Kits</div></div>
+          <div class="skill-card"><div class="skill-ico">R</div><div class="skill-name">React (basic)</div></div>
+          <div class="skill-card"><div class="skill-ico">A</div><div class="skill-name">Accessibility (A11y)</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <h2 class="proyectos_title">Featured Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <a href="https://frame.uiverse.es" target="_blank" rel="noopener">
+            <div class="thumb_frame"></div>
+            <h3>FRAME Festival — Ticketing Website Concept</h3>
+            <p>
+              Concept project for the official FRAME festival website, focused on an immersive visual experience
+              and a smooth checkout flow that reflects the energy of the event.
+            </p>
+            <div class="chips"><span>Figma</span><span>HTML/CSS</span><span>JS</span></div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="https://paletas.uiverse.es" target="_blank" rel="noopener">
+            <div class="thumb_paleta"></div>
+            <h3>Palette Generator — UIverse</h3>
+            <p>
+              Interactive web app that generates random color palettes, lets you lock colors, copy HEX codes,
+              preview them in a dashboard layout and save favorites locally.
+            </p>
+            <div class="chips"><span>JavaScript</span><span>UI/UX</span><span>LocalStorage</span></div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="https://gradientes.uiverse.es" target="_blank" rel="noopener">
+            <div class="thumb_gradients"></div>
+            <h3>Gradient Generator — UIverse</h3>
+            <p>
+              Tool to design linear and radial gradients with full control over angle, colors and stops.
+              Perfect for modern interfaces, backgrounds and components.
+            </p>
+            <div class="chips"><span>CSS</span><span>JavaScript</span><span>Gradients</span></div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="https://buttons.uiverse.es" target="_blank" rel="noopener">
+            <div class="thumb_botones"></div>
+            <h3>Button Generator — UIverse</h3>
+            <p>
+              Visual tool to craft custom buttons with control over typography, colors, shadows, borders and hover effects,
+              and copy production-ready HTML/CSS.
+            </p>
+            <div class="chips"><span>CSS</span><span>JavaScript</span><span>UI Design</span><span>Buttons</span></div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section container">
+      <div class="about">
+        <div class="avatar"></div>
+        <div>
+          <h2>About me</h2>
+          <p style="margin:6px 0 0;color:var(--muted)">
+            I'm Francisco Sánchez, focused on UI design, Figma prototyping and modern front-end (HTML/CSS/JS).
+            I like to combine aesthetics and clarity so every screen has a clear purpose.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container center">
+      <h2>Contact</h2>
+      <p style="color:var(--muted);max-width:60ch;margin:8px auto 18px">
+        Got an idea or want to improve your website? Let's talk and shape it together.
+      </p>
+      <a class="btn primary" href="https://contacto.uiverse.es/">Write me</a>
+      <p style="opacity:.8;margin-top:14px;font-size:.9rem">
+        Francisco Sánchez — Designer & Web Developer
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container center">
+      © <span id="y"></span> Francisco Sánchez. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
