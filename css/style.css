@@ -277,7 +277,7 @@ body{
 .thumb_frame{    background-image: url("../img/mockauppc.png"); }
 .thumb_paleta{   background-image: url("../img/palettebg.png"); }
 .thumb_gradients{background-image: url("../img/gradientbg.png"); }
-.thumb_botones{  background-image: url("../img/buttonsbg.png"); }
+.thumb_botones{  background-image: url("../img/gradientbg.png"); }
 .thumb_urbangym{  background-image: url("../img/morckupurbangym.jpg"); }
 
 .card h3{
