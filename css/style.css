@@ -265,7 +265,8 @@ body{
 .thumb_frame,
 .thumb_paleta,
 .thumb_gradients,
-.thumb_botones{
+.thumb_botones
+.thumb_urbangym{
   height:160px;
   border-radius:14px;
   border: 1px solid var(--border);
@@ -277,6 +278,7 @@ body{
 .thumb_paleta{   background-image: url("../img/palettebg.png"); }
 .thumb_gradients{background-image: url("../img/gradientbg.png"); }
 .thumb_botones{  background-image: url("../img/buttonsbg.png"); }
+.thumb_urbangym{  background-image: url("../img//morckupurbangym.jpg"); }
 
 .card h3{
   margin:12px 0 6px;
