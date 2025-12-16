@@ -164,7 +164,7 @@ body{
   border: 1px solid var(--border);
   background:
     linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0)),
-    url("../img/proyectofigma.webp") center 75%/cover no-repeat;
+    url("../img/bghero.png") center 75%/cover no-repeat;
 }
 
 /* Badge (posición fluida; en móvil se ajusta a la derecha) */
