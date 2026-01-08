@@ -17,131 +17,202 @@
 
   <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
   <header class="header">
     <div class="container header-in">
       <!-- Logo -->
-      <a href="/" class="logo-link" aria-label="Inicio">
+      <a href="#top" class="logo-link" aria-label="Ir al inicio">
         <div class="logo"></div>
       </a>
 
       <!-- Centro -->
       <div class="brand">
-        <h1 class="logo_tittle">Francisco Sánchez</h1>
-        <div class="logo_subtitle">UI/UX + Front-End</div>
+        <p class="brand-name">Francisco Sánchez</p>
+        <p class="brand-role">UI/UX orientado a producto · Front-End</p>
       </div>
 
       <!-- Acciones derecha -->
       <div class="header-actions">
         <a href="/en/" class="btn ghost" aria-label="View portfolio in English">EN</a>
-        <a class="btn primary" href="https://contacto.uiverse.es/">Escríbeme</a>
+        <a class="btn primary" href="#contacto">Escríbeme</a>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- HERO + SKILLS -->
+  <main id="top">
+    <!-- HERO -->
     <section class="container">
       <div class="showcase">
         <div class="showcase-hero" aria-label="Presentación">
           <div class="showcase-badge">Disponible · Remoto / España</div>
+
           <div class="hero-content">
             <h1 class="hero-title">
-              Diseño y desarrollo interfaces web funcionales<br>
-              para productos digitales
+              UI/UX Junior orientado a producto<br>
+              (con Front-End)
             </h1>
+
             <p class="hero-subtitle">
-              UI/UX + Front-End enfocado en flujos, accesibilidad y experiencias claras listas para producción.
+              Diseño flujos y pantallas que resuelven problemas reales y los convierto en interfaces claras,
+              accesibles y listas para producción (Figma + HTML/CSS + JS).
             </p>
+
             <div class="hero-actions">
-              <a class="btn primary" href="#proyectos">Ver caso principal</a>
-              <a class="btn ghost" href="https://contacto.uiverse.es/">Contactar</a>
+              <a class="btn primary" href="#casos">Ver casos</a>
+              <a class="btn ghost" href="#contacto">Contactar</a>
             </div>
+
+            <!-- Proof points (en lugar de lista larga de skills) -->
+            <ul class="proof-list" aria-label="Puntos clave">
+              <li><strong>Producto:</strong> flujos, onboarding, conversión</li>
+              <li><strong>Accesibilidad:</strong> foco, contraste, formularios</li>
+              <li><strong>Implementación:</strong> HTML/CSS + JavaScript</li>
+            </ul>
           </div>
         </div>
 
-        <div class="skills-grid" aria-label="Herramientas y tecnologías">
-          <div class="skill-card"><div class="skill-ico">H</div><div class="skill-name">HTML5</div></div>
-          <div class="skill-card"><div class="skill-ico">C</div><div class="skill-name">CSS3 / Responsive</div></div>
-          <div class="skill-card"><div class="skill-ico">J</div><div class="skill-name">JavaScript</div></div>
-          <div class="skill-card"><div class="skill-ico">F</div><div class="skill-name">Figma / UI Kits</div></div>
-          <div class="skill-card"><div class="skill-ico">R</div><div class="skill-name">React (básico)</div></div>
-          <div class="skill-card"><div class="skill-ico">A</div><div class="skill-name">Accesibilidad (A11y)</div></div>
+        <!-- Core stack (compacto, no “lista infinita”) -->
+        <div class="stack-grid" aria-label="Stack principal">
+          <div class="stack-card"><div class="stack-ico">F</div><div class="stack-name">Figma (Auto-Layout, variantes)</div></div>
+          <div class="stack-card"><div class="stack-ico">UI</div><div class="stack-name">UI components · estados · handoff</div></div>
+          <div class="stack-card"><div class="stack-ico">A11y</div><div class="stack-name">Accesibilidad básica (WCAG)</div></div>
+          <div class="stack-card"><div class="stack-ico">H</div><div class="stack-name">HTML5 semántico</div></div>
+          <div class="stack-card"><div class="stack-ico">C</div><div class="stack-name">CSS3 · Responsive · Grid/Flex</div></div>
+          <div class="stack-card"><div class="stack-ico">JS</div><div class="stack-name">JavaScript (DOM, interacciones)</div></div>
         </div>
       </div>
     </section>
 
-    <!-- PROYECTOS -->
-    <section id="proyectos" class="section container">
-      <h2 class="proyectos_title">Proyectos destacados</h2>
-      <div class="cards">
-        <article class="card">
-          <a href="https://frame.uiverse.es" target="_blank" rel="noopener">
-            <div class="thumb_frame"></div>
-            <h3>FRAME Festival — Web de venta de entradas</h3>
-            <p>Proyecto conceptual donde diseñé la web oficial del festival FRAME, centrada en una experiencia visual inmersiva y un proceso de compra fluido. El diseño combina color, tipografía y jerarquía para reflejar la energía del evento.</p>
-            <div class="chips"><span>Figma</span><span>HTML/CSS</span><span>JS</span></div>
+    <!-- CASOS -->
+    <section id="casos" class="section container">
+      <h2 class="proyectos_title">Casos de producto</h2>
+      <p class="section-lead">
+        3 proyectos contados como caso: problema, decisiones y solución (no solo “demos”).
+      </p>
+
+      <div class="case-grid">
+        <!-- UrbanGym -->
+        <article class="case-card">
+          <a href="https://urbangym.uiverse.es/" aria-label="Ver caso UrbanGym Pro">
+            <div class="case-thumb thumb_urbangym"></div>
+
+            <h3>UrbanGym Pro</h3>
+
+            <p class="case-problem">
+              <strong>Problema:</strong> presentar la oferta del gimnasio y guiar al usuario a una acción clara (prueba / membresía).
+            </p>
+
+            <p class="case-solution">
+              <strong>Solución:</strong> jerarquía de contenido + secciones orientadas a decisión + componentes reutilizables y responsive.
+            </p>
+
+            <div class="chips" aria-label="Etiquetas UrbanGym">
+              <span>Producto</span><span>UI/UX</span><span>Front-End</span>
+            </div>
+
+            <span class="case-cta">Ver caso →</span>
           </a>
         </article>
 
-        <article class="card">
-          <a href="https://paletas.uiverse.es" target="_blank" rel="noopener">
-            <div class="thumb_paleta"></div>
-            <h3>Generador de Paletas — UIverse</h3>
-            <p>Aplicación web interactiva que genera combinaciones de colores aleatorias, permite bloquear tonos, copiar códigos HEX, previsualizar la paleta y guardarlas localmente.</p>
-            <div class="chips"><span>JavaScript</span><span>UI/UX</span><span>LocalStorage</span></div>
+        <!-- FRAME -->
+        <article class="case-card">
+          <a href="https://frame.uiverse.es" aria-label="Ver caso FRAME Festival">
+            <div class="case-thumb thumb_frame"></div>
+
+            <h3>FRAME Festival</h3>
+
+            <p class="case-problem">
+              <strong>Problema:</strong> proceso de compra de entradas más claro y fluido, reduciendo fricción.
+            </p>
+
+            <p class="case-solution">
+              <strong>Solución:</strong> flujo y jerarquía visual + estados de interacción + consistencia tipográfica y visual.
+            </p>
+
+            <div class="chips" aria-label="Etiquetas FRAME">
+              <span>Conversión</span><span>UI</span><span>Responsive</span>
+            </div>
+
+            <span class="case-cta">Ver caso →</span>
           </a>
         </article>
 
-        <article class="card">
-          <a href="https://gradientes.uiverse.es" target="_blank" rel="noopener">
-            <div class="thumb_gradients"></div>
-            <h3>Generador de Gradientes — UIverse</h3>
-            <p>Herramienta interactiva para diseñar gradientes con control total sobre ángulo, colores y posiciones. Ideal para interfaces modernas, fondos y componentes.</p>
-            <div class="chips"><span>CSS</span><span>JavaScript</span><span>Gradients</span></div>
-          </a>
-        </article>
+        <!-- Botones -->
+        <article class="case-card">
+          <a href="https://buttons.uiverse.es" aria-label="Ver caso Generador de Botones">
+            <div class="case-thumb thumb_botones "></div>
 
-        <article class="card">
-          <a href="https://buttons.uiverse.es" target="_blank" rel="noopener">
-            <div class="thumb_botones"></div>
-            <h3>Generador de Botones — UIverse</h3>
-            <p>Herramienta visual para diseñar botones personalizados con control sobre tipografía, colores, sombras, bordes y efectos hover, y copiar el código listo para usar.</p>
-            <div class="chips"><span>CSS</span><span>JavaScript</span><span>UI Design</span><span>Buttons</span></div>
+            <h3>Generador de Botones</h3>
+
+            <p class="case-problem">
+              <strong>Problema:</strong> crear variantes consistentes (hover, sombras, bordes) sin perder tiempo.
+            </p>
+
+            <p class="case-solution">
+              <strong>Solución:</strong> panel de controles + preview + copia de CSS listo para uso.
+            </p>
+
+            <div class="chips" aria-label="Etiquetas Botones">
+              <span>Tooling</span><span>UI</span><span>JavaScript</span>
+            </div>
+
+            <span class="case-cta">Ver caso →</span>
           </a>
         </article>
-        <article class="card">
-          <a href="https://urbangym.uiverse.es/" target="_blank" rel="noopener">
-            <div class="thumb_urbangym"></div>
-            <h3>UrbanGym Pro — High Performance Training</h3>
-            <p>Plataforma diseñada para mostrar un gimnasio de alto rendimiento enfocado en fuerza,
-            acondicionamiento y entrenamiento funcional avanzado. 
-            <br>
-            <br>
-            Incluye secciones de clases,
-            entrenadores, programación inteligente y planes de membresía, todo con una interfaz moderna
-            y orientada a mejorar la experiencia del usuario.</p>
-            <div class="chips"><span>CSS</span><span>JavaScript</span><span>UI Design</span><span>Front-End</span></div>
-          </a>
-        </article>
+      </div>
+
+      <div class="mini-note">
+        <p>
+          Otros experimentos (paletas, gradientes, etc.) los dejaré como sección secundaria más adelante para no diluir el foco.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section id="proceso" class="section container">
+      <h2>Cómo trabajo</h2>
+      <p class="section-lead">
+        Un proceso simple, repetible y orientado a producto.
+      </p>
+
+      <div class="process-grid" role="list">
+        <div class="process-step" role="listitem">
+          <h3>1) Entender el problema</h3>
+          <p>Objetivo, usuario, restricciones y qué significa “éxito” en el producto.</p>
+        </div>
+
+        <div class="process-step" role="listitem">
+          <h3>2) Diseñar flujo + UI</h3>
+          <p>Wireframes, jerarquía, estados, componentes y prototipo en Figma.</p>
+        </div>
+
+        <div class="process-step" role="listitem">
+          <h3>3) Validar y entregar</h3>
+          <p>Responsive + accesibilidad básica + handoff (o implementación parcial).</p>
+        </div>
       </div>
     </section>
 
     <!-- SOBRE MÍ -->
-    <section class="section container">
+    <section id="sobre-mi" class="section container">
       <div class="about">
         <div>
           <h2>Sobre mí</h2>
-          <p style="margin:6px 0 0;color:var(--muted)">
-        Soy Francisco Sánchez, diseñador especializado en interfaces de usuario (UI) y maquetación web moderna. Me apasiona transformar ideas en experiencias visuales claras, coherentes y funcionales.
-        Trabajo con herramientas como Figma para el diseño y prototipado, y desarrollo con HTML, CSS y JavaScript, cuidando cada detalle desde la estructura hasta la interacción.
-        <br>
-        <br>
-        Mi enfoque combina estética, usabilidad y propósito: creo que un buen diseño no solo debe verse bien, sino también comunicar de forma intuitiva y generar confianza en quien lo utiliza. Me interesa especialmente la construcción de sistemas de diseño consistentes, la tipografía web y las transiciones sutiles que aportan fluidez a cada interfaz.
-        <br>
-        <br>
-        Siempre busco mejorar, aprender nuevas tendencias y mantener un estilo visual limpio, accesible y centrado en el usuario. Cada proyecto es una oportunidad para contar una historia a través del diseño, equilibrando creatividad con precisión técnica.
+
+          <p class="about-text">
+            Soy Francisco Sánchez. Me enfoco en UI/UX de producto y en convertir diseños en interfaces listas para producción.
+            Trabajo con Figma (Auto-Layout, variantes) y desarrollo con HTML/CSS y JavaScript, cuidando la estructura, la jerarquía,
+            la interacción y la accesibilidad básica.
+            <br><br>
+            Me interesa especialmente construir sistemas consistentes (componentes/estados), mejorar la claridad de los flujos y reducir fricción en pantallas clave.
           </p>
+
+          <div class="about-links">
+            <a class="btn ghost" href="https://github.com/Pacosanchez45" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/francisco-s%C3%A1nchez-s%C3%A1nchez-519868242//" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn primary" href="#contacto">Contactar</a>
+          </div>
         </div>
       </div>
     </section>
@@ -149,12 +220,14 @@
     <!-- CONTACTO -->
     <section id="contacto" class="section container center">
       <h2>Contacto</h2>
-      <p style="color:var(--muted);max-width:60ch;margin:8px auto 18px">
-        ¿Tienes una idea o necesitas mejorar tu web? Hablemos y vemos cómo darle forma.
+      <p class="contact-lead">
+        ¿Tienes un producto o web y quieres mejorar claridad, conversión o experiencia? Escríbeme y lo vemos.
       </p>
+
       <a class="btn primary" href="https://contacto.uiverse.es/">Escríbeme</a>
-      <p style="opacity:.8;margin-top:14px;font-size:.9rem">
-        Francisco Sánchez — Diseñador y Desarrollador Web
+
+      <p class="contact-sign">
+        Francisco Sánchez — UI/UX orientado a producto · Front-End
       </p>
     </section>
   </main>
