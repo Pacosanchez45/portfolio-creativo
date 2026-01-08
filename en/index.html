@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Francisco Sánchez — Portfolio</title>
+  <title>UIverse</title>
 
   <!-- hreflang -->
   <link rel="alternate" href="https://uiverse.es/" hreflang="es">
@@ -17,129 +17,202 @@
 
   <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
   <header class="header">
     <div class="container header-in">
       <!-- Logo -->
-      <a href="/en/" class="logo-link" aria-label="Back to English homepage">
+      <a href="#top" class="logo-link" aria-label="Go to top">
         <div class="logo"></div>
       </a>
 
       <!-- Center -->
       <div class="brand">
-        <h1 class="logo_tittle">Francisco Sánchez</h1>
-        <div class="logo_subtitle">UI/UX + Front-End</div>
+        <p class="brand-name">Francisco Sánchez</p>
+        <p class="brand-role">Product-focused UI/UX · Front-End</p>
       </div>
 
       <!-- Right actions -->
       <div class="header-actions">
-        <a href="/" class="btn ghost" aria-label="Ver portfolio en español">ES</a>
-        <a class="btn primary" href="https://contacto.uiverse.es/">Contact</a>
+        <a href="/" class="btn ghost" aria-label="Ver portfolio en Español">ES</a>
+        <a class="btn primary" href="#contact">Contact me</a>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- HERO + SKILLS -->
+  <main id="top">
+    <!-- HERO -->
     <section class="container">
       <div class="showcase">
-        <div class="showcase-hero">
+        <div class="showcase-hero" aria-label="Introduction">
           <div class="showcase-badge">Available · Remote / Spain</div>
+
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Product-focused Junior UI/UX<br>
+              (with Front-End)
+            </h1>
+
+            <p class="hero-subtitle">
+              I design flows and screens that solve real problems and turn them into clear, accessible,
+              production-ready interfaces (Figma + HTML/CSS + JS).
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="#cases">View case studies</a>
+              <a class="btn ghost" href="#contact">Contact</a>
+            </div>
+
+            <!-- Proof points -->
+            <ul class="proof-list" aria-label="Key strengths">
+              <li><strong>Product:</strong> flows, onboarding, conversion</li>
+              <li><strong>Accessibility:</strong> focus, contrast, forms</li>
+              <li><strong>Implementation:</strong> HTML/CSS + JavaScript</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="skills-grid" aria-label="Tools and technologies">
-          <div class="skill-card"><div class="skill-ico">H</div><div class="skill-name">HTML5</div></div>
-          <div class="skill-card"><div class="skill-ico">C</div><div class="skill-name">CSS3 / Responsive</div></div>
-          <div class="skill-card"><div class="skill-ico">J</div><div class="skill-name">JavaScript</div></div>
-          <div class="skill-card"><div class="skill-ico">F</div><div class="skill-name">Figma / UI Kits</div></div>
-          <div class="skill-card"><div class="skill-ico">R</div><div class="skill-name">React (basic)</div></div>
-          <div class="skill-card"><div class="skill-ico">A</div><div class="skill-name">Accessibility (A11y)</div></div>
+        <!-- Core stack -->
+        <div class="stack-grid" aria-label="Core stack">
+          <div class="stack-card"><div class="stack-ico">F</div><div class="stack-name">Figma (Auto Layout, variants)</div></div>
+          <div class="stack-card"><div class="stack-ico">UI</div><div class="stack-name">UI components · states · handoff</div></div>
+          <div class="stack-card"><div class="stack-ico">A11y</div><div class="stack-name">Basic accessibility (WCAG)</div></div>
+          <div class="stack-card"><div class="stack-ico">H</div><div class="stack-name">Semantic HTML5</div></div>
+          <div class="stack-card"><div class="stack-ico">C</div><div class="stack-name">CSS3 · Responsive · Grid/Flex</div></div>
+          <div class="stack-card"><div class="stack-ico">JS</div><div class="stack-name">JavaScript (DOM, interactions)</div></div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section container">
-      <h2 class="proyectos_title">Featured Projects</h2>
-      <div class="cards">
-        <article class="card">
-          <a href="https://frame.uiverse.es" target="_blank" rel="noopener">
-            <div class="thumb_frame"></div>
-            <h3>FRAME Festival — Ticketing Website Concept</h3>
-            <p>
-              Concept project for the official FRAME festival website, focused on an immersive visual experience
-              and a smooth checkout flow that reflects the energy of the event.
+    <!-- CASES -->
+    <section id="cases" class="section container">
+      <h2 class="proyectos_title">Case studies</h2>
+      <p class="section-lead">
+        3 projects told as product cases: problem, decisions, and solution (not just demos).
+      </p>
+
+      <div class="case-grid">
+        <!-- UrbanGym -->
+        <article class="case-card">
+          <a href="https://urbangym.uiverse.es/" aria-label="View UrbanGym Pro case study">
+            <div class="case-thumb thumb_urbangym"></div>
+
+            <h3>UrbanGym Pro</h3>
+
+            <p class="case-problem">
+              <strong>Problem:</strong> present the gym’s offer and guide users toward a clear action (trial / membership).
             </p>
-            <div class="chips"><span>Figma</span><span>HTML/CSS</span><span>JS</span></div>
+
+            <p class="case-solution">
+              <strong>Solution:</strong> content hierarchy + decision-oriented sections + reusable components and responsive UI.
+            </p>
+
+            <div class="chips" aria-label="UrbanGym tags">
+              <span>Product</span><span>UI/UX</span><span>Front-End</span>
+            </div>
+
+            <span class="case-cta">View case →</span>
           </a>
         </article>
 
-        <article class="card">
-          <a href="https://paletas.uiverse.es" target="_blank" rel="noopener">
-            <div class="thumb_paleta"></div>
-            <h3>Palette Generator — UIverse</h3>
-            <p>
-              Interactive web app that generates random color palettes, lets you lock colors, copy HEX codes,
-              preview them in a dashboard layout and save favorites locally.
+        <!-- FRAME -->
+        <article class="case-card">
+          <a href="https://frame.uiverse.es" aria-label="View FRAME Festival case study">
+            <div class="case-thumb thumb_frame"></div>
+
+            <h3>FRAME Festival</h3>
+
+            <p class="case-problem">
+              <strong>Problem:</strong> make ticket purchase clearer and smoother, reducing friction.
             </p>
-            <div class="chips"><span>JavaScript</span><span>UI/UX</span><span>LocalStorage</span></div>
+
+            <p class="case-solution">
+              <strong>Solution:</strong> purchase flow + visual hierarchy + interaction states + consistent type and layout.
+            </p>
+
+            <div class="chips" aria-label="FRAME tags">
+              <span>Conversion</span><span>UI</span><span>Responsive</span>
+            </div>
+
+            <span class="case-cta">View case →</span>
           </a>
         </article>
 
-        <article class="card">
-          <a href="https://gradientes.uiverse.es" target="_blank" rel="noopener">
-            <div class="thumb_gradients"></div>
-            <h3>Gradient Generator — UIverse</h3>
-            <p>
-              Tool to design linear and radial gradients with full control over angle, colors and stops.
-              Perfect for modern interfaces, backgrounds and components.
-            </p>
-            <div class="chips"><span>CSS</span><span>JavaScript</span><span>Gradients</span></div>
-          </a>
-        </article>
+        <!-- Buttons -->
+        <article class="case-card">
+          <a href="https://buttons.uiverse.es" aria-label="View Button Generator case study">
+            <div class="case-thumb thumb_botones"></div>
 
-        <article class="card">
-          <a href="https://buttons.uiverse.es" target="_blank" rel="noopener">
-            <div class="thumb_botones"></div>
-            <h3>Button Generator — UIverse</h3>
-            <p>
-              Visual tool to craft custom buttons with control over typography, colors, shadows, borders and hover effects,
-              and copy production-ready HTML/CSS.
+            <h3>Button Generator</h3>
+
+            <p class="case-problem">
+              <strong>Problem:</strong> create consistent button variants (hover, shadows, borders) without wasting time.
             </p>
-            <div class="chips"><span>CSS</span><span>JavaScript</span><span>UI Design</span><span>Buttons</span></div>
+
+            <p class="case-solution">
+              <strong>Solution:</strong> control panel + live preview + copy-ready CSS output.
+            </p>
+
+            <div class="chips" aria-label="Buttons tags">
+              <span>Tooling</span><span>UI</span><span>JavaScript</span>
+            </div>
+
+            <span class="case-cta">View case →</span>
           </a>
         </article>
-                <article class="card">
-          <a href="https://urbangym.uiverse.es/" target="_blank" rel="noopener">
-            <div class="thumb_urbangym"></div>
-            <h3>UrbanGym Pro — High-Performance Training</h3>
-            <p>A showcase website for a high-performance gym focused on strength, conditioning, and functional
-            training. 
-            <br>
-            <br>
-            Includes class overviews, coach profiles, smart programming highlights, and membership
-            plans, all presented through a modern interface designed to enhance user experience and engagement.</p>
-            <div class="chips"><span>CSS</span><span>JavaScript</span><span>UI Design</span><span>Front-End</span></div>
-          </a>
-        </article>
+      </div>
+
+      <div class="mini-note">
+        <p>
+          Other experiments (palettes, gradients, etc.) will live in a secondary section later, so the main message stays focused.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section container">
+      <h2>How I work</h2>
+      <p class="section-lead">
+        A simple, repeatable, product-oriented process.
+      </p>
+
+      <div class="process-grid" role="list">
+        <div class="process-step" role="listitem">
+          <h3>1) Understand the problem</h3>
+          <p>Goals, users, constraints, and what “success” means for the product.</p>
+        </div>
+
+        <div class="process-step" role="listitem">
+          <h3>2) Design the flow + UI</h3>
+          <p>Wireframes, hierarchy, states, components, and a Figma prototype.</p>
+        </div>
+
+        <div class="process-step" role="listitem">
+          <h3>3) Validate and deliver</h3>
+          <p>Responsive design + basic accessibility + handoff (or partial implementation).</p>
+        </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="section container">
+    <section id="about" class="section container">
       <div class="about">
         <div>
           <h2>About</h2>
-          <p style="margin:6px 0 0;color:var(--muted)">
-        I’m Francisco Sánchez, a designer specialized in user interfaces (UI) and modern web layout. I’m passionate about transforming ideas into visual experiences that are clear, coherent, and functional.
-        I work with tools like Figma for design and prototyping, and I develop with HTML, CSS, and JavaScript, taking care of every detail from structure to interaction.
-        <br>
-        <br>
-        My approach combines aesthetics, usability, and purpose: I believe good design should not only look good but also communicate intuitively and inspire confidence in the person using it. I’m particularly interested in building consistent design systems, web typography, and subtle transitions that bring smoothness to each interface.
-        <br>
-        <br>
-        I’m always looking to improve, learn new trends, and maintain a clean, accessible, user-centered visual style. Each project is an opportunity to tell a story through design, balancing creativity with technical precision.
+
+          <p class="about-text">
+            I’m Francisco Sánchez. I focus on product UI/UX and turning designs into production-ready interfaces.
+            I work with Figma (Auto Layout, variants) and build with HTML/CSS and JavaScript, taking care of structure,
+            hierarchy, interaction, and basic accessibility.
+            <br><br>
+            I’m especially interested in building consistent systems (components/states), improving flow clarity, and reducing friction on key screens.
           </p>
+
+          <div class="about-links">
+            <a class="btn ghost" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn primary" href="#contact">Contact</a>
+          </div>
         </div>
       </div>
     </section>
@@ -147,12 +220,14 @@
     <!-- CONTACT -->
     <section id="contact" class="section container center">
       <h2>Contact</h2>
-      <p style="color:var(--muted);max-width:60ch;margin:8px auto 18px">
-        Got an idea or want to improve your website? Let's talk and shape it together.
+      <p class="contact-lead">
+        Working on a product or website and want to improve clarity, conversion, or user experience? Let’s talk.
       </p>
-      <a class="btn primary" href="https://contacto.uiverse.es/">Write me</a>
-      <p style="opacity:.8;margin-top:14px;font-size:.9rem">
-        Francisco Sánchez — Designer & Web Developer
+
+      <a class="btn primary" href="https://contacto.uiverse.es/">Contact me</a>
+
+      <p class="contact-sign">
+        Francisco Sánchez — Product-focused UI/UX · Front-End
       </p>
     </section>
   </main>
