@@ -283,8 +283,22 @@ textarea:focus-visible{
 /* =========================
    5) SECCIONES
    ========================= */
-.section{ padding: 20px 0 64px; }
-.section h2{ margin: 0 0 12px; }
+.section{ 
+  padding: 64px 0 32px;
+}
+
+.section + .section{ 
+  margin-top: 18px; 
+}
+
+.section h2{ 
+  margin: 0 0 12px;
+  margin-bottom: 18px; 
+}
+
+.section-lead{
+  margin-bottom: 32px;
+}
 
 /* =========================
    6) CASOS (cards)
@@ -679,6 +693,23 @@ textarea:focus-visible{
   margin-top: 12px;
   font-size: .95rem;
   padding-left: 18px;
+  }
+
+  .section{
+  padding: 72px 0 64px;
+}
+
+  .section h2{
+    margin-top: 64px;
+  }
+
+  .section-lead{
+    margin-bottom: 32px;
+    margin-left: 1;
+  }
+
+  .section-mi{
+  margin-top: 64px;
   }
 
   /* CONTENIDO GENERAL */
