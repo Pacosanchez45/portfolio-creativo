@@ -507,24 +507,13 @@ button:focus-visible {
 }
 
 .about-layout {
-  display: grid;
-  grid-template-columns: 340px minmax(0, 1fr);
-  gap: 54px;
-  align-items: center;
-}
-
-.about-photo {
-  min-height: 450px;
-  border-radius: var(--radius);
-  border: 1px solid var(--line-dark);
-  background:
-    linear-gradient(180deg, rgba(17, 24, 32, 0) 60%, rgba(17, 24, 32, .38) 100%),
-    url("../img/me.png") center top / cover no-repeat;
-  box-shadow: var(--shadow);
+  display: block;
 }
 
 .about-copy {
   max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .about-copy p {
@@ -534,6 +523,7 @@ button:focus-visible {
 .about-links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
   margin-top: 26px;
 }
@@ -656,14 +646,8 @@ button:focus-visible {
     min-height: 360px;
   }
 
-  .about-layout,
   .contact-layout {
     grid-template-columns: 1fr;
-  }
-
-  .about-photo {
-    min-height: 380px;
-    max-width: 420px;
   }
 }
 
