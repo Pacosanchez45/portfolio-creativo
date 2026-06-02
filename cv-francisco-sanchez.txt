@@ -1,0 +1,30 @@
+Francisco Sánchez
+UI/UX Junior orientado a producto · Front-End UI
+Disponible para prácticas, trainee, junior o apoyo en agencia/equipo de producto
+Portfolio: https://www.uiverse.es/
+Contacto: https://contacto.uiverse.es/
+Email: pacosansan97@gmail.com
+
+PERFIL
+Diseñador UI/UX junior con base en Front-End. Trabajo con Figma, HTML, CSS y JavaScript para diseñar flujos, pantallas y componentes claros, responsive y fáciles de implementar. Busco mi primera oportunidad profesional para aprender en un equipo real y aportar en diseño visual, prototipado, accesibilidad básica y maquetación.
+
+HERRAMIENTAS
+Figma: Auto Layout, componentes, variantes, prototipos, handoff.
+UI/UX: jerarquía visual, flujos, formularios, estados, responsive, accesibilidad básica.
+Front-End: HTML semántico, CSS, Grid/Flex, JavaScript DOM.
+
+PROYECTOS
+Clínica Dental LB - caso de estudio UI/UX
+Rediseño conceptual de una web de clínica dental para mejorar claridad, confianza y solicitud de cita desde móvil.
+
+UrbanGym Pro
+Diseño y maquetación de una experiencia web para presentar una oferta de gimnasio y guiar al usuario hacia una acción clara.
+
+FRAME Festival
+Exploración de interfaz responsive para festival/evento, con foco en navegación, jerarquía visual y experiencia de compra.
+
+Generador de Botones
+Herramienta en JavaScript para crear variantes de botones y copiar CSS listo para uso.
+
+OBJETIVO ACTUAL
+Entrar en un equipo como UI/UX Junior, Product Design Junior, Front-End UI, trainee o prácticas. Me interesa especialmente trabajar en producto digital, agencias web, SaaS, interfaces internas y proyectos donde diseño e implementación se conecten.
