@@ -463,9 +463,9 @@ button:focus-visible {
   border-color: rgba(255, 255, 255, .38);
 }
 
-.thumb-urbangym { background-image: url("../img/morckupurbangym.jpg"); }
+.thumb-urbangym { background-image: url("../img/urbangym-thumb.png"); }
 .thumb-frame { background-image: url("../img/mockauppc.png"); }
-.thumb-buttons { background-image: url("../img/buttonsbg.png"); }
+.thumb-buttons { background-image: url("../img/buttons-thumb.png"); }
 .thumb-dental {
   background:
     radial-gradient(circle at 72% 26%, rgba(32, 182, 172, .28), transparent 28%),
