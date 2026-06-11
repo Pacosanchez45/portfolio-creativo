@@ -1,30 +1,25 @@
-# Rutina de 14 días
+# Rutina de 14 dias para captar oportunidades
 
-Objetivo: crear señales visibles de progreso y generar conversaciones reales.
+## Objetivo
+Generar conversaciones con empresas, agencias y equipos de producto que puedan necesitar diseno UI/UX, redisenos web, landing pages, dashboards o Front-End UI.
 
-## Cada día laborable
-
-- 60 minutos: mejorar un caso de portfolio.
-- 30 minutos: buscar ofertas junior, trainee o prácticas.
-- 30 minutos: escribir a personas concretas en LinkedIn.
-- 20 minutos: registrar avances y respuestas.
+## Cada dia
+- 45 minutos: revisar empresas con webs mejorables o productos digitales activos.
+- 30 minutos: enviar mensajes personalizados a empresas, agencias o equipos de producto.
+- 45 minutos: mejorar un caso de portfolio, una landing o una seccion comercial de UIverse.
+- 20 minutos: publicar o compartir una mejora concreta en LinkedIn.
 
 ## Semana 1
-
-1. Publicar la home orientada a junior/prácticas.
-2. Terminar el caso Clínica Dental LB.
-3. Preparar CV de una página.
-4. Escribir a 10 personas para pedir feedback.
-5. Enviar 10 candidaturas seleccionadas.
+1. Publicar la home orientada a empresas y proyectos reales.
+2. Preparar 4 casos visibles: UrbanGym Pro, FRAME Festival, Generador de Botones y Clinica Dental LB.
+3. Crear una lista de 30 empresas o agencias con posible necesidad de mejora web.
+4. Enviar 10 mensajes personalizados.
 
 ## Semana 2
-
-1. Mejorar UrbanGym como caso de estudio.
-2. Mejorar FRAME como caso de estudio.
-3. Escribir a 10 agencias pequeñas.
-4. Escribir a 10 recruiters o perfiles de talento.
-5. Revisar qué mensajes generan más respuesta.
+1. Mejorar un caso de estudio con problema, decision e impacto.
+2. Preparar una mini auditoria de ejemplo para enviar como muestra.
+3. Contactar con otros 20 posibles clientes o colaboradores.
+4. Revisar respuestas y ajustar el mensaje comercial.
 
 ## Regla
-
-No medir el progreso solo por respuestas. Medirlo por señales creadas: casos terminados, mensajes enviados, feedback recibido, entrevistas, portfolio más claro y CV más sólido.
+No medir el progreso solo por respuestas. Medirlo por senales creadas: casos publicados, conversaciones abiertas, auditorias enviadas, feedback recibido y una web cada vez mas clara para vender servicios.

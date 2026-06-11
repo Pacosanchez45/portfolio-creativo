@@ -1,39 +1,42 @@
-# Mensajes para buscar oportunidades
+# Mensajes para contactar con empresas
 
-## Diseñadores / Product Designers
+## Empresas con web mejorable
 
-Hola, soy Francisco Sánchez. Estoy buscando mi primera oportunidad como UI/UX Junior con base en Front-End.
+Hola, soy Francisco Sanchez. Trabajo en diseno UI/UX y Front-End para mejorar webs, landings y productos digitales.
 
-Estoy rehaciendo mi portfolio con casos más claros y me gustaría pedirte 5 minutos de feedback sobre uno de ellos, si no te importa. No busco vender nada, solo mejorar mi enfoque y entender mejor qué esperan los equipos de un perfil junior.
+He estado revisando vuestra presencia online y creo que podria ayudaros a mejorar claridad, jerarquia visual y conversion, especialmente en las primeras pantallas y llamadas a la accion.
 
 Portfolio: https://www.uiverse.es/
 
-Muchas gracias.
+Si os encaja, puedo preparar una primera revision breve con oportunidades de mejora.
 
-## Agencias pequeñas
+Un saludo,
+Francisco Sanchez
+
+## Agencias y estudios
 
 Hola, buenas.
 
-Soy Francisco Sánchez, UI/UX Junior con base en Front-End. Estoy buscando una primera oportunidad, prácticas o colaboración de apoyo en agencia.
+Soy Francisco Sanchez, disenador UI/UX con base Front-End. Puedo apoyar en diseno de pantallas, landing pages, componentes, responsive, maquetacion y preparacion de interfaces para desarrollo.
 
-Trabajo con Figma, HTML, CSS y JavaScript, y puedo ayudar en diseño de pantallas, componentes, responsive, maquetación y preparación de interfaces para desarrollo.
-
-Portfolio: https://www.uiverse.es/
-
-Si en algún momento necesitáis apoyo junior o queréis valorar mi perfil, estaré encantado de hablar.
-
-Un saludo,
-Francisco Sánchez
-
-## Recruiters / RRHH
-
-Hola, soy Francisco Sánchez. Estoy buscando oportunidades como UI/UX Junior, Product Design Junior, Front-End UI o prácticas.
-
-Tengo formación en UI/UX y base práctica en Figma, HTML, CSS y JavaScript. Estoy preparando casos de portfolio centrados en problemas, decisiones de diseño y soluciones responsive.
+Trabajo con Figma, HTML, CSS y JavaScript, y me adapto bien a proyectos web, producto digital, dashboards, formularios y herramientas internas.
 
 Portfolio: https://www.uiverse.es/
 
-Si conoce alguna oportunidad junior o trainee donde mi perfil pueda encajar, agradecería mucho que me tuviera en cuenta.
+Si en algun momento necesitais apoyo de diseno o Front-End UI, estare encantado de hablar.
 
 Un saludo,
-Francisco Sánchez
+Francisco Sanchez
+
+## Equipos de producto / SaaS
+
+Hola, soy Francisco Sanchez. Trabajo en UI/UX y Front-End para interfaces digitales que necesitan ser mas claras, ordenadas y faciles de usar.
+
+Puedo ayudar en auditoria visual, flujos, pantallas, estados, formularios, componentes y responsive, tanto en Figma como en implementacion HTML/CSS/JavaScript.
+
+Portfolio: https://www.uiverse.es/
+
+Si creeis que puedo aportar en alguna mejora de producto o interfaz, me encantaria hablarlo.
+
+Un saludo,
+Francisco Sanchez

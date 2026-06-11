@@ -1,30 +1,31 @@
-Francisco Sánchez
-UI/UX Junior orientado a producto · Front-End UI
-Disponible para prácticas, trainee, junior o apoyo en agencia/equipo de producto
+Francisco Sanchez
+UI/UX orientado a producto · Front-End UI
+Disponible para proyectos web, producto digital, agencias y equipos que necesiten claridad visual e implementacion
 Portfolio: https://www.uiverse.es/
 Contacto: https://contacto.uiverse.es/
 Email: pacosansan97@gmail.com
 
 PERFIL
-Diseñador UI/UX junior con base en Front-End. Trabajo con Figma, HTML, CSS y JavaScript para diseñar flujos, pantallas y componentes claros, responsive y fáciles de implementar. Busco mi primera oportunidad profesional para aprender en un equipo real y aportar en diseño visual, prototipado, accesibilidad básica y maquetación.
+Diseno interfaces, landing pages, dashboards y experiencias digitales con foco en claridad, presencia y conversion. Trabajo con Figma, HTML, CSS y JavaScript para transformar ideas, webs o herramientas internas en soluciones visuales mas ordenadas, responsive y faciles de usar.
 
-HERRAMIENTAS
-Figma: Auto Layout, componentes, variantes, prototipos, handoff.
-UI/UX: jerarquía visual, flujos, formularios, estados, responsive, accesibilidad básica.
-Front-End: HTML semántico, CSS, Grid/Flex, JavaScript DOM.
+CAPACIDADES
+UI/UX: jerarquia visual, estructura de pantallas, flujos, formularios, estados, responsive y accesibilidad basica.
+Figma: Auto Layout, componentes, variantes, prototipos y handoff.
+Front-End: HTML semantico, CSS, Grid/Flex, JavaScript DOM e interfaces responsive.
+Producto: diagnostico de fricciones, mejora de contenido, llamadas a la accion y experiencia de usuario.
 
 PROYECTOS
-Clínica Dental LB - caso de estudio UI/UX
-Rediseño conceptual de una web de clínica dental para mejorar claridad, confianza y solicitud de cita desde móvil.
-
 UrbanGym Pro
-Diseño y maquetación de una experiencia web para presentar una oferta de gimnasio y guiar al usuario hacia una acción clara.
+Diseno y maquetacion de una experiencia web para presentar una oferta de gimnasio y guiar al usuario hacia una accion clara.
 
 FRAME Festival
-Exploración de interfaz responsive para festival/evento, con foco en navegación, jerarquía visual y experiencia de compra.
+Interfaz responsive para festival/evento, con foco en navegacion, jerarquia visual y experiencia de compra.
 
 Generador de Botones
-Herramienta en JavaScript para crear variantes de botones y copiar CSS listo para uso.
+Herramienta en JavaScript para crear variantes visuales de botones y copiar CSS listo para uso.
 
-OBJETIVO ACTUAL
-Entrar en un equipo como UI/UX Junior, Product Design Junior, Front-End UI, trainee o prácticas. Me interesa especialmente trabajar en producto digital, agencias web, SaaS, interfaces internas y proyectos donde diseño e implementación se conecten.
+Clinica Dental LB - caso de estudio UI/UX
+Rediseno conceptual de una web de clinica dental para mejorar claridad, confianza y solicitud de cita desde movil.
+
+ENFOQUE ACTUAL
+Colaborar con empresas, agencias o equipos de producto que necesiten mejorar una web, crear una landing, ordenar una interfaz, disenar una herramienta interna o llevar una propuesta visual a Front-End.
