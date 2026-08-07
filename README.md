@@ -26,6 +26,7 @@ El objetivo principal fue transformar una web de presentación en una herramient
 
 ## Proyectos destacados
 
+- UXSignal - caso de estudio de producto UX/IA, demo pública en [uxsignal-ai.vercel.app](https://uxsignal-ai.vercel.app) y repositorio en [GitHub](https://github.com/Pacosanchez45/uxsignal-ai).
 - UIverse - Portfolio profesional UX/UI & Front-End.
 - Generador de Botones - herramienta interactiva con JavaScript.
 - Clínica Dental LB - rediseño UX/UI para negocio local.
