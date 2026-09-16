@@ -1,27 +1,25 @@
 # UIverse - Portfolio profesional UX/UI & Front-End
 
-Portfolio profesional de Francisco Sánchez, diseñado para presentar proyectos de UX/UI, producto digital y Front-End de forma clara, visual y orientada a selección.
+Portfolio profesional de Francisco Sánchez, diseñado para presentar proyectos de UX/UI, producto digital, desarrollo web, SEO y marketing de forma clara, visual y orientada a captar oportunidades.
 
 ## Demo
 
 - Web: [https://www.uiverse.es/](https://www.uiverse.es/)
-- CV: [https://www.uiverse.es/cv/francisco-sanchez-cv.pdf](https://www.uiverse.es/cv/francisco-sanchez-cv.pdf)
 
 ## Objetivo del proyecto
 
-UIverse nace como portfolio personal, pero está planteado como una pieza de producto: debe explicar rápido quién soy, qué tipo de interfaces diseño, qué proyectos he construido y cómo combino diseño UX/UI con ejecución Front-End.
+UIverse nace como portfolio personal, pero está planteado como una pieza de producto: debe explicar rápido qué diseño, qué desarrollo, qué proyectos he construido y cómo puedo ayudar a una empresa a mejorar su presencia digital.
 
-El objetivo principal fue transformar una web de presentación en una herramienta profesional para candidaturas, con proyectos reales, casos de estudio, enlaces a GitHub y una propuesta de perfil más enfocada.
+El objetivo principal fue transformar una web de presentación en una herramienta profesional para mostrar criterio, proyectos reales, casos de estudio y una oferta clara de diseño y desarrollo web.
 
 ## Qué incluye
 
 - Home bilingüe en español e inglés.
 - Hero con posicionamiento profesional UX/UI + Front-End.
-- Sección de capacidades: diseño, producto y código.
+- Página de perfil con diseño, desarrollo, SEO, marketing y proceso resumido.
 - Proyectos destacados con enlaces a demos y repositorios.
 - Caso de estudio propio de UIverse.
-- Bloque "Sobre mí" y contacto.
-- CV descargable.
+- Página de contacto.
 - Diseño responsive para escritorio y móvil.
 
 ## Proyectos destacados
@@ -47,7 +45,7 @@ El objetivo principal fue transformar una web de presentación en una herramient
 - Mensaje principal directo para que el perfil se entienda en pocos segundos.
 - Proyectos ordenados por valor profesional, no solo por estética.
 - Textos orientados a explicar decisiones, proceso y resultado.
-- Llamadas a la acción claras: ver proyectos, descargar CV y contactar.
+- Llamadas a la acción claras: ver proyectos, conocer el perfil y contactar.
 - Diseño visual oscuro, moderno y con contraste alto.
 - Estructura responsive y navegación simple.
 

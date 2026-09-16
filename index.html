@@ -12,17 +12,16 @@
   <meta property="og:url" content="https://uiverse.es/">
   <meta property="og:title" content="Francisco Sánchez | Diseñador UX/UI con base Front-End">
   <meta property="og:description" content="Diseño interfaces digitales claras, atractivas y listas para funcionar, combinando UX/UI, criterio de producto y desarrollo Front-End.">
-  <meta property="og:image" content="https://uiverse.es/img/bghero.png">
+  <meta property="og:image" content="https://uiverse.es/img/hero-premium-bg.png">
   <meta name="theme-color" content="#0d1117">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260805-uxsignal-fix">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20260916-footer-mobile">
 </head>
 
-<body>
+<body class="home-premium">
   <header class="header">
     <div class="container header-in">
       <a href="#top" class="logo-link" aria-label="Ir al inicio">
@@ -30,16 +29,21 @@
         <span class="logo-word">UIverse</span>
       </a>
 
-      <nav class="nav" aria-label="Navegación principal">
-        <a href="#casos">Proyectos</a>
-        <a href="#servicios">Capacidades</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#contacto">Contacto</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" data-open-label="Abrir menú" data-close-label="Cerrar menú" aria-controls="site-menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-menu" class="nav" aria-label="Navegación principal">
+        <a href="/" aria-current="page">Inicio</a>
+        <a href="/proyectos.html">Proyectos</a>
+        <a href="/sobre-mi.html">Perfil</a>
+        <a href="/contacto.html">Contacto</a>
       </nav>
 
       <div class="header-actions">
         <a href="/en/" class="lang-btn" aria-label="View portfolio in English">EN</a>
-        <a href="#casos" class="btn btn-small btn-primary">Ver proyectos</a>
+        <a href="/proyectos.html" class="btn btn-small btn-primary">Ver proyectos</a>
       </div>
     </div>
   </header>
@@ -58,8 +62,8 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#casos">Ver proyectos</a>
-            <a class="btn btn-secondary" href="#servicios-web">Quiero una web</a>
+            <a class="btn btn-primary" href="/proyectos.html">Ver proyectos</a>
+            <a class="btn btn-secondary" href="/contacto.html">Quiero una web</a>
           </div>
         </div>
 
@@ -192,7 +196,7 @@
               Cuéntame cuál es tu web y te indicaré gratuitamente algunos puntos que mejoraría en su diseño, claridad y experiencia de usuario.
             </p>
           </div>
-          <a class="btn btn-primary" href="#contacto">Quiero una revisión gratuita</a>
+          <a class="btn btn-primary" href="/contacto.html">Quiero una revisión gratuita</a>
         </div>
       </div>
     </section>
@@ -201,7 +205,7 @@
       <div class="container">
         <div class="section-heading compact">
           <p class="eyebrow">Casos destacados</p>
-          <h2>Seis proyectos que demuestran diseño, producto y ejecución Front-End.</h2>
+          <h2>Tres proyectos destacados para entender cómo diseño y construyo.</h2>
           <p>
             No son solo capturas: cada proyecto permite revisar la interfaz funcionando, las decisiones tomadas
             y, cuando existe repositorio público, el código con el que está construido.
@@ -353,6 +357,10 @@
             </div>
           </article>
         </div>
+
+        <div class="section-actions">
+          <a class="btn btn-primary" href="/proyectos.html">Ver todos los proyectos</a>
+        </div>
       </div>
     </section>
 
@@ -389,24 +397,42 @@
       </div>
     </section>
 
-    <section id="sobre-mi" class="section about-section">
+    <section id="sobre-mi" class="section about-section profile-section">
       <div class="container about-layout">
         <div class="about-copy">
-          <p class="eyebrow">Sobre mí</p>
-          <h2>Diseño pensando en cómo se ve una pantalla, cómo se entiende y cómo se construye.</h2>
+          <p class="eyebrow">Perfil + servicios</p>
+          <h2>Diseño, desarrollo y criterio digital sin convertir tu web en una pieza decorativa.</h2>
           <p>
-            Me gusta unir criterio visual con ejecución Front-End. Eso me ayuda a diseñar interfaces realistas,
-            consistentes y preparadas para funcionar en producto, no solo para verse bien en una captura.
+            Me gusta unir criterio visual con ejecución Front-End. Trabajo webs, interfaces y landings para que una
+            empresa se entienda mejor, transmita confianza y tenga una base sólida para SEO y marketing.
           </p>
           <p>
-            Trabajo con Figma para estructurar flujos, componentes y prototipos, y con HTML, CSS y JavaScript para
-            llevar esas decisiones a una experiencia responsive, clara y cuidada.
+            También soy CEO de <a class="inline-link" href="https://namidesign.es/" target="_blank" rel="noopener noreferrer">Nami Design</a>
+            desde donde ayudamos a marcas y negocios a construir una presencia digital más seria y coherente.
           </p>
+
+          <div class="profile-mini-grid" aria-label="Áreas de trabajo">
+            <article>
+              <span>01</span>
+              <h3>UX/UI + Web</h3>
+              <p>Estructura, jerarquía visual, responsive y desarrollo limpio.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>SEO + Marketing</h3>
+              <p>Base técnica y mensajes pensados para atraer mejores oportunidades.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Proceso claro</h3>
+              <p>Diagnóstico, dirección visual y entrega útil sin alargar la conversación.</p>
+            </article>
+          </div>
 
           <div class="about-links">
             <a class="btn btn-secondary" href="https://github.com/Pacosanchez45" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/francisco-s%C3%A1nchez-s%C3%A1nchez-519868242/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="btn btn-secondary" href="/cv/francisco-sanchez-cv.pdf" target="_blank" rel="noopener">Descargar CV</a>
+            <a class="btn btn-secondary" href="https://namidesign.es/" target="_blank" rel="noopener noreferrer">Nami Design</a>
           </div>
         </div>
       </div>
@@ -424,27 +450,53 @@
         </div>
 
         <div class="contact-actions" aria-label="Opciones de contacto">
-          <a class="btn btn-primary" href="https://contacto.uiverse.es/">Contactar</a>
+          <a class="btn btn-primary" href="/contacto.html">Contactar</a>
           <a class="btn btn-secondary" href="mailto:pacosansan97@gmail.com">pacosansan97@gmail.com</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-in">
+  <footer class="footer footer-pro">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo-link" aria-label="Ir al inicio">
+          <span class="logo" aria-hidden="true"></span>
+          <span class="logo-word">UIverse</span>
+        </a>
+        <p>Diseño UX/UI, desarrollo web, SEO y marketing para negocios que necesitan una presencia digital más seria y efectiva.</p>
+        <div class="footer-social">
+          <a href="https://github.com/Pacosanchez45" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/francisco-s%C3%A1nchez-s%C3%A1nchez-519868242/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <nav class="footer-column" aria-label="Navegación secundaria">
+        <h2>Navegación</h2>
+        <a href="/">Inicio</a>
+        <a href="/proyectos.html">Proyectos</a>
+        <a href="/sobre-mi.html">Perfil</a>
+        <a href="/contacto.html">Contacto</a>
+      </nav>
+
+      <div class="footer-column">
+        <h2>Servicios</h2>
+        <p>Webs profesionales, landings, rediseños, interfaces, SEO básico y marketing digital.</p>
+        <a class="text-link" href="/contacto.html">Cuéntame tu proyecto</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
       <p>© <span id="y"></span> Francisco Sánchez. UI/UX orientado a producto y Front-End.</p>
       <a href="#top">Volver arriba</a>
     </div>
   </footer>
 
-  <a class="fab-contact" href="https://contacto.uiverse.es/" aria-label="Contactar">
+  <a class="fab-contact" href="/contacto.html" aria-label="Contactar">
     <span class="fab-icon" aria-hidden="true"></span>
     <span class="fab-text">Contactar</span>
   </a>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script src="js/site.js"></script>
 </body>
 </html>
