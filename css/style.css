@@ -882,62 +882,13 @@ button:focus-visible {
   transform: none;
 }
 
-.thumb-urbangym { background-image: url("../img/urbangym-thumb.png"); }
-.thumb-uiverse { background-image: url("../img/bghero.png"); }
-.thumb-frame { background-image: url("../img/mockauppc.png"); }
-.thumb-buttons { background-image: url("../img/buttons-thumb.png"); }
-.thumb-uxsignal {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(90deg, rgba(13, 17, 23, .18), rgba(13, 17, 23, .02));
-}
-
-.thumb-uxsignal::before {
-  position: absolute;
-  inset: 0;
-  content: "";
-  border-radius: inherit;
-  background-image: url("../img/uxsignal/04.png");
-  background-position: 28% 32%;
-  background-size: 142% auto;
-  background-repeat: no-repeat;
-}
-.thumb-dental {
-  background:
-    radial-gradient(circle at 72% 26%, rgba(32, 182, 172, .28), transparent 28%),
-    radial-gradient(circle at 88% 74%, rgba(239, 107, 90, .18), transparent 30%),
-    linear-gradient(135deg, #effaf7 0%, #ffffff 48%, #d9f0ed 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.thumb-dental::before,
-.thumb-dental::after {
-  position: absolute;
-  content: "";
-  border-radius: var(--radius);
-  background: rgba(13, 17, 23, .9);
-}
-
-.thumb-dental::before {
-  top: 92px;
-  left: 86px;
-  width: 150px;
-  height: 26px;
-  transform: rotate(13deg);
-}
-
-.thumb-dental::after {
-  right: 82px;
-  bottom: 88px;
-  width: 230px;
-  height: 92px;
-  border-radius: 80px 24px 24px 80px;
-  background: rgba(255, 255, 255, .88);
-  box-shadow: 0 24px 54px rgba(9, 12, 18, .18);
-  transform: rotate(-8deg);
-}
-
+/* Thematic project covers shared by the home and project pages. */
+.thumb-urbangym { background-image: url("../img/covers/urbangym.jpg"); }
+.thumb-uiverse { background-image: url("../img/covers/uiverse.jpg"); }
+.thumb-frame { background-image: url("../img/covers/frame.jpg"); }
+.thumb-buttons { background-image: url("../img/covers/buttons.jpg"); }
+.thumb-uxsignal { background-image: url("../img/covers/uxsignal.jpg"); }
+.thumb-dental { background-image: url("../img/covers/dental.jpg"); }
 .case-kicker {
   margin: 0;
   color: var(--teal);
@@ -1809,11 +1760,6 @@ button:focus-visible {
   .case-image {
     min-height: 0;
     aspect-ratio: 16 / 9.6;
-  }
-
-  .thumb-uxsignal::before {
-    background-position: 30% 34%;
-    background-size: 132% auto;
   }
 
   .uxsignal-gallery-two {
