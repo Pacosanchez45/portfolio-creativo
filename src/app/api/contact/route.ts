@@ -1,5 +1,7 @@
 import { Resend } from 'resend';
 
+export const runtime = 'nodejs';
+
 const allowedTypes = new Set(['ux-ui', 'web', 'redesign', 'product', 'frontend', 'other']);
 const typeLabels: Record<string, string> = { 'ux-ui': 'Diseño UX/UI', web: 'Web / Landing Page', redesign: 'Rediseño', product: 'Producto digital', frontend: 'Front-End', other: 'Otro' };
 const attempts = new Map<string, number[]>();
@@ -63,6 +65,7 @@ export async function POST(request: Request) {
       to,
       replyTo: email,
       subject: `Nuevo proyecto desde UIverse — ${typeLabels[projectType]}`,
+      text: `Nuevo contacto desde UIverse\n\nNombre: ${name}\nCorreo: ${email}\nTipo de proyecto: ${typeLabels[projectType]}\nFecha y hora: ${sentAt}\n\nMensaje:\n${message}`,
       html: `<div style="font-family:Arial,sans-serif;max-width:640px;color:#161714"><h1>Nuevo contacto desde UIverse</h1><p><strong>Nombre:</strong> ${escapeHtml(name)}</p><p><strong>Correo:</strong> ${escapeHtml(email)}</p><p><strong>Tipo de proyecto:</strong> ${escapeHtml(typeLabels[projectType])}</p><p><strong>Fecha y hora:</strong> ${escapeHtml(sentAt)}</p><hr><p style="white-space:pre-wrap">${escapeHtml(message)}</p></div>`,
     });
     if (error) return Response.json({ ok: false, code: 'provider' }, { status: 502 });

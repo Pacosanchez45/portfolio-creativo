@@ -47,7 +47,8 @@ El contenido es visible sin JavaScript. `prefers-reduced-motion` desactiva las e
 - La Home usa `src/components/contact/` como CTA; el formulario está en `src/components/contact-page/`.
 - `POST /api/contact` valida los datos, aplica honeypot, tiempo mínimo y un límite básico por IP, y envía con Resend desde el servidor.
 - Copia `.env.example` a `.env.local` y configura las tres variables obligatorias: `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` y `CONTACT_TO_EMAIL`.
-- Para producción, verifica `uiverse.es` en Resend y usa `CONTACT_FROM_EMAIL=contacto@uiverse.es`.
+- Para producción, verifica `uiverse.es` en Resend, crea una API key con permiso de envío y guárdala en Vercel como `RESEND_API_KEY`. Nunca uses el prefijo `NEXT_PUBLIC_` para esta variable.
+- Usa `CONTACT_FROM_EMAIL=contacto@uiverse.es` únicamente cuando el dominio figure como verificado en Resend.
 - Todos los formularios se envían a `CONTACT_TO_EMAIL=pacosansan97@gmail.com`; el endpoint conserva como `Reply-To` el email introducido por la persona que escribe.
 - El Hero conserva el nombre Francisco Sánchez; UIverse permanece como marca del sitio.
 
