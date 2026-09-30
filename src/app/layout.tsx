@@ -7,7 +7,7 @@ import './globals.css';
 import { MotionProvider } from '@/components/motion-provider';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://uiverse.es'),
+  metadataBase: new URL('https://www.uiverse.es'),
   title: es.seo.title,
   applicationName: 'UIverse',
   description: es.seo.description,

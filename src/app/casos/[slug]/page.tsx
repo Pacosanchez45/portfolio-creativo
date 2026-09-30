@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${study.title} — Caso de estudio | UIverse`,
     description: study.intro,
-    alternates: { canonical: `https://uiverse.es/casos/${study.slug}` },
-    openGraph: { type: 'article', url: `https://uiverse.es/casos/${study.slug}`, title: `${study.title} — UIverse`, description: study.intro, images: [{ url: study.heroImage.src }] },
+    alternates: { canonical: `https://www.uiverse.es/casos/${study.slug}` },
+    openGraph: { type: 'article', url: `https://www.uiverse.es/casos/${study.slug}`, title: `${study.title} — UIverse`, description: study.intro, images: [{ url: study.heroImage.src }] },
   };
 }
 

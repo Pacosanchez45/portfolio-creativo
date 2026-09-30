@@ -66,6 +66,6 @@ El contenido es visible sin JavaScript. `prefers-reduced-motion` desactiva las e
 
 ## Producción
 
-- Dominio canónico: `https://uiverse.es`.
+- Dominio canónico: `https://www.uiverse.es` (`https://uiverse.es` redirige a `www`).
 - El proyecto está preparado para desplegarse en Vercel desde la raíz del repositorio.
 - Configura en Vercel `RESEND_API_KEY`, `CONTACT_FROM_EMAIL=contacto@uiverse.es` y `CONTACT_TO_EMAIL=pacosansan97@gmail.com` antes de probar el formulario en producción.
