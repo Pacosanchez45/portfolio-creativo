@@ -1,63 +1,72 @@
-# UIverse - Portfolio profesional UX/UI & Front-End
+# UIverse · Portfolio
 
-Portfolio profesional de Francisco Sánchez, diseñado para presentar proyectos de UX/UI, producto digital, desarrollo web, SEO y marketing de forma clara, visual y orientada a captar oportunidades.
+Portfolio de UIverse con Home, archivo de proyectos, casos de estudio y página de contacto. Next.js App Router, TypeScript, Tailwind CSS, GSAP, ScrollTrigger, Lenis y Resend.
 
-## Demo
+## Desarrollo
 
-- Web: [https://www.uiverse.es/](https://www.uiverse.es/)
+```sh
+npm install
+npm run dev
+```
 
-## Objetivo del proyecto
+Preview: http://127.0.0.1:3000. Validación: `npm run lint`, `npm run typecheck`, `npm run build`.
 
-UIverse nace como portfolio personal, pero está planteado como una pieza de producto: debe explicar rápido qué diseño, qué desarrollo, qué proyectos he construido y cómo puedo ayudar a una empresa a mejorar su presencia digital.
+## Estructura
 
-El objetivo principal fue transformar una web de presentación en una herramienta profesional para mostrar criterio, proyectos reales, casos de estudio y una oferta clara de diseño y desarrollo web.
+- `src/app/globals.css`: tokens Tailwind v4, tipografía Manrope local, spacing, breakpoints y estilos responsive.
+- `src/components/header.tsx`: navegación y estado al hacer scroll.
+- `src/components/hero.tsx`: composición y animación GSAP aislada con cleanup.
+- `src/components/motion-provider.tsx`: Lenis sincronizado con ScrollTrigger; scroll nativo móvil y reduced motion.
 
-## Qué incluye
+La Home muestra tres proyectos destacados desde la misma fuente usada por `/proyectos`. Sobre mí usa `id="about"`; la CTA final enlaza a `/contacto` y `/proyectos`.
 
-- Home bilingüe en español e inglés.
-- Hero con posicionamiento profesional UX/UI + Front-End.
-- Página de perfil con diseño, desarrollo, SEO, marketing y proceso resumido.
-- Proyectos destacados con enlaces a demos y repositorios.
-- Caso de estudio propio de UIverse.
-- Página de contacto.
-- Diseño responsive para escritorio y móvil.
+## Identidad e idiomas
 
-## Proyectos destacados
+- `src/translations/es.ts` y `en.ts`: textos de interfaz, SEO y versiones localizadas del contenido. Español es el idioma inicial; los datos base y los assets siguen en `src/data/`.
+- `LanguageProvider`: cambio en tiempo real, `html.lang`, título y descripción; guarda `es` o `en` en `localStorage` bajo `uiverse.language.v1`. Si el almacenamiento está bloqueado, mantiene la elección en memoria.
+- Las traducciones conservan las claves de los componentes animados y refrescan las medidas de ScrollTrigger sin recrear las secciones.
+- `src/components/brand-mark.tsx`: monograma UI editable en SVG. `src/app/icon.svg`: favicon de la marca.
+- About presenta la experiencia como una pieza tipográfica. Sus textos están en los diccionarios ES/EN; los nombres de herramientas conservan su denominación original.
 
-- UXSignal - caso de estudio de producto UX/IA, demo pública en [uxsignal-ai.vercel.app](https://uxsignal-ai.vercel.app) y repositorio en [GitHub](https://github.com/Pacosanchez45/uxsignal-ai).
-- UIverse - Portfolio profesional UX/UI & Front-End.
-- Generador de Botones - herramienta interactiva con JavaScript.
-- Clínica Dental LB - rediseño UX/UI para negocio local.
-- FRAME Festival - experiencia web para festival de cine.
-- UrbanGym Pro - landing comercial bilingüe.
+## Selected Work
 
-## Stack
+- `src/data/projects.ts`: nombres, categorías, años, descripciones, imágenes, alt y `caseUrl` editables.
+- `src/components/selected-work/`: componentes SelectedWork y ProjectShowcase, hook GSAP con cleanup y CSS Module aislado.
+- `public/projects/`: mockups SVG originales de ejemplo. Reemplazables por imágenes de proyectos reales.
+- `caseUrl: null` abre una ficha conceptual accesible con diálogo nativo, cierre con Escape y retorno de foco. Una URL real convierte el CTA en enlace.
+- Revelado de títulos e imágenes, escala progresiva, parallax suave y hover. En móvil se simplifican los efectos; reduced motion muestra todo sin animación. No hay pinning ni scroll-jacking.
 
-- HTML5
-- CSS3
-- JavaScript
-- Figma
-- Git y GitHub
-- Vercel
+El Hero separa las transformaciones de entrada, cursor y scroll en wrappers distintos. La entrada dura 1,45 s; el punto usa un rebote breve. El cursor mueve las líneas en direcciones opuestas (máximo 8 px horizontales y 3 px verticales), excluyendo equipos táctiles. ScrollTrigger aplica parallax y opacidad progresiva al desplazarse hacia Selected Work.
 
-## Decisiones UX/UI
+El contenido es visible sin JavaScript. `prefers-reduced-motion` desactiva las entradas y el seguimiento del cursor. Las animaciones se limpian al desmontar y al cambiar preferencias.
 
-- Mensaje principal directo para que el perfil se entienda en pocos segundos.
-- Proyectos ordenados por valor profesional, no solo por estética.
-- Textos orientados a explicar decisiones, proceso y resultado.
-- Llamadas a la acción claras: ver proyectos, conocer el perfil y contactar.
-- Diseño visual oscuro, moderno y con contraste alto.
-- Estructura responsive y navegación simple.
 
-## Qué demuestra este proyecto
+## Contacto
 
-- Capacidad para definir posicionamiento profesional.
-- Criterio de arquitectura de información.
-- Diseño visual aplicado a portfolio.
-- Maquetación responsive.
-- Organización de proyectos y casos de estudio.
-- Publicación y mantenimiento de una web real.
+- Enlaces de correo y LinkedIn editables en `src/data/contact.ts`.
+- La Home usa `src/components/contact/` como CTA; el formulario está en `src/components/contact-page/`.
+- `POST /api/contact` valida los datos, aplica honeypot, tiempo mínimo y un límite básico por IP, y envía con Resend desde el servidor.
+- Copia `.env.example` a `.env.local` y configura las tres variables obligatorias: `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` y `CONTACT_TO_EMAIL`.
+- Para producción, verifica `uiverse.es` en Resend y usa `CONTACT_FROM_EMAIL=contacto@uiverse.es`.
+- Todos los formularios se envían a `CONTACT_TO_EMAIL=pacosansan97@gmail.com`; el endpoint conserva como `Reply-To` el email introducido por la persona que escribe.
+- El Hero conserva el nombre Francisco Sánchez; UIverse permanece como marca del sitio.
 
-## Estado
+## Archivo de proyectos
 
-Proyecto activo. UIverse sigue evolucionando como portfolio profesional y como base para nuevos proyectos de UX/UI y Front-End.
+- `src/data/projects.ts` es la fuente única de los cinco proyectos, enlaces, tecnologías y portadas.
+- La Home toma los tres primeros; `/proyectos` muestra los cinco con sus enlaces de caso, demo y GitHub.
+- Las portadas editables generadas para esta versión están en `public/projects/covers/` y se identifican con el sufijo `-cover-ai`.
+
+## Casos de estudio
+
+- `/casos/uxsignal` y `/casos/clinica-dental-lb` comparten una plantilla editorial con contenido específico, imágenes reales, motion, responsive y traducción ES/EN.
+- `src/data/case-studies.ts` centraliza todo el contenido, metadata, enlaces y medios de ambos casos.
+- Las antiguas URLs terminadas en `.html` redirigen desde `next.config.ts`, por lo que enlaces publicados y favoritos siguen funcionando.
+- Los casos enlazan al portfolio, al archivo de proyectos, a la demo publicada y a GitHub.
+
+## Producción
+
+- Dominio canónico: `https://uiverse.es`.
+- El proyecto está preparado para desplegarse en Vercel desde la raíz del repositorio.
+- Configura en Vercel `RESEND_API_KEY`, `CONTACT_FROM_EMAIL=contacto@uiverse.es` y `CONTACT_TO_EMAIL=pacosansan97@gmail.com` antes de probar el formulario en producción.
+

@@ -1,0 +1,53 @@
+.section { position:relative; isolation:isolate; overflow:hidden; background: var(--color-canvas); padding: clamp(5rem, 10vw, 10rem) var(--gutter) 5rem; }
+.label { font-size: 0.68rem; letter-spacing: 0.12em; color: #bdc1b4; margin: 0 0 3rem; }
+.layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); column-gap: clamp(3rem, 7vw, 8rem); row-gap: 4rem; align-items: start; }
+.title { grid-column: 1; grid-row: 1; margin: 0; font-size: clamp(2.5rem, 6.1vw, 6.7rem); font-weight: 500; letter-spacing: -0.065em; line-height: 1.09; }
+.title > .mask:nth-child(2) { font-size: 0.78em; margin-left: 8%; }
+.title > .mask:nth-child(3) { font-size: 1.07em; }
+.title > .mask:nth-child(4) { margin-left: 4%; }
+.mask { display: block; overflow: hidden; padding-block: 0.1em; margin-block: -0.1em; }
+.mask > span { display: block; }
+.outline { color: transparent; -webkit-text-stroke: 1px #c6c9bd; }
+.accent { color: var(--color-accent); }
+.experience { grid-column: 1; grid-row: 2; width: 88%; margin-left: 7%; perspective: 1200px; }
+.tilt { transform-style: preserve-3d; }
+.experienceRule { display: block; height: 1px; background: var(--color-rule); transform-origin: left; }
+.experienceNumber { margin: 2rem 0 1.5rem; font-size: clamp(7rem, 19vw, 20rem); font-weight: 500; letter-spacing: -0.085em; line-height: 1.05; }
+.experiencePlus { display: inline-block; color: var(--color-accent); font-size: 0.55em; vertical-align: top; margin-top: 0.12em; margin-left: 0.04em; transform-origin: center; }
+.experienceText { display: flex; align-items: flex-start; gap: 1.5rem; margin: 0 0 2.5rem 14%; }
+.experienceText p { margin: 0; font-size: clamp(0.75rem, 1.05vw, 1rem); line-height: 1.65; letter-spacing: 0.08em; }
+.experienceText p > span { display: block; }
+.experienceMarker { width: 1.8rem; height: 1px; margin-top: 0.65rem; background: var(--color-accent); flex-shrink: 0; transform-origin: left; }
+.copy { grid-column: 2; grid-row: 1 / 3; padding-top: 1rem; }
+.lead { margin: 0 0 2rem; font-size: clamp(1.25rem, 2vw, 2rem); letter-spacing: -0.035em; line-height: 1.55; }
+.body { margin: 0; font-size: clamp(1rem, 1.15vw, 1.15rem); line-height: 1.9; color: #c0c4b7; }
+.meta { margin: clamp(3rem, 6vw, 6rem) 0 0; }
+.meta > div { border-top: 1px solid var(--color-rule); padding: 1.4rem 0; }
+.meta dt { font-size: 0.6rem; letter-spacing: 0.1em; color: #a9af9f; margin-bottom: 0.75rem; }
+.meta dd { margin: 0; font-size: clamp(0.75rem, 1vw, 0.92rem); letter-spacing: 0.015em; line-height: 1.7; }
+.statement { margin: clamp(5rem, 10vw, 10rem) 0 3rem; font-size: clamp(1.5rem, 4.7vw, 5rem); font-weight: 500; letter-spacing: -0.055em; line-height: 1.35; }
+.tools { border-top: 1px solid var(--color-rule); padding-top: 1.5rem; }
+.toolsHeading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.58rem; letter-spacing: 0.1em; color: #b5bcaa; }
+.pause { background: none; color: inherit; border: 0; font: inherit; letter-spacing: inherit; min-height: 44px; cursor: pointer; }
+.pause:hover { color: var(--color-accent); }
+.marquee { overflow: hidden; margin-top: 1.25rem; }
+.track { display: flex; width: max-content; animation: travel 45s linear infinite; }
+.toolList { display: flex; list-style: none; margin: 0; padding: 0; flex-shrink: 0; }
+.toolList li { display: flex; align-items: center; gap: 2rem; padding-right: 2rem; font-size: clamp(1.1rem, 2.2vw, 2rem); letter-spacing: -0.025em; color: #c1c5b8; }
+.toolList li > span { color: var(--color-accent); }
+.marquee[data-paused='true'] .track, .marquee:hover .track { animation-play-state: paused; }
+@keyframes travel { to { transform: translateX(-50%); } }
+@media (min-width: 1600px) { .section { padding-inline: max(var(--gutter), calc((100vw - 100rem) / 2)); } }
+@media (min-width: 768px) and (max-width: 1023px) { .layout { gap: 2rem; } .experience { width: 95%; margin-left: 0; } .lead { font-size: 1.3rem; } }
+@media (max-width: 767px) {
+  .layout { display: flex; flex-direction: column; gap: 2.5rem; }
+  .title { font-size: clamp(2.7rem, 12vw, 5.5rem); }
+  .experience { width: 100%; margin: 0; perspective: none; }
+  .experienceNumber { font-size: clamp(7rem, 43vw, 15rem); }
+  .experienceText { margin-left: 22%; }
+  .copy { padding: 0; }
+  .lead { font-size: 1.4rem; }
+  .statement { font-size: clamp(1.2rem, 4.7vw, 2rem); }
+  .toolsHeading { font-size: 0.5rem; }
+}
+@media (prefers-reduced-motion: reduce) { .track { animation: none; width: auto; } .toolList { flex-wrap: wrap; gap: 1rem 0; } .toolList[aria-hidden='true'] { display: none; } .pause { display: none; } .experience { perspective: none; } }
