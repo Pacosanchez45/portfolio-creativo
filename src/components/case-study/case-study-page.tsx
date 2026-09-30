@@ -85,7 +85,7 @@ export function CaseStudyPage({ slug }: { slug: CaseStudySlug }) {
     <span className={styles.progress} aria-hidden="true"><span data-case-progress /></span>
     <section className={styles.hero}>
       <div className={styles.heroTop}>
-        <Link href="/proyectos" data-case-back>← {study.labels.back}</Link>
+        <Link href="/" data-case-back>← {study.labels.back}</Link>
         <span data-case-index>{study.index} / {study.year}</span>
       </div>
       <div className={styles.heroGrid}>
