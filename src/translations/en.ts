@@ -68,4 +68,3 @@ export const en: Content = {
     meta: [{ label: 'ROLE', value: 'UX/UI DESIGNER & FRONT-END' }, { label: 'LOCATION', value: 'MÁLAGA, SPAIN' }, { label: 'FOCUS', value: 'DIGITAL PRODUCTS / WEB / INTERACTION' }, { label: 'EXPERIENCE', value: '3+ YEARS FREELANCE' }],
   },
 };
-

@@ -44,4 +44,3 @@ export const es = {
 };
 
 export type Content = typeof es;
-
