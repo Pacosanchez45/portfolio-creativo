@@ -19,7 +19,7 @@ export const en: Content = {
     description: 'Portfolio focused on UX/UI, digital products and front-end with a visual, structural and functional mindset.',
     navigation: 'NAVIGATION', featured: 'FEATURED PROJECTS', contact: 'CONTACT',
     home: 'Home', projects: 'Projects', about: 'About', contactLink: 'Contact', location: 'Málaga, Spain',
-    copyright: '© 2026 UIverse', credit: 'Designed and developed by Francisco Sánchez', external: 'opens in a new tab',
+    copyright: '© 2026 UIverse', credit: 'Designed and developed by Francisco Sánchez', external: 'opens in a new tab', namiLabel: 'Visit Nami Design (opens in a new tab)',
   },
   seo: { title: 'UIverse — UX/UI Design & Front-End Portfolio', description: 'Clear, functional and thoughtfully crafted digital experiences. A portfolio of UX/UI design and Front-End development.' },
   routeSeo: { contact: { title: 'UIverse — Contact', description: 'Tell me about your digital project and get an initial direction for UX/UI design and Front-End development.' }, projects: { title: 'UIverse — Projects', description: 'A complete selection of UX/UI, digital product and Front-End development projects.' } },
@@ -66,5 +66,6 @@ export const en: Content = {
   aboutContent: { ...es.aboutContent,
     paragraphs: ['I design digital products and interfaces with a perspective that combines user experience, visual direction and technical execution.', 'I want to understand how a product works before deciding how it should look. I work from structure, flows and hierarchy through to interaction and the final details.'],
     meta: [{ label: 'ROLE', value: 'UX/UI DESIGNER & FRONT-END' }, { label: 'LOCATION', value: 'MÁLAGA, SPAIN' }, { label: 'FOCUS', value: 'DIGITAL PRODUCTS / WEB / INTERACTION' }, { label: 'EXPERIENCE', value: '3+ YEARS FREELANCE' }],
+    company: { label: 'COMPANY', name: 'NAMI DESIGN', description: 'WEB DESIGN / SEO / SOCIAL MEDIA', ariaLabel: 'Visit the Nami Design website' },
   },
 };

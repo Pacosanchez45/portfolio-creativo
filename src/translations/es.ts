@@ -22,7 +22,7 @@ export const es = {
     description: 'Portfolio de UX/UI, producto digital y front-end con enfoque visual, estructural y funcional.',
     navigation: 'NAVEGACIÓN', featured: 'PROYECTOS DESTACADOS', contact: 'CONTACTO',
     home: 'Inicio', projects: 'Proyectos', about: 'Sobre mí', contactLink: 'Contacto', location: 'Málaga, España',
-    copyright: '© 2026 UIverse', credit: 'Diseñado y desarrollado por Francisco Sánchez', external: 'abre en una pestaña nueva',
+    copyright: '© 2026 UIverse', credit: 'Diseñado y desarrollado por Francisco Sánchez', external: 'abre en una pestaña nueva', namiLabel: 'Visitar Nami Design (abre en una pestaña nueva)',
   },
   seo: { title: 'UIverse — Diseño UX/UI y desarrollo Front-End', description: 'Diseño experiencias digitales claras, funcionales y visualmente cuidadas. Portfolio de diseño UX/UI y desarrollo Front-End.' },
   routeSeo: { contact: { title: 'UIverse — Contacto', description: 'Cuéntame tu proyecto digital y recibe una primera orientación sobre diseño UX/UI y desarrollo Front-End.' }, projects: { title: 'UIverse — Proyectos', description: 'Selección completa de proyectos de UX/UI, producto digital y desarrollo Front-End.' } },
@@ -40,7 +40,7 @@ export const es = {
     { label: 'UBICACIÓN', value: 'MÁLAGA, ESPAÑA' },
     { label: 'ENFOQUE', value: 'PRODUCTOS DIGITALES / WEB / INTERACCIÓN' },
     { label: 'EXPERIENCIA', value: '3+ AÑOS FREELANCE' },
-  ] },
+  ], company: { label: 'EMPRESA', name: 'NAMI DESIGN', description: 'DISEÑO WEB / SEO / REDES SOCIALES', ariaLabel: 'Visitar la web de Nami Design' } },
 };
 
 export type Content = typeof es;

@@ -61,6 +61,7 @@ export function Footer() {
         <p>{c.footer.location}</p>
         <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn<span aria-hidden="true">↗</span></a>
         <a href={contact.github} target="_blank" rel="noopener noreferrer">GitHub<span aria-hidden="true">↗</span></a>
+        <a href={contact.nami} target="_blank" rel="noopener noreferrer" aria-label={c.footer.namiLabel}>Nami Design<span aria-hidden="true">↗</span></a>
       </address>
     </div>
     <div className={styles.bottom} data-footer-bottom><span>{c.footer.copyright}</span><span>{c.footer.credit}</span></div>
