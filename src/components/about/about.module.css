@@ -45,16 +45,17 @@
 .marquee[data-paused='true'] .track, .marquee:hover .track { animation-play-state: paused; }
 @keyframes travel { to { transform: translateX(-50%); } }
 @media (min-width: 1600px) { .section { padding-inline: max(var(--gutter), calc((100vw - 100rem) / 2)); } }
-@media (min-width: 768px) and (max-width: 1023px) { .layout { gap: 2rem; } .experience { width: 95%; margin-left: 0; } .lead { font-size: 1.3rem; } }
+@media (min-width: 768px) and (max-width: 1023px) { .layout { grid-template-columns:minmax(0,1fr) minmax(0,.9fr); gap: 2rem; } .title { font-size:clamp(3rem,5.8vw,4.2rem); } .experience { width: 95%; margin-left: 0; } .experienceNumber { font-size:clamp(7rem,16vw,11rem); } .lead { font-size: 1.22rem; } .statement { font-size:clamp(2.3rem,4.5vw,3.3rem); } }
 @media (max-width: 767px) {
   .layout { display: flex; flex-direction: column; gap: 2.5rem; }
-  .title { font-size: clamp(2.7rem, 12vw, 5.5rem); }
+  .title { font-size: clamp(2.15rem, 9.8vw, 4.4rem); }
   .experience { width: 100%; margin: 0; perspective: none; }
-  .experienceNumber { font-size: clamp(7rem, 43vw, 15rem); }
-  .experienceText { margin-left: 22%; }
+  .experienceNumber { font-size: clamp(6.2rem, 34vw, 12rem); }
+  .experienceText { margin-left: 16%; }
   .copy { padding: 0; }
-  .lead { font-size: 1.4rem; }
-  .statement { font-size: clamp(1.2rem, 4.7vw, 2rem); }
+  .lead { font-size: 1.2rem; }
+  .statement { font-size: clamp(1.15rem, 4.35vw, 1.85rem); }
+  .companyArrow { font-size:.85rem; }
   .toolsHeading { font-size: 0.5rem; }
 }
 @media (prefers-reduced-motion: reduce) { .track { animation: none; width: auto; } .toolList { flex-wrap: wrap; gap: 1rem 0; } .toolList[aria-hidden='true'] { display: none; } .pause { display: none; } .experience { perspective: none; } }

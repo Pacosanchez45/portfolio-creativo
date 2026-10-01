@@ -18,7 +18,7 @@
 * { box-sizing: border-box; }
 html { scroll-padding-top: var(--header-height); scroll-behavior: smooth; }
 html.lenis { scroll-behavior: auto; }
-body { margin: 0; background: var(--color-canvas); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+body { margin: 0; overflow-x: clip; background: var(--color-canvas); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
 ::selection { background: var(--color-accent); color: var(--color-canvas); }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -61,6 +61,19 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .selected-work > span { color: var(--color-accent); font-size: 1.4rem; line-height: 1; }
 .hero-note, .hero-index { color: var(--color-muted); }
 @media (min-width: 1600px) { .hero-main { width: 100%; max-width: 96rem; align-self: center; } }
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root { --gutter: clamp(1.75rem, 4vw, 2.5rem); --header-height: 5.75rem; }
+  .site-header { padding-block: 1.15rem; gap: 1rem; }
+  .header-nav { gap: clamp(1rem, 2.2vw, 1.5rem); }
+  .nav-item { font-size: 0.6rem; }
+  .hero { padding-top: calc(var(--header-height) + 2rem); }
+  .hero-main { padding-block: clamp(2rem, 4vh, 3.25rem); }
+  .hero-name { font-size: clamp(4.5rem, 10.8vw, 6.9rem); margin-bottom: 1.5rem; }
+  .surname { margin-left: 8%; font-size: 1.08em; }
+  .hero-details { margin-top: 1.5rem; }
+  .hero-role { font-size: clamp(1.05rem, 2.3vw, 1.4rem); }
+  .hero-description { max-width: 23rem; font-size: 1rem; }
+}
 @media (max-width: 767px) {
   :root { --header-height: 5.5rem; }
   .site-header { gap: 1rem; }
@@ -69,12 +82,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .nav-item { font-size: 0.55rem; }
   .hero { padding-top: calc(var(--header-height) + 1.5rem); }
   .eyebrow-right { display: none; }
-  .hero-name { font-size: clamp(2.4rem, 12.6vw, 6.2rem); }
-  .surname { margin-left: 8%; }
-  .hero-main { padding-block: 3.5rem; }
+  .hero-name { font-size: clamp(2.25rem, 11.2vw, 4.8rem); }
+  .surname { margin-left: 4%; font-size: 1.08em; }
+  .hero-main { padding-block: 2.75rem; }
   .hero-details { grid-template-columns: 1fr; gap: 2rem; margin-top: 2.5rem; }
   .hero-role { font-size: 1.25rem; }
-  .hero-description { max-width: 20rem; margin-left: 12%; font-size: 1rem; }
+  .hero-description { max-width: 20rem; margin-left: 8%; font-size: 0.94rem; }
   .hero-note { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -91,4 +104,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .nav-item { font-size: 0.6rem; }
   .language-switch { grid-column: 2; grid-row: 1; }
   .hero-role { font-size: clamp(1rem, 4.7vw, 1.25rem); }
+  .selected-work { gap: 0.8rem; min-height: 44px; }
+  .selected-work > span { font-size: 1.05rem; }
 }

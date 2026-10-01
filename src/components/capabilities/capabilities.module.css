@@ -23,16 +23,16 @@
   .row:hover .arrow { transform: translate(3px, -3px); opacity: 1; }
 }
 @media (min-width: 1600px) { .section { padding-inline: max(var(--gutter), calc((100vw - 100rem) / 2)); } }
-@media (min-width: 768px) and (max-width: 1023px) { .row { grid-template-columns: 2rem minmax(0, 1.3fr) minmax(0, 1fr) 1rem; gap: 1rem; } .description { font-size: 0.93rem; } }
+@media (min-width: 768px) and (max-width: 1023px) { .title { font-size:clamp(3.4rem,8vw,5.2rem); } .row { grid-template-columns: 2rem minmax(0, 1.3fr) minmax(0, 1fr); gap: 1rem; } .name { font-size:clamp(1.65rem,3.7vw,2.45rem); } .description { font-size: 0.9rem; } .arrow { display:none; } .statement { font-size:clamp(2.5rem,5.7vw,4rem); } }
 @media (max-width: 767px) {
   .eyebrow { font-size: 0.58rem; }
-  .title { font-size: clamp(1.9rem, 10.1vw, 4.8rem); }
-  .row { grid-template-columns: 1.6rem minmax(0, 1fr) 1rem; gap: 1rem; padding-block: 2.2rem; }
+  .title { font-size: clamp(1.9rem, 8.8vw, 4rem); }
+  .row { grid-template-columns: 1.6rem minmax(0, 1fr); gap: 1rem; padding-block: 2.2rem; }
   .number { padding-top: 0.35rem; font-size: 0.7rem; }
-  .name { font-size: clamp(1.3rem, 5.8vw, 2.5rem); }
+  .name { font-size: clamp(1.25rem, 5.25vw, 2.25rem); }
   .description { grid-column: 2; grid-row: 2; margin: 0; font-size: 0.95rem; }
-  .arrow { grid-column: 3; grid-row: 1; font-size: 1.1rem; opacity: 1; }
-  .statement { margin-left: 0; font-size: clamp(1.65rem, 6.9vw, 3.3rem); }
+  .arrow { display:none; }
+  .statement { margin-left: 0; font-size: clamp(1.55rem, 6.2vw, 2.85rem); }
   .outline { margin-left: 3%; }
 }
 @media (prefers-reduced-motion: reduce) { .hoverName, .arrow { transform: none !important; } }

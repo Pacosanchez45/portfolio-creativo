@@ -68,7 +68,7 @@
 .close { display: flex; align-items: center; gap: 1.5rem; min-height: 44px; margin-left: auto; border: 0; background: none; color: var(--color-ink); font: inherit; font-size: 0.7rem; cursor: pointer; }
 .close span { font-size: 1.5rem; color: var(--color-accent); }
 @media (min-width: 1600px) { .section { max-width: 110rem; margin-inline: auto; } }
-@media (min-width: 768px) and (max-width: 1023px) { .composition { min-height: auto; gap: 1.5rem; } .projectTitle { font-size: 2.1rem; } .description { font-size: 0.95rem; } .right .composition { padding-left: 3%; } .visual, .featured .visual { aspect-ratio: 0.9; } }
+@media (min-width: 768px) and (max-width: 1023px) { .sectionTitle { font-size:clamp(3.25rem,6.8vw,4.75rem); } .composition { min-height: auto; gap: 1.5rem; } .projectTitle { font-size: 2rem; } .description { font-size: 0.93rem; } .right .composition { padding-left: 0; } .visual, .featured .visual { aspect-ratio: 0.94; } .visual::after { display:none; } }
 @media (max-width: 767px) {
   .section { padding-top: 5rem; }
   .progress { position: static; }
@@ -81,9 +81,13 @@
   .projectTop { margin-bottom: 1.5rem; }
   .composition, .right .composition, .left .composition { display: flex; flex-direction: column; gap: 2rem; align-items: stretch; min-height: 0; padding: 0; }
   .copy, .left .copy { display: contents; }
-  .projectTitle { order: 1; font-size: clamp(1.8rem, 7.7vw, 3.5rem); margin: 0; }
+  .sectionTitle { font-size:clamp(2.35rem,9vw,3.8rem); }
+  .projectTitle { order: 1; font-size: clamp(1.65rem, 7.1vw, 3rem); margin: 0; }
   .visual, .featured .visual, .right .visual, .left .visual { order: 0; aspect-ratio: 1.15; }
   .copy > div[data-work-copy] { order: 2; }
+  .visual::after { display:none; }
+  .cta { width:100%; gap:1rem; justify-content:space-between; }
+  .cta span { font-size:1.05rem; }
   .description { margin: 1rem 0 0; max-width: 28rem; }
   .category { margin-top: 0; }
   .ctaWrap { order: 3; align-self: flex-start; }

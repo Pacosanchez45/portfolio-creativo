@@ -63,9 +63,16 @@
 .pageNav a { transition:color 220ms; }
 .pageNav a:hover { color:var(--color-accent); }
 @media (min-width:1600px) { .hero,.formSection,.notes,.pageNav { padding-inline:max(var(--gutter),calc((100vw - 100rem)/2)); } }
+@media (min-width:768px) and (max-width:1023px) {
+  .pageTitle { font-size:clamp(3.8rem,7vw,5.4rem); }
+  .intro { font-size:1.1rem; }
+  .signals dt { font-size:clamp(1.35rem,2.4vw,1.8rem); }
+  .formSection { gap:clamp(2rem,5vw,4rem); }
+  .formHeading h2 { font-size:clamp(2.5rem,4.6vw,3.5rem); }
+}
 @media (max-width:767px) {
   .hero { padding-top:calc(var(--header-height) + 3rem); }
-  .pageTitle { font-size:clamp(2.25rem,11vw,4.5rem); }
+  .pageTitle { font-size:clamp(2.05rem,9.5vw,4rem); }
   .signals { flex-direction:column; gap:2rem; }
   .formSection { grid-template-columns:1fr; gap:3.5rem; }
   .notes article { grid-template-columns:2rem 1fr; }
