@@ -43,7 +43,8 @@
 .technology span { color:#8f9588; font-size:.58rem; letter-spacing:.11em; }
 .technology p { margin:.75rem 0 0; font-size:.8rem; line-height:1.7; }
 .links { display:flex; flex-wrap:wrap; gap:1.5rem; margin-top:2.5rem; }
-.links a { position:relative; padding-bottom:.55rem; font-size:.64rem; letter-spacing:.08em; transition:color 220ms; }
+.links a { position:relative; display:inline-flex; align-items:center; gap:.7rem; white-space:nowrap; padding-bottom:.55rem; font-size:.64rem; letter-spacing:.08em; transition:color 220ms; }
+.links a svg { flex:0 0 auto; width:1.35em; height:1.35em; color:var(--color-accent); }
 .links a::after { content:''; position:absolute; inset:auto 0 0; height:1px; background:var(--color-accent); transform:scaleX(.18); transform-origin:left; transition:transform 300ms; }
 .links a:hover { color:var(--color-accent); }
 .links a:hover::after { transform:scaleX(1); }
