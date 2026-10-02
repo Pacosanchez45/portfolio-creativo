@@ -1,6 +1,7 @@
 'use client';
 import { useLanguage } from '@/components/language-provider';
 import { contact } from '@/data/contact';
+import { ArrowRight } from '@/components/ui/arrow-right';
 
 import styles from './about.module.css';
 
@@ -14,7 +15,7 @@ export function AboutMeta() {
       <dd>
         <a className={styles.companyLink} href={contact.nami} target="_blank" rel="noopener noreferrer" aria-label={`${about.company.ariaLabel} (${c.footer.external})`}>
           <span><strong>{about.company.name}</strong><small>{about.company.description}</small></span>
-          <span className={styles.companyArrow} aria-hidden="true">↗</span>
+          <span className={styles.companyArrow} aria-hidden="true"><ArrowRight /></span>
         </a>
       </dd>
     </div>

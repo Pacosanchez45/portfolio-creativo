@@ -4,6 +4,7 @@ import { FormEvent, useEffect, useRef, useState } from 'react';
 import { useLanguage } from '@/components/language-provider';
 import { ProjectTypeSelect } from './project-type-select';
 import styles from './contact-page.module.css';
+import { ArrowRight } from '@/components/ui/arrow-right';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 type Errors = Partial<Record<'name' | 'email' | 'projectType' | 'message', string>>;
@@ -61,7 +62,7 @@ export function ContactForm() {
       <label htmlFor="message">{c.contactPage.fields.message}</label><textarea id="message" name="message" rows={7} required aria-invalid={Boolean(errors.message)} aria-describedby={errorId('message')} />
       {errors.message && <span id="message-error" className={styles.fieldError}>{errors.message}</span>}
     </div>
-    <button className={styles.submit} type="submit" disabled={status === 'submitting'}>{status === 'submitting' ? c.contactPage.sending : c.contactPage.submit}<span aria-hidden="true">↗</span></button>
+    <button className={styles.submit} type="submit" disabled={status === 'submitting'}>{status === 'submitting' ? c.contactPage.sending : c.contactPage.submit}<span aria-hidden="true"><ArrowRight /></span></button>
     <p className={styles.legal}>{c.contactPage.legal}</p>
     <p className={`${styles.formStatus} ${status === 'success' ? styles.success : ''}`} aria-live="polite">{status === 'success' ? c.contactPage.success : status === 'error' ? c.contactPage.error : ''}</p>
   </form>;

@@ -10,6 +10,7 @@ import { contact } from '@/data/contact';
 import { ContactForm } from './contact-form';
 import styles from './contact-page.module.css';
 import { DepthDetails } from '@/components/decorative/depth-details';
+import { ArrowRight } from '@/components/ui/arrow-right';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -39,7 +40,7 @@ export function ContactPageContent() {
       <div className={styles.formHeading}><p>{c.contactPage.formEyebrow}</p><h2 id="contact-form-title">{c.contactPage.formTitle}<span>.</span></h2><p>{c.contactPage.formIntro}</p></div>
       <ContactForm />
     </section>
-    <section className={styles.notes} aria-label={c.contactPage.notes[0].title}><DepthDetails variant="notes" label="03 / 03" />{c.contactPage.notes.map(note => <article key={note.number} data-contact-reveal><span>{note.number}</span><h2>{note.title}</h2><p>{note.text}</p>{note.number === '03' && <div className={styles.channels}><a href={`mailto:${contact.email}`} aria-label={c.contactPage.emailLabel}>EMAIL ↗</a><a href={contact.linkedin ?? '#'} target="_blank" rel="noopener noreferrer" aria-label={c.contactPage.linkedinLabel}>LINKEDIN ↗</a></div>}</article>)}</section>
+    <section className={styles.notes} aria-label={c.contactPage.notes[0].title}><DepthDetails variant="notes" label="03 / 03" />{c.contactPage.notes.map(note => <article key={note.number} data-contact-reveal><span>{note.number}</span><h2>{note.title}</h2><p>{note.text}</p>{note.number === '03' && <div className={styles.channels}><a href={`mailto:${contact.email}`} aria-label={c.contactPage.emailLabel}>EMAIL <ArrowRight /></a><a href={contact.linkedin ?? '#'} target="_blank" rel="noopener noreferrer" aria-label={c.contactPage.linkedinLabel}>LINKEDIN <ArrowRight /></a></div>}</article>)}</section>
     <nav className={styles.pageNav} aria-label={c.nav.label}><Link href="/">← {c.contactPage.back}</Link><Link href="/proyectos">{c.contactPage.projects} →</Link></nav>
   </main>;
 }

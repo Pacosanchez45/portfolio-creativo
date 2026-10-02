@@ -9,6 +9,7 @@ import { useGSAP } from '@gsap/react';
 import { useLanguage } from '@/components/language-provider';
 import { caseStudiesEn, caseStudiesEs, type CaseStudySlug } from '@/data/case-studies';
 import styles from './case-study-page.module.css';
+import { ArrowRight } from '@/components/ui/arrow-right';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -125,7 +126,7 @@ export function CaseStudyPage({ slug }: { slug: CaseStudySlug }) {
       <span className={styles.rule} data-case-rule aria-hidden="true" />
       <p className={styles.eyebrow} data-case-eyebrow>{study.final.eyebrow}</p>
       <h2><span><span data-case-heading>{study.final.title}</span></span></h2>
-      <div className={styles.finalLinks} data-case-copy><a href={study.final.primary.href} target="_blank" rel="noopener noreferrer">{study.final.primary.label}<span>↗</span></a><a href={study.final.secondary.href} target="_blank" rel="noopener noreferrer">{study.final.secondary.label}<span>↗</span></a></div>
+      <div className={styles.finalLinks} data-case-copy><a href={study.final.primary.href} target="_blank" rel="noopener noreferrer">{study.final.primary.label}<span><ArrowRight /></span></a><a href={study.final.secondary.href} target="_blank" rel="noopener noreferrer">{study.final.secondary.label}<span><ArrowRight /></span></a></div>
     </section>
 
     <nav className={styles.caseNav} aria-label={study.labels.projects}>

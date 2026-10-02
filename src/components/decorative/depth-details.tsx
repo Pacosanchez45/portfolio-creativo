@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import styles from './depth-details.module.css';
+import { ArrowRight } from '@/components/ui/arrow-right';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -27,7 +28,7 @@ const artwork: Record<Variant, ReactNode> = {
   capabilities: <><span className={styles.capCross} data-detail-axis><i /><i /></span><span className={styles.capOrbit} data-detail-plane><i /><i /><b /></span></>,
   process: <><span className={styles.processTrack} data-detail-axis><i /><i /><i /><i /></span><span className={styles.processSteps} data-detail-plane><i /><i /><i /><i /></span></>,
   about: <><span className={styles.aboutMeasure} data-detail-axis><i /><i /><i /></span><span className={styles.aboutBrackets} data-detail-plane><i /><i /><b>03+</b></span></>,
-  contact: <><span className={styles.contactDots} data-detail-axis><i /><i /><i /></span><span className={styles.contactRoute} data-detail-plane><i /><i /><b>↗</b></span></>,
+  contact: <><span className={styles.contactDots} data-detail-axis><i /><i /><i /></span><span className={styles.contactRoute} data-detail-plane><i /><i /><b><ArrowRight /></b></span></>,
   contactPage: <><span className={styles.messageMeta} data-detail-axis><i /><i /></span><span className={styles.messageFrame} data-detail-plane><i /><i /><i /><b /></span></>,
   projectsPage: <><span className={styles.sheetMarks} data-detail-axis><i /><i /><i /><i /></span><span className={styles.contactSheet} data-detail-plane><i /><i /><i /><i /></span></>,
   form: <><span className={styles.formRail} data-detail-axis><i /><i /><i /></span><span className={styles.formFields} data-detail-plane><i /><i /><i /><b /></span></>,

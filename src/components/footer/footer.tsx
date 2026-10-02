@@ -10,6 +10,7 @@ import { BrandMark } from '@/components/brand-mark';
 import { contact } from '@/data/contact';
 import styles from './footer.module.css';
 import { DepthDetails } from '@/components/decorative/depth-details';
+import { ArrowRight } from '@/components/ui/arrow-right';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -46,22 +47,22 @@ export function Footer() {
       </div>
       <nav className={styles.column} data-footer-column aria-label={c.footer.navigation}>
         <h2>{c.footer.navigation}</h2>
-        {navigation.map(item => <Link key={item.href} href={item.href}>{item.label}<span aria-hidden="true">↗</span></Link>)}
+        {navigation.map(item => <Link key={item.href} href={item.href}>{item.label}<span aria-hidden="true"><ArrowRight /></span></Link>)}
       </nav>
       <nav className={styles.column} data-footer-column aria-label={c.footer.featured}>
         <h2>{c.footer.featured}</h2>
         {c.projects.map(project => {
           const href = project.caseUrl ?? project.projectUrl ?? project.githubUrl ?? '/proyectos';
-          return href.startsWith('/') ? <Link key={project.id} href={href}>{project.name}<span aria-hidden="true">→</span></Link> : <a key={project.id} href={href} target="_blank" rel="noopener noreferrer" aria-label={`${project.name} (${c.footer.external})`}>{project.name}<span aria-hidden="true">↗</span></a>;
+          return href.startsWith('/') ? <Link key={project.id} href={href}>{project.name}<span aria-hidden="true"><ArrowRight /></span></Link> : <a key={project.id} href={href} target="_blank" rel="noopener noreferrer" aria-label={`${project.name} (${c.footer.external})`}>{project.name}<span aria-hidden="true"><ArrowRight /></span></a>;
         })}
       </nav>
       <address className={styles.column} data-footer-column>
         <h2>{c.footer.contact}</h2>
-        <a href={`mailto:${contact.email}`}>{contact.email}<span aria-hidden="true">↗</span></a>
+        <a href={`mailto:${contact.email}`}>{contact.email}<span aria-hidden="true"><ArrowRight /></span></a>
         <p>{c.footer.location}</p>
-        <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn<span aria-hidden="true">↗</span></a>
-        <a href={contact.github} target="_blank" rel="noopener noreferrer">GitHub<span aria-hidden="true">↗</span></a>
-        <a href={contact.nami} target="_blank" rel="noopener noreferrer" aria-label={c.footer.namiLabel}>Nami Design<span aria-hidden="true">↗</span></a>
+        <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn<span aria-hidden="true"><ArrowRight /></span></a>
+        <a href={contact.github} target="_blank" rel="noopener noreferrer">GitHub<span aria-hidden="true"><ArrowRight /></span></a>
+        <a href={contact.nami} target="_blank" rel="noopener noreferrer" aria-label={c.footer.namiLabel}>Nami Design<span aria-hidden="true"><ArrowRight /></span></a>
       </address>
     </div>
     <div className={styles.bottom} data-footer-bottom><span>{c.footer.copyright}</span><span>{c.footer.credit}</span></div>

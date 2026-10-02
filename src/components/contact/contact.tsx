@@ -8,6 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '@/components/language-provider';
 import styles from './contact.module.css';
 import { DepthDetails } from '@/components/decorative/depth-details';
+import { ArrowRight } from '@/components/ui/arrow-right';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -60,8 +61,8 @@ export function Contact() {
     <div className={styles.details} data-contact-details>
       <p className={styles.copy} data-contact-copy>{c.contact.description}</p>
       <div className={styles.actions} data-contact-actions>
-        <Link className={styles.primary} href="/contacto">{c.contact.cta}<span aria-hidden="true">↗</span></Link>
-        <Link className={styles.secondary} href="/proyectos">{c.contact.projectsCta}<span aria-hidden="true">↗</span></Link>
+        <Link className={styles.primary} href="/contacto">{c.contact.cta}<span aria-hidden="true"><ArrowRight /></span></Link>
+        <Link className={styles.secondary} href="/proyectos">{c.contact.projectsCta}<span aria-hidden="true"><ArrowRight /></span></Link>
       </div>
     </div>
   </section>;

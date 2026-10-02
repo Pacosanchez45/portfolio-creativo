@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Project } from '@/data/projects';
 import { useWorkMotion } from './use-work-motion';
+import { ArrowRight } from '@/components/ui/arrow-right';
 import styles from './selected-work.module.css';
 
 export function ProjectShowcase({ project }: { project: Project }) {
@@ -21,7 +22,7 @@ export function ProjectShowcase({ project }: { project: Project }) {
         <h3 id={`${project.id}-title`} className={styles.projectTitle} data-title-parallax aria-label={project.name}><span className={styles.titleHover} aria-hidden="true">{project.name.split(' ').map((word, index) => <span className={styles.wordMask} key={index}><span data-work-title>{word}</span>{' '}</span>)}</span></h3>
         <div data-work-copy><p className={styles.category} data-meta-parallax>{project.category}</p><p className={styles.description}>{project.description}</p></div>
         <div data-cta-parallax className={styles.ctaWrap}><div data-work-cta>
-          {destination ? destination.startsWith('/') ? <Link className={styles.cta} href={destination} aria-label={label}>{c.work.cta} <span aria-hidden="true">→</span></Link> : <a className={styles.cta} href={destination} target="_blank" rel="noopener noreferrer" aria-label={label}>{c.work.cta} <span aria-hidden="true">↗</span></a> : <button className={styles.cta} onClick={() => dialog.current?.showModal()} aria-haspopup="dialog" aria-label={label}>{c.work.cta} <span aria-hidden="true">↗</span></button>}
+          {destination ? destination.startsWith('/') ? <Link className={styles.cta} href={destination} aria-label={label}>{c.work.cta} <span aria-hidden="true"><ArrowRight /></span></Link> : <a className={styles.cta} href={destination} target="_blank" rel="noopener noreferrer" aria-label={label}>{c.work.cta} <span aria-hidden="true"><ArrowRight /></span></a> : <button className={styles.cta} onClick={() => dialog.current?.showModal()} aria-haspopup="dialog" aria-label={label}>{c.work.cta} <span aria-hidden="true"><ArrowRight /></span></button>}
         </div></div>
       </div>
       <div data-image-parallax className={`${styles.visual} ${project.imageFit === 'contain' ? styles.contained : ''}`} data-work-image>

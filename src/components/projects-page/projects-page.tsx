@@ -9,6 +9,7 @@ import { useGSAP } from '@gsap/react';
 import { useLanguage } from '@/components/language-provider';
 import styles from './projects-page.module.css';
 import { DepthDetails } from '@/components/decorative/depth-details';
+import { ArrowRight } from '@/components/ui/arrow-right';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -79,7 +80,7 @@ export function ProjectsPageContent() {
     <section className={styles.archive} aria-label={c.projectsPage.title}>
       {c.projects.map((project, index) => {
         const visualHref = project.caseUrl ?? project.projectUrl ?? project.githubUrl ?? '/proyectos';
-        const visualContent = <><span className={styles.frame} data-project-frame aria-hidden="true" /><span className={styles.imageWindow}><span data-project-image-inner><Image src={project.image} alt={project.imageAlt} width={project.imageWidth ?? 1536} height={project.imageHeight ?? 960} sizes="(max-width: 767px) 100vw, 52vw" loading={index === 0 ? 'eager' : 'lazy'} /></span></span><span className={styles.corner} aria-hidden="true">↗</span></>;
+        const visualContent = <><span className={styles.frame} data-project-frame aria-hidden="true" /><span className={styles.imageWindow}><span data-project-image-inner><Image src={project.image} alt={project.imageAlt} width={project.imageWidth ?? 1536} height={project.imageHeight ?? 960} sizes="(max-width: 767px) 100vw, 52vw" loading={index === 0 ? 'eager' : 'lazy'} /></span></span><span className={styles.corner} aria-hidden="true"><ArrowRight /></span></>;
         return <article className={styles.project} data-archive-project data-treatment={project.visualTreatment} key={project.id}>
         <span className={styles.line} data-project-line aria-hidden="true" />
         <div className={styles.top}><span data-project-number>{project.number}</span><span>{project.year}</span></div>
@@ -95,9 +96,9 @@ export function ProjectsPageContent() {
             <p className={styles.description} data-project-copy>{project.description}</p>
             <div className={styles.technology} data-project-copy><span>{c.projectsPage.technologies}</span><p>{project.technologies}</p></div>
             <div className={styles.links} data-project-copy>
-              {project.caseUrl && (project.caseUrl.startsWith('/') ? <Link href={project.caseUrl}>{c.projectsPage.viewCase} →</Link> : <a href={project.caseUrl} target="_blank" rel="noopener noreferrer">{c.projectsPage.viewCase} ↗</a>)}
-              {project.projectUrl && <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">{c.projectsPage.viewProject} ↗</a>}
-              {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">{c.projectsPage.github} ↗</a>}
+              {project.caseUrl && (project.caseUrl.startsWith('/') ? <Link href={project.caseUrl}>{c.projectsPage.viewCase} <ArrowRight /></Link> : <a href={project.caseUrl} target="_blank" rel="noopener noreferrer">{c.projectsPage.viewCase} <ArrowRight /></a>)}
+              {project.projectUrl && <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">{c.projectsPage.viewProject} <ArrowRight /></a>}
+              {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">{c.projectsPage.github} <ArrowRight /></a>}
             </div>
           </div>
         </div>
