@@ -20,6 +20,7 @@ export function CaseStudyPage({ slug }: { slug: CaseStudySlug }) {
   const currentIndex = caseStudySlugs.indexOf(slug);
   const nextSlug = caseStudySlugs[(currentIndex + 1) % caseStudySlugs.length];
   const nextStudy = (language === 'es' ? caseStudiesEs : caseStudiesEn)[nextSlug];
+  const caseNumber = study.index.split(' / ')[0];
 
   useGSAP(() => {
     const media = gsap.matchMedia();
@@ -41,6 +42,7 @@ export function CaseStudyPage({ slug }: { slug: CaseStudySlug }) {
         const copy = select('[data-case-copy]');
         const mediaItems = select('[data-case-media]');
         const mediaImages = select('[data-case-media] img');
+        const decor = select('[data-case-decor]');
         const timeline = gsap.timeline({ defaults: { ease: 'power3.out' }, scrollTrigger: { trigger: section, start: 'top 82%', toggleActions: 'play none none none' } })
           .from(select('[data-case-rule]'), { scaleX: 0, duration: .8 }, 0)
           .from(select('[data-case-section-number], [data-case-eyebrow]'), { opacity: 0, y: 8, duration: .5, stagger: .06 }, .08)
@@ -48,9 +50,13 @@ export function CaseStudyPage({ slug }: { slug: CaseStudySlug }) {
         if (copy.length) timeline.from(copy, { opacity: 0, y: 12, duration: .65, stagger: .06 }, .28);
         if (mediaItems.length) timeline.from(mediaItems, { clipPath: 'inset(0 0 100% 0)', y: 12, duration: .85, stagger: .1 }, .2);
         if (mediaImages.length) timeline.from(mediaImages, { scale: 1.04, duration: 1 }, .2);
+        if (decor.length) timeline.from(decor, { opacity: 0, scale: .92, rotation: section.dataset.decorRotation ?? '-5', duration: .9 }, .18);
         if (!isMobile) {
           select('[data-case-media]').forEach((item, index) => {
             gsap.fromTo(item, { y: index % 2 ? 12 : -8 }, { y: index % 2 ? -10 : 12, ease: 'none', scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: 1.15 } });
+          });
+          decor.forEach((item, index) => {
+            gsap.fromTo(item, { y: index % 2 ? 14 : -12, rotation: index % 2 ? 1.5 : -1.5 }, { y: index % 2 ? -18 : 16, rotation: 0, ease: 'none', scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: 1.35 } });
           });
         }
       });
@@ -109,8 +115,12 @@ export function CaseStudyPage({ slug }: { slug: CaseStudySlug }) {
     </section>
 
     <div className={styles.sections}>
-      {study.sections.map(section => <section className={`${styles.section} ${styles[section.layout ?? 'wide']}`} data-case-section key={section.number}>
+      {study.sections.map((section, sectionIndex) => <section className={`${styles.section} ${styles[section.layout ?? 'wide']}`} data-case-section data-decor-rotation={sectionIndex % 2 ? '5' : '-5'} key={section.number}>
         <span className={styles.rule} data-case-rule aria-hidden="true" />
+        <div className={`${styles.sectionDecor} ${[styles.decorOrbit, styles.decorGrid, styles.decorRuler, styles.decorBracket][sectionIndex % 4]}`} data-case-decor aria-hidden="true">
+          <span /><span /><span /><i />
+          <em>{section.number}</em>
+        </div>
         <header className={styles.sectionHeading}>
           <span className={styles.sectionNumber} data-case-section-number>{section.number}</span>
           <div><p className={styles.eyebrow} data-case-eyebrow>{section.eyebrow}</p><h2><span><span data-case-heading>{section.title}</span></span></h2></div>
@@ -125,9 +135,18 @@ export function CaseStudyPage({ slug }: { slug: CaseStudySlug }) {
 
     <section className={styles.final} data-case-section>
       <span className={styles.rule} data-case-rule aria-hidden="true" />
-      <p className={styles.eyebrow} data-case-eyebrow>{study.final.eyebrow}</p>
-      <h2><span><span data-case-heading>{study.final.title}</span></span></h2>
-      <div className={styles.finalLinks} data-case-copy><a href={study.final.primary.href} target="_blank" rel="noopener noreferrer">{study.final.primary.label}<span><ArrowRight /></span></a><a href={study.final.secondary.href} target="_blank" rel="noopener noreferrer">{study.final.secondary.label}<span><ArrowRight /></span></a></div>
+      <div className={styles.finalComposition}>
+        <div className={styles.finalCopy}>
+          <p className={styles.eyebrow} data-case-eyebrow>{study.final.eyebrow}</p>
+          <h2><span><span data-case-heading>{study.final.title}</span></span></h2>
+          <div className={styles.finalLinks} data-case-copy><a href={study.final.primary.href} target="_blank" rel="noopener noreferrer">{study.final.primary.label}<span><ArrowRight /></span></a><a href={study.final.secondary.href} target="_blank" rel="noopener noreferrer">{study.final.secondary.label}<span><ArrowRight /></span></a></div>
+        </div>
+        <div className={styles.finalArt} data-project={slug} data-case-decor aria-hidden="true">
+          <span /><span /><span /><span /><i />
+          <strong>{caseNumber}</strong>
+          <small>CASE / {study.projectId.replaceAll('-', ' ')}</small>
+        </div>
+      </div>
     </section>
 
     <nav className={styles.caseNav} aria-label={study.labels.projects}>

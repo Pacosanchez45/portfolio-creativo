@@ -37,7 +37,7 @@ export const projects: readonly Project[] = [
     description: 'Aplicación para diseñar botones, probar variantes en tiempo real y copiar HTML y CSS listo para usar.',
     image: '/projects/covers/button-generator-cover-ai.webp', imageAlt: 'Generador de botones en un portátil con controles, estados y panel de código.', imageWidth: 1536, imageHeight: 960,
     visualTreatment: 'tool', visualCaption: 'INTERACCIÓN / ESTADOS / CÓDIGO',
-    caseUrl: null, projectUrl: 'https://buttons.uiverse.es/', githubUrl: 'https://github.com/Pacosanchez45/uiverse-botones',
+    caseUrl: '/casos/generador-botones', projectUrl: 'https://buttons.uiverse.es/', githubUrl: 'https://github.com/Pacosanchez45/uiverse-botones',
     concept: 'Herramienta interactiva para unir decisión visual y lógica Front-End mediante una edición inmediata y código reutilizable.',
   },
   {
@@ -55,7 +55,7 @@ export const projects: readonly Project[] = [
     description: 'Experiencia multipágina para un festival de cine de suspense, desde el descubrimiento de películas hasta la selección de entradas y la simulación del pago.',
     image: '/projects/covers/frame-festival-cover-ai.webp', imageAlt: 'Dirección visual de un festival de suspense con interfaz, carteles y entradas.', imageWidth: 1536, imageHeight: 960,
     visualTreatment: 'cinema', visualCaption: 'CINE / CULTURA / EXPERIENCIA',
-    caseUrl: null, projectUrl: 'https://frame.uiverse.es/', githubUrl: 'https://github.com/Pacosanchez45/frame',
+    caseUrl: '/casos/frame-festival', projectUrl: 'https://frame.uiverse.es/', githubUrl: 'https://github.com/Pacosanchez45/frame',
     concept: 'Experiencia de producto que conecta programación, detalle de película, selección de entradas y pago simulado.',
   },
   {
