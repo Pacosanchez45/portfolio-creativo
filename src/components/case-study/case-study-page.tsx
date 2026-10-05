@@ -7,7 +7,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { useLanguage } from '@/components/language-provider';
-import { caseStudiesEn, caseStudiesEs, type CaseStudySlug } from '@/data/case-studies';
+import { caseStudiesEn, caseStudiesEs, caseStudySlugs, type CaseStudySlug } from '@/data/case-studies';
 import styles from './case-study-page.module.css';
 import { ArrowRight } from '@/components/ui/arrow-right';
 
@@ -17,7 +17,8 @@ export function CaseStudyPage({ slug }: { slug: CaseStudySlug }) {
   const ref = useRef<HTMLElement>(null);
   const { language } = useLanguage();
   const study = (language === 'es' ? caseStudiesEs : caseStudiesEn)[slug];
-  const nextSlug: CaseStudySlug = slug === 'uxsignal' ? 'clinica-dental-lb' : 'uxsignal';
+  const currentIndex = caseStudySlugs.indexOf(slug);
+  const nextSlug = caseStudySlugs[(currentIndex + 1) % caseStudySlugs.length];
   const nextStudy = (language === 'es' ? caseStudiesEs : caseStudiesEn)[nextSlug];
 
   useGSAP(() => {

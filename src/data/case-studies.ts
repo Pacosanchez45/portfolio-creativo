@@ -1,4 +1,4 @@
-export type CaseStudySlug = 'uxsignal' | 'clinica-dental-lb';
+export type CaseStudySlug = 'uxsignal' | 'clinica-dental-lb' | 'urbangym-pro';
 
 export interface CaseMedia {
   src: string;
@@ -60,7 +60,7 @@ const uxMedia = {
 
 export const caseStudiesEs: Record<CaseStudySlug, CaseStudy> = {
   uxsignal: {
-    slug: 'uxsignal', projectId: 'uxsignal', index: '01 / 02', year: '2026',
+    slug: 'uxsignal', projectId: 'uxsignal', index: '01 / 03', year: '2026',
     eyebrow: 'DISEÑO DE PRODUCTO / INVESTIGACIÓN UX / IA', title: 'UXSIGNAL',
     subtitle: 'INVESTIGACIÓN UX ASISTIDA POR IA, CON EVIDENCIAS TRAZABLES Y REVISIÓN HUMANA.',
     intro: 'Diseñé y desarrollé un producto que transforma entrevistas y notas en hallazgos estructurados, mostrando sus fuentes, contradicciones y nivel de confianza antes de incorporarlos a un informe.',
@@ -83,7 +83,7 @@ export const caseStudiesEs: Record<CaseStudySlug, CaseStudy> = {
     labels: { back: 'VOLVER AL PORTFOLIO', projects: 'TODOS LOS PROYECTOS', next: 'SIGUIENTE CASO', top: 'VOLVER ARRIBA' },
   },
   'clinica-dental-lb': {
-    slug: 'clinica-dental-lb', projectId: 'clinica-dental-lb', index: '02 / 02', year: '2026',
+    slug: 'clinica-dental-lb', projectId: 'clinica-dental-lb', index: '02 / 03', year: '2026',
     eyebrow: 'UX/UI / SALUD / RESPONSIVE', title: 'CLÍNICA DENTAL LB',
     subtitle: 'CONFIANZA Y CLARIDAD DESDE EL PRIMER SCROLL.',
     intro: 'Una propuesta web completa para una clínica dental que necesita explicar sus tratamientos con orden, transmitir profesionalidad y convertir visitas en solicitudes de cita.',
@@ -101,6 +101,28 @@ export const caseStudiesEs: Record<CaseStudySlug, CaseStudy> = {
       { number: '04', eyebrow: 'IMPLEMENTACIÓN', title: 'DEL CONCEPTO A UNA WEB RESPONSIVE REAL.', paragraphs: ['La propuesta se llevó a código con componentes visuales coherentes, navegación móvil, llamadas a la acción y formularios preparados para acompañar la conversión.', 'La siguiente evolución sería conectar una agenda real, validar los contenidos con una clínica y ampliar la arquitectura SEO de tratamientos.'], bullets: ['Diseño responsive completo.', 'Estados de interacción y navegación móvil.', 'Formulario y acciones de contacto.', 'Estructura preparada para SEO local.'], media: [{ src: '/cases/dental/site-preview.png', width: 1600, height: 1000, alt: 'Web responsive de la clínica dental.', caption: 'IMPLEMENTACIÓN / FRONT-END' }], layout: 'wide' },
     ],
     final: { eyebrow: 'VER EL RESULTADO', title: 'UNA EXPERIENCIA DIGITAL PENSADA PARA GENERAR CONFIANZA Y FACILITAR LA PRIMERA CITA.', primary: { label: 'VER WEB COMPLETA', href: 'https://clinicadental.uiverse.es/' }, secondary: { label: 'VER GITHUB', href: 'https://github.com/Pacosanchez45/clinica-dental-ejemplo' } },
+    labels: { back: 'VOLVER AL PORTFOLIO', projects: 'TODOS LOS PROYECTOS', next: 'SIGUIENTE CASO', top: 'VOLVER ARRIBA' },
+  },
+  'urbangym-pro': {
+    slug: 'urbangym-pro', projectId: 'urbangym-pro', index: '03 / 03', year: '2026',
+    eyebrow: 'DIRECCIÓN VISUAL / INTERACCIÓN / FRONT-END', title: 'URBANGYM PRO',
+    subtitle: 'UNA EXPERIENCIA FITNESS CON MÁS CARÁCTER, CONTEXTO Y CONTROL PARA EL USUARIO.',
+    intro: 'Rediseñé la web completa de UrbanGym para convertir una landing básica en una experiencia editorial, bilingüe e interactiva que comunica método, comunidad y rendimiento.',
+    heroImage: { src: '/cases/urbangym/site-home.webp', width: 1600, height: 1000, alt: 'Hero de la nueva web de UrbanGym con fotografía de entrenamiento y gran tipografía editorial.', caption: 'HOME / DIRECCIÓN VISUAL / CONVERSIÓN' },
+    summary: [
+      { label: 'ROL', value: 'UX/UI DESIGN & FRONT-END' },
+      { label: 'ENFOQUE', value: 'MARCA / INTERACCIÓN / CONVERSIÓN' },
+      { label: 'STACK', value: 'HTML / CSS / JAVASCRIPT' },
+      { label: 'AÑO', value: '2026' },
+    ],
+    sections: [
+      { number: '01', eyebrow: 'DIAGNÓSTICO', title: 'EL PRODUCTO NECESITABA DEJAR DE PARECER UNA PLANTILLA FITNESS.', paragraphs: ['La versión anterior agrupaba información correcta, pero la presentaba mediante bloques y tarjetas muy previsibles. Faltaban una narrativa de marca, contraste entre secciones y motivos para explorar.', 'El rediseño parte de una promesa más concreta: entrenamiento con intención, seguimiento y progresión medible.'], bullets: ['Jerarquía editorial más reconocible.', 'Fotografía con una dirección consistente.', 'Menos tarjetas y más composición.', 'Acciones claras sin repetir el mismo patrón.'] },
+      { number: '02', eyebrow: 'DIRECCIÓN VISUAL', title: 'FUERZA VISUAL SIN CONVERTIR LA EXPERIENCIA EN UN CLICHÉ.', layout: 'split', paragraphs: ['La identidad combina negro, blanco cálido y un verde ácido muy contenido. La tipografía condensada aporta energía, mientras la retícula y las líneas técnicas ordenan la información.', 'La fotografía se usa como contexto y atmósfera. Evité brillos, fondos futuristas y recursos que hicieran parecer la web un concepto generado sin criterio.'], media: [{ src: '/cases/urbangym/training-class.webp', width: 1536, height: 1024, alt: 'Clase funcional en un gimnasio urbano contemporáneo.', caption: 'FOTOGRAFÍA / ENERGÍA / COMUNIDAD' }] },
+      { number: '03', eyebrow: 'ARQUITECTURA', title: 'UNA PÁGINA QUE SE PUEDE EXPLORAR, NO SOLO RECORRER.', items: [{ title: 'PROGRAMAS INTERACTIVOS', text: 'Cuatro pestañas actualizan imagen, objetivos, duración y nivel sin abandonar el contexto.' }, { title: 'AGENDA POR DÍAS', text: 'El usuario consulta horarios, plazas y coach desde una navegación compacta y accesible.' }, { title: 'MEMBRESÍAS COMPARABLES', text: 'El selector mensual o anual actualiza precios y mantiene visibles las diferencias clave.' }, { title: 'RESERVA CONTEXTUAL', text: 'Las acciones abren un diálogo de primera sesión desde los momentos de mayor intención.' }] },
+      { number: '04', eyebrow: 'EXPERIENCIA', title: 'EL RITMO VISUAL ACOMPAÑA EL RITMO DEL ENTRENAMIENTO.', paragraphs: ['Los reveals, cambios de pestaña, microinteracciones y el ligero movimiento del hero añaden respuesta sin ralentizar la navegación.', 'El movimiento se reduce automáticamente cuando el sistema lo solicita y desaparece donde podría perjudicar la estabilidad en móvil.'], media: [{ src: '/cases/urbangym/recovery-space.webp', width: 1536, height: 1024, alt: 'Zona de recuperación y movilidad del club UrbanGym.', caption: 'RECUPERACIÓN / CONTRASTE / RESPIRACIÓN' }], layout: 'wide' },
+      { number: '05', eyebrow: 'RESULTADO', title: 'UNA MARCA MÁS CREÍBLE Y UNA WEB CON MÁS RAZONES PARA INTERACTUAR.', paragraphs: ['La nueva experiencia equilibra impacto, información y utilidad: presenta el método, permite explorar programas y horarios, muestra al equipo y conduce hacia una sesión de prueba.', 'La implementación mantiene dos idiomas, navegación por teclado, estados accesibles, responsive completo y un enlace claro de regreso al portfolio.'], bullets: ['ES / EN en tiempo real.', 'Menú y layout responsive.', 'Pestañas accesibles y agenda dinámica.', 'Preferencias de movimiento respetadas.', 'Assets optimizados para web.'] },
+    ],
+    final: { eyebrow: 'VER EL RESULTADO', title: 'UNA EXPERIENCIA FITNESS MÁS HUMANA, DIRECTA Y MEMORABLE.', primary: { label: 'VER WEB COMPLETA', href: 'https://urbangym.uiverse.es/' }, secondary: { label: 'VER GITHUB', href: 'https://github.com/Pacosanchez45/UrbanGym' } },
     labels: { back: 'VOLVER AL PORTFOLIO', projects: 'TODOS LOS PROYECTOS', next: 'SIGUIENTE CASO', top: 'VOLVER ARRIBA' },
   },
 };
@@ -138,6 +160,23 @@ export const caseStudiesEn: Record<CaseStudySlug, CaseStudy> = {
       { number: '04', eyebrow: 'IMPLEMENTATION', title: 'FROM CONCEPT TO A REAL RESPONSIVE WEBSITE.', paragraphs: ['The proposal was implemented with consistent visual components, mobile navigation, calls to action and forms designed to support conversion.', 'The next evolution would connect a real booking system, validate content with a clinic and expand the treatment SEO architecture.'], bullets: ['Complete responsive design.', 'Interaction states and mobile navigation.', 'Form and contact actions.', 'Structure ready for local SEO.'], media: [{ src: '/cases/dental/site-preview.png', width: 1600, height: 1000, alt: 'Responsive dental clinic website.', caption: 'IMPLEMENTATION / FRONT-END' }], layout: 'wide' },
     ],
     final: { eyebrow: 'VIEW THE RESULT', title: 'A DIGITAL EXPERIENCE DESIGNED TO BUILD TRUST AND MAKE THE FIRST APPOINTMENT EASIER.', primary: { label: 'VIEW LIVE WEBSITE', href: 'https://clinicadental.uiverse.es/' }, secondary: { label: 'VIEW GITHUB', href: 'https://github.com/Pacosanchez45/clinica-dental-ejemplo' } },
+    labels: { back: 'BACK TO PORTFOLIO', projects: 'ALL PROJECTS', next: 'NEXT CASE', top: 'BACK TO TOP' },
+  },
+  'urbangym-pro': {
+    ...caseStudiesEs['urbangym-pro'],
+    eyebrow: 'VISUAL DIRECTION / INTERACTION / FRONT-END',
+    subtitle: 'A FITNESS EXPERIENCE WITH MORE CHARACTER, CONTEXT AND USER CONTROL.',
+    intro: 'I redesigned the complete UrbanGym website, turning a basic landing page into an editorial, bilingual and interactive experience that communicates method, community and performance.',
+    heroImage: { ...caseStudiesEs['urbangym-pro'].heroImage, alt: 'New UrbanGym hero with training photography and large editorial typography.', caption: 'HOME / VISUAL DIRECTION / CONVERSION' },
+    summary: [{ label: 'ROLE', value: 'UX/UI DESIGN & FRONT-END' }, { label: 'FOCUS', value: 'BRAND / INTERACTION / CONVERSION' }, { label: 'STACK', value: 'HTML / CSS / JAVASCRIPT' }, { label: 'YEAR', value: '2026' }],
+    sections: [
+      { number: '01', eyebrow: 'DIAGNOSIS', title: 'THE PRODUCT NEEDED TO STOP FEELING LIKE A FITNESS TEMPLATE.', paragraphs: ['The previous version contained the right information but presented it through predictable blocks and cards. It lacked a brand narrative, contrast between sections and reasons to explore.', 'The redesign starts from a clearer promise: purposeful training, coaching and measurable progression.'], bullets: ['A more recognisable editorial hierarchy.', 'Photography with consistent direction.', 'Fewer cards and stronger composition.', 'Clear actions without repeating one pattern.'] },
+      { number: '02', eyebrow: 'VISUAL DIRECTION', title: 'VISUAL STRENGTH WITHOUT TURNING THE EXPERIENCE INTO A CLICHÉ.', layout: 'split', paragraphs: ['The identity combines black, warm white and a restrained acid green. Condensed typography adds energy while the grid and technical rules organise information.', 'Photography creates context and atmosphere. I avoided glow, futuristic backgrounds and devices that would make the site feel like an unconsidered generated concept.'], media: [{ src: '/cases/urbangym/training-class.webp', width: 1536, height: 1024, alt: 'Functional class in a contemporary urban gym.', caption: 'PHOTOGRAPHY / ENERGY / COMMUNITY' }] },
+      { number: '03', eyebrow: 'ARCHITECTURE', title: 'A PAGE TO EXPLORE, NOT SIMPLY SCROLL THROUGH.', items: [{ title: 'INTERACTIVE PROGRAMS', text: 'Four tabs update the image, goals, duration and level without removing the user from context.' }, { title: 'DAILY SCHEDULE', text: 'Users can inspect time, availability and coach through compact, accessible navigation.' }, { title: 'COMPARABLE MEMBERSHIPS', text: 'The monthly or annual switch updates prices while keeping the main differences visible.' }, { title: 'CONTEXTUAL BOOKING', text: 'Actions open the first-session dialog at moments of strongest intent.' }] },
+      { number: '04', eyebrow: 'EXPERIENCE', title: 'THE VISUAL RHYTHM SUPPORTS THE TRAINING RHYTHM.', paragraphs: ['Reveals, tab changes, microinteractions and subtle hero movement add response without slowing navigation.', 'Motion is automatically reduced when requested by the system and removed where it could affect mobile stability.'], media: [{ src: '/cases/urbangym/recovery-space.webp', width: 1536, height: 1024, alt: 'UrbanGym recovery and mobility area.', caption: 'RECOVERY / CONTRAST / SPACE' }], layout: 'wide' },
+      { number: '05', eyebrow: 'OUTCOME', title: 'A MORE CREDIBLE BRAND AND MORE REASONS TO INTERACT.', paragraphs: ['The new experience balances impact, information and utility: it presents the method, lets people explore programs and schedules, introduces the team and leads toward a trial session.', 'The implementation keeps both languages, keyboard navigation, accessible states, complete responsive behaviour and a clear route back to the portfolio.'], bullets: ['Real-time ES / EN.', 'Responsive menu and layout.', 'Accessible tabs and dynamic schedule.', 'Reduced-motion preferences respected.', 'Web-optimised assets.'] },
+    ],
+    final: { eyebrow: 'VIEW THE RESULT', title: 'A MORE HUMAN, DIRECT AND MEMORABLE FITNESS EXPERIENCE.', primary: { label: 'VIEW LIVE WEBSITE', href: 'https://urbangym.uiverse.es/' }, secondary: { label: 'VIEW GITHUB', href: 'https://github.com/Pacosanchez45/UrbanGym' } },
     labels: { back: 'BACK TO PORTFOLIO', projects: 'ALL PROJECTS', next: 'NEXT CASE', top: 'BACK TO TOP' },
   },
 };

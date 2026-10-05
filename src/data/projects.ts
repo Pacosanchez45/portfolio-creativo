@@ -64,7 +64,7 @@ export const projects: readonly Project[] = [
     description: 'Landing bilingüe para una propuesta fitness premium con identidad contundente y fuerte llamada a la acción.',
     image: '/projects/covers/urbangym-cover-ai.webp', imageAlt: 'Landing fitness premium presentada en pantallas dentro de un gimnasio urbano.', imageWidth: 1536, imageHeight: 960,
     visualTreatment: 'fitness', visualCaption: 'MARCA / ENERGÍA / CONVERSIÓN',
-    caseUrl: null, projectUrl: 'https://urbangym.uiverse.es/', githubUrl: 'https://github.com/Pacosanchez45/UrbanGym',
+    caseUrl: '/casos/urbangym-pro', projectUrl: 'https://urbangym.uiverse.es/', githubUrl: 'https://github.com/Pacosanchez45/UrbanGym',
     concept: 'Landing responsive bilingüe orientada a conversión, con una identidad directa y una jerarquía visual clara.',
   },
 ];
